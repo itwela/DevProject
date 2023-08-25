@@ -1,7 +1,8 @@
 # This is a GUI for a web scraper that pulls PTR (Periodic Trading Records) from whoever I choose.
 
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk 
+from tkinter import messagebox
 import subprocess
 import os
 import customtkinter
@@ -25,20 +26,27 @@ def startdownload():
     except:
         print("Error")
     else:
+        #success popup
+        messagebox.showinfo("Success", "Success")
+        #---------------
         print("Success!")
 
 
 
 #function for searching the ptr (house)
-'''def startdownload():
+def houseparse():
     try:
         year = year_input.get()
-        filename = "downloadFile{}.py".format(year)
-        subprocess.call(["python", filename])
+        lastname = last_name_var.get()
+        textfilename = "{}FD.txt".format(year)
+        subprocess.call(["python", 'house.py', textfilename, lastname])
     except:
         print("Error")
     else:
-        print("Success!")'''
+        #success popup
+        messagebox.showinfo("Success", "Success")
+        #---------------
+        print("Success!")
 
 
 # window
@@ -48,19 +56,33 @@ app.title('Congress Web Scraper')
 
 #title
 title = customtkinter.CTkLabel(app, text='Congress PTR Web Scraper!')
-title.pack(padx=10, pady=50)
+title.pack(padx=10, pady=25)
 
-#year
+#year text
 year_title = customtkinter.CTkLabel(app, text='Insert a year')
 year_title.pack(padx=10, pady=10)
+
 #input for the year
 year_var = tk.StringVar()
 year_input = customtkinter.CTkEntry(app, width=300, height=40, textvariable=year_var)
 year_input.pack()
 
-# button
+# download button
 download = customtkinter.CTkButton(app, text="Download", command=startdownload)
 download.pack(padx=10, pady=10)
+
+#year text
+last_name_title = customtkinter.CTkLabel(app, text='Insert a last name')
+last_name_title.pack(padx=10, pady=10)
+
+#input for the last name
+last_name_var = tk.StringVar()
+last_name_input = customtkinter.CTkEntry(app, width=300, height=40, textvariable=last_name_var)
+last_name_input.pack()
+
+# find button
+find = customtkinter.CTkButton(app, text="Find", command=houseparse)
+find.pack(padx=10, pady=10)
 
 
 # run loop
