@@ -11,10 +11,17 @@ import downloadFile2021 as df21
 import downloadFile2022 as df22
 import downloadFile2023 as df23
 import house as ho
+from house import read_house
+import pandas as pd
 
 #
 customtkinter.set_appearance_mode('System')
 customtkinter.set_default_color_theme('blue')
+
+# window
+app = customtkinter.CTk()
+app.geometry('720x480')
+app.title('Congress Web Scraper')
 
 
 # funciton for year input (excited as i figured this out myself :)
@@ -23,13 +30,13 @@ def startdownload():
         year = year_input.get()
         filename = "downloadFile{}.py".format(year)
         subprocess.call(["python", filename])
+        #success
+        finishLabel.configure(text='Your files are ready!', text_color='green')
     except:
-        print("Error")
-    else:
-        #success popup
-        messagebox.showinfo("Success", "Success")
-        #---------------
-        print("Success!")
+        #error
+        finishLabel.configure(text='There has been an Error!', text_color='red')
+    
+   
 
 
 
@@ -40,19 +47,18 @@ def houseparse():
         lastname = last_name_var.get()
         textfilename = "{}FD.txt".format(year)
         subprocess.call(["python", 'house.py', textfilename, lastname])
-    except:
-        print("Error")
-    else:
+
+        
+        #output_label.configure(text='DocId')
+        
+    except subprocess.CalledProcessError as e:
+        print("Error:", e)
+
         #success popup
-        messagebox.showinfo("Success", "Success")
+        #messagebox.showinfo("Success", "Success")
         #---------------
-        print("Success!")
 
 
-# window
-app = customtkinter.CTk()
-app.geometry('720x480')
-app.title('Congress Web Scraper')
 
 #title
 title = customtkinter.CTkLabel(app, text='Congress PTR Web Scraper!')
@@ -84,6 +90,13 @@ last_name_input.pack()
 find = customtkinter.CTkButton(app, text="Find", command=houseparse)
 find.pack(padx=10, pady=10)
 
+
+# Finished Downloading
+finishLabel = customtkinter.CTkLabel(app, text='')
+finishLabel.pack()
+
+output_label = customtkinter.CTkLabel(app, text='')
+output_label.pack()
 
 # run loop
 app.mainloop()

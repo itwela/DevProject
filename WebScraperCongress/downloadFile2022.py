@@ -36,7 +36,7 @@ def download_disclosure_reports(new_file_name: str):
         download_file(new_file_name)
             
 def download_file(fileName: str):
-    download_url = "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2020FD.ZIP"
+    download_url = "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2022FD.ZIP"
     
      # pull file from site
     r = requests.get(url=download_url)
@@ -49,14 +49,14 @@ def unzip_disclosure_reports(filename: str):
     cwd = os.getcwd()
     zipfile_path = cwd + "/" + filename
     with ZipFile(zipfile_path, "r") as zObject:
-        zObject.extract("2020FD.txt", cwd)
+        zObject.extract("2022FD.txt", cwd)
     zObject.close()
         
         
 
 
 if __name__ == "__main__":
-    new_file_name = "2020DamnDaniel.zip"
+    new_file_name = "2022DamnDaniel.zip"
     
     
     download_disclosure_reports(new_file_name=new_file_name)
