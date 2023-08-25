@@ -1,0 +1,68 @@
+# This is a GUI for a web scraper that pulls PTR (Periodic Trading Records) from whoever I choose.
+
+import tkinter as tk
+from tkinter import ttk
+import subprocess
+import os
+import customtkinter
+import downloadFile2020 as df20
+import downloadFile2021 as df21
+import downloadFile2022 as df22
+import downloadFile2023 as df23
+import house as ho
+
+#
+customtkinter.set_appearance_mode('System')
+customtkinter.set_default_color_theme('blue')
+
+
+# funciton for year input (excited as i figured this out myself :)
+def startdownload():
+    try:
+        year = year_input.get()
+        filename = "downloadFile{}.py".format(year)
+        subprocess.call(["python", filename])
+    except:
+        print("Error")
+    else:
+        print("Success!")
+
+
+
+#function for searching the ptr (house)
+'''def startdownload():
+    try:
+        year = year_input.get()
+        filename = "downloadFile{}.py".format(year)
+        subprocess.call(["python", filename])
+    except:
+        print("Error")
+    else:
+        print("Success!")'''
+
+
+# window
+app = customtkinter.CTk()
+app.geometry('720x480')
+app.title('Congress Web Scraper')
+
+#title
+title = customtkinter.CTkLabel(app, text='Congress PTR Web Scraper!')
+title.pack(padx=10, pady=50)
+
+#year
+year_title = customtkinter.CTkLabel(app, text='Insert a year')
+year_title.pack(padx=10, pady=10)
+#input for the year
+year_var = tk.StringVar()
+year_input = customtkinter.CTkEntry(app, width=300, height=40, textvariable=year_var)
+year_input.pack()
+
+# button
+download = customtkinter.CTkButton(app, text="Download", command=startdownload)
+download.pack(padx=10, pady=10)
+
+
+# run loop
+app.mainloop()
+
