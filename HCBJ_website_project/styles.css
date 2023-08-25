@@ -1,0 +1,105 @@
+/* The color palette behind this is intentional. I like dogs and recently learned that dogs see in tones of mostly yellow and blue.
+    So I wanted to make that the color palette so that even my dogs could see the color :). */
+
+* {  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.navbar {
+  background: #fdebd1;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    /* margin: top, right, bottom, left */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+/* were doing '#' and not '.' here because in the index.html file, the navbar__logo is an "id" class. */
+/* This logo has a cool gradient effect */
+#navbar__logo {
+  background-color: #3036ca;
+  background-image: linear-gradient(to top, #b3effb 0%, #303c6a 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.fa-gem {
+    margin-right: 0.5rem;
+}
+
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+}
+
+.navbar__item { 
+    height: 80px;
+}
+
+.navbar__links {
+    color: #3f1702;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 50%;
+}
+
+.navbar__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px 20px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background: #3036ca;
+    color: #fff;
+}
+
+/* logic for what happens when we hover over the sign up button
+    on the homepage */
+.button:hover {
+    background: #6fb1bd;
+    transition: all 0.3s ease;
+}
