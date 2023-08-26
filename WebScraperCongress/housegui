@@ -11,17 +11,22 @@ import downloadFile2021 as df21
 import downloadFile2022 as df22
 import downloadFile2023 as df23
 import house as ho
-from house import read_house
 import pandas as pd
+import fileinput
 
-#
-customtkinter.set_appearance_mode('System')
+
+
+
+customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
+
 
 # window
 app = customtkinter.CTk()
-app.geometry('720x480')
-app.title('Congress Web Scraper')
+app.geometry('720x580')
+app.title('CONGRESS WEB SCRAPER')
+
+#
 
 
 # funciton for year input (excited as i figured this out myself :)
@@ -36,8 +41,6 @@ def startdownload():
         #error
         finishLabel.configure(text='There has been an Error!', text_color='red')
     
-   
-
 
 
 #function for searching the ptr (house)
@@ -48,8 +51,21 @@ def houseparse():
         textfilename = "{}FD.txt".format(year)
         subprocess.call(["python", 'house.py', textfilename, lastname])
 
+        # Get a list of all .txt files in the current directory
+        txt_files = [file for file in os.listdir() if file.endswith(".txt")]
         
-        #output_label.configure(text='DocId')
+        # Sort the files by their creation time
+        txt_files.sort(key=lambda x: os.path.getctime(x), reverse=True)
+        
+        if txt_files:
+            most_recent_txt_file = txt_files[0]
+            with open(most_recent_txt_file, "r") as file:
+                file_contents = file.read()
+                output_label.configure(text=file_contents, justify="center")
+
+        
+ 
+
         
     except subprocess.CalledProcessError as e:
         print("Error:", e)
@@ -61,7 +77,7 @@ def houseparse():
 
 
 #title
-title = customtkinter.CTkLabel(app, text='Congress PTR Web Scraper!')
+title = customtkinter.CTkLabel(app, text='CONGRESS PTR WEB SCRAPER')
 title.pack(padx=10, pady=25)
 
 #year text
@@ -95,8 +111,22 @@ find.pack(padx=10, pady=10)
 finishLabel = customtkinter.CTkLabel(app, text='')
 finishLabel.pack()
 
+#custom data
 output_label = customtkinter.CTkLabel(app, text='')
-output_label.pack()
+output_label.place(relx=0.5, rely=0.8, anchor="center")
+
+# instructions
+usage_label_1 = customtkinter.CTkLabel(app, text='Step 1. Enter a year of your choosing and press Download.', wraplength=100)
+usage_label_1.place(relx=0.20, rely=0.18, anchor="ne")
+
+usage_label_2 = customtkinter.CTkLabel(app, text='Step 2. Enter a Last Name of a Politician you are curious about. Ex: Banks, Thanedar and the press Find.', wraplength=100)
+usage_label_2.place(relx=0.20, rely=0.40, anchor="ne")
+
+steps = customtkinter.CTkLabel(app, text='Once you get your results, go to google and search the last name and the DocID. The first link should be the financial report!', wraplength=100)
+steps.place(relx=0.80, rely=0.25, anchor="nw")
+#======================
+
+
 
 # run loop
 app.mainloop()
