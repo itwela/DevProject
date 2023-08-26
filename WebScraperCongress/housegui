@@ -17,7 +17,7 @@ import fileinput
 
 
 
-customtkinter.set_appearance_mode('Dark')
+#customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
 
 
@@ -122,10 +122,26 @@ usage_label_1.place(relx=0.20, rely=0.18, anchor="ne")
 usage_label_2 = customtkinter.CTkLabel(app, text='Step 2. Enter a Last Name of a Politician you are curious about. Ex: Banks, Thanedar and the press Find.', wraplength=100)
 usage_label_2.place(relx=0.20, rely=0.40, anchor="ne")
 
-steps = customtkinter.CTkLabel(app, text='Once you get your results, go to google and search the last name and the DocID. The first link should be the financial report!', wraplength=100)
-steps.place(relx=0.80, rely=0.25, anchor="nw")
+steps = customtkinter.CTkLabel(app, text='Once you get your results, go to google and search the FIRST AND LAST name AND the DOCID. The first link should be the financial report!', wraplength=100)
+steps.place(relx=0.80, rely=0.18, anchor="nw")
+
+ex_1 = customtkinter.CTkLabel(app, text='For example, Robert Aderholt 10053968', wraplength=100)
+ex_1.place(relx=0.80, rely=0.50, anchor="nw")
 #======================
 
+#Light and Dark Mode
+def switch_event():
+    #customtkinter.set_appearance_mode(color_mode)
+    customtkinter.set_appearance_mode(switch.get())
+    print("switch toggled, current value:", switch.get())
+
+switch_var = customtkinter.StringVar(value="")
+switch = customtkinter.CTkSwitch(app, text="Color Mode", command=switch_event,
+variable=switch_var, onvalue="Dark", offvalue="Light")
+switch.pack()
+#=======================
+color_mode = switch.get() 
+#=============================
 
 
 # run loop
