@@ -16,4 +16,5 @@ npm run dev
 
 html: --------
 
-<br> = a line break ?
+<br> = a line break 
+<span> = allows you to select a specific part of text inside of an <h> tag
