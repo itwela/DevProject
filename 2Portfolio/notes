@@ -1,3 +1,5 @@
+java terminal: -----
+
 npm create vite@latest 
     - creates new js project with essentials
 
@@ -9,3 +11,9 @@ npm install three
     
 npm run dev 
     - starts local server
+
+---------------------------
+
+html: --------
+
+<br> = a line break ?

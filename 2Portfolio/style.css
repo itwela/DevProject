@@ -1,13 +1,22 @@
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    /*
+    box-sizing: border-box;
+    */
 }
 
 
 body,html{
+    box-sizing: border-box;
     overflow-x: hidden;
-    font-family: 'Oswald', sans-serif;
+
+    font-family: 'Montserrat', sans-serif;    
+    
 }
 
 .webgl{
@@ -15,6 +24,7 @@ body,html{
     top: 0;
     left: 0;
     z-index: 1;
+    
 }
 
 nav{
@@ -40,10 +50,11 @@ nav ul{
 
 .title {
     color: rgb(255, 255, 255);
-    z-index: 2;
+    z-index: 20;
     position: absolute;
     font-size: 4rem;
     text-align: center;
+    letter-spacing: 1px;
     /*how to center a h1 tag*/
     text-shadow: 0 0 15px #515151;
     left: 50%;
@@ -52,7 +63,7 @@ nav ul{
 }
 
 .subtitle{
-    color: rgb(0, 0, 0);
+    color: rgb(23, 23, 23);
     z-index: 2;
     position: absolute;
     font-size: 2rem;
@@ -64,12 +75,116 @@ nav ul{
     transform: translate(-50%, -90%);
 }
 
+/*---------------------------
+
+
+        Below 3d stuff
+
+
+-----------------------------*/
+
+
+
+/* run on everty sectino except */
+section:not(:first-of-type) {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+    
+}
+
+
+section .container {
+    max-width: 1360px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+section.three .container {
+    grid-template-areas: 'content ..';
+}
+
+section.four .container {
+    grid-template-areas: '.. content';
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+
+    grid-area: content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.five {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    font-size: 90px;
+    line-height: 100px;
+    font-weight: 700;
+    width: 100%;
+    height: 100px;
+    padding: 200px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 70px;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+}
+
+h3 span {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 80px;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    width: 100%;
+    display: block;
+}
+
+/*---------------------------
+
+
+        Mobile setup
+
+
+-----------------------------*/
+
 @media screen and (max-width: 800px) {
     .subtitle {
         display: flex;
         z-index: 2;
         position: absolute;
-        text-align: center;
         left: 50%;
         top: 95.5%;
         transform: translate(-50%, -90%);
@@ -99,6 +214,15 @@ nav ul{
     }
 
 }
+
+/*---------------------------
+
+
+        Below Mobile setup
+
+
+-----------------------------*/
+
 
 
 

@@ -30,7 +30,7 @@ const sizes = {
 
 
 //Light
-const lightone = new THREE.PointLight(0xffffff, 200, -100)
+const lightone = new THREE.DirectionalLight(0xffffff, 2)//, 200, -100)
 lightone.position.set(5,15,3)
 scene.add(lightone)
 
@@ -38,8 +38,8 @@ const lighttwo = new THREE.PointLight(0xffffff, 100)
 lighttwo.position.set(5,30,3)
 scene.add(lighttwo)
 
-const lightthree = new THREE.PointLight(0xffffff, 20)
-lightthree.position.set(0,2,5)
+const lightthree = new THREE.PointLight(0xffffff, 40)
+lightthree.position.set(0,2,8)
 scene.add(lightthree)
 
 
@@ -47,7 +47,7 @@ const ambientLight = new THREE.AmbientLight(0x808080);
 scene.add(ambientLight)
 
 const lightfour = new THREE.PointLight(0xffffff, 5)
-lightfour.position.set(0,-23,0)
+lightfour.position.set(0,-23,2)
 scene.add(lightfour)
 
 
@@ -85,11 +85,11 @@ renderer.render(scene, camera)
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
 // This stops people from being able to move object out of positions 
-controls.enablePan = true
+controls.enablePan = false
 // This stops people from being able to zoom in or out.
 controls.enableZoom = false
 controls.autoRotate = true
-//controls.autoRotateSpeed = 10
+controls.autoRotateSpeed = 6
 
 
 //Resize Function
