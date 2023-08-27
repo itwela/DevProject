@@ -1,1 +1,5 @@
-npm run dev - starts local server
+npm run dev 
+    - starts local server
+
+npm create vite@latest 
+    - creates new js project with essentials

@@ -1,0 +1,11 @@
+npm create vite@latest 
+    - creates new js project with essentials
+
+npm install
+    - install everything else needed
+
+npm install three
+    - installs three.js. you must do this every time you make a new site
+    
+npm run dev 
+    - starts local server
