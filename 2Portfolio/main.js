@@ -16,7 +16,7 @@ const material = new THREE.MeshStandardMaterial( {
 })
 
 const spheremesh = new THREE.Mesh( geometry, material );
-spheremesh.position.set(0,-0.5,0)
+spheremesh.position.set(0,0.5,0)
 
 scene.add(spheremesh)
 
@@ -61,8 +61,7 @@ scene.add(lightfour)
 
 //background
 const spaceTexture = new THREE.TextureLoader().load('space.jpg');
-scene.background = spaceTexture;
-
+scene.background = new THREE.Color(0x1c1d39);
 
 //Camera   
 const camera = new THREE.PerspectiveCamera( 45, sizes.width / sizes.height, 0.1, 100);
@@ -123,3 +122,5 @@ tl.fromTo('nav', {y: '-100%'}, {y:'0%'})
 tl.fromTo('.title', {opacity: 0}, {opacity: 1})
 tl.fromTo('.subtitle', {opacity: 0}, {opacity: 0.6})
 
+
+//-----------

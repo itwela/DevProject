@@ -1,0 +1,11 @@
+Model Information:
+* title:	boxing
+* source:	https://sketchfab.com/3d-models/boxing-a997f1e3d85e4d95b0bfacf701f3aff9
+* author:	MadCatD (https://sketchfab.com/MadCatD)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "boxing" (https://sketchfab.com/3d-models/boxing-a997f1e3d85e4d95b0bfacf701f3aff9) by MadCatD (https://sketchfab.com/MadCatD) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

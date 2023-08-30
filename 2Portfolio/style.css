@@ -16,7 +16,8 @@ body,html{
     overflow-x: hidden;
 
     font-family: 'Montserrat', sans-serif;    
-    
+    background-image: linear-gradient(0deg, #65446f 10%, #de9816 20%, #1c1d39 60%);
+
 }
 
 .webgl{
@@ -50,29 +51,23 @@ nav ul{
 
 .title {
     color: rgb(255, 255, 255);
-    z-index: 20;
+
     position: absolute;
-    font-size: 4rem;
     text-align: center;
     letter-spacing: 1px;
-    /*how to center a h1 tag*/
+    z-index: 20;
+    font-size: 4rem;
+    line-height: 60px;
+    /*how to center a h1 tag    */
     text-shadow: 0 0 15px #515151;
     left: 50%;
     top: 82%;
     transform: translate(-50%, -90%);
+
 }
 
-.subtitle{
-    color: rgb(23, 23, 23);
-    z-index: 2;
-    position: absolute;
-    font-size: 2rem;
-    text-align: center;
-
-    /*how to center a h1 tag*/
-    left: 50%;
-    top: 90%;
-    transform: translate(-50%, -90%);
+.subtitle {
+    bottom: -100px;
 }
 
 /*---------------------------
@@ -81,7 +76,7 @@ nav ul{
         Below 3d stuff
 
 
------------------------------*/
+-----------------------------
 
 
 
@@ -109,6 +104,8 @@ section .container {
 
 }
 
+
+
 section.three .container {
     grid-template-areas: 'content ..';
 }
@@ -118,9 +115,9 @@ section.four .container {
 }
 
 .hero {
-    width: 100%;
-    height: 100%;
-    margin-bottom: 50px;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 0px;
 
     grid-area: content;
     display: flex;
@@ -149,7 +146,7 @@ section.four .container {
 h3 {
     font-size: 40px;
     font-weight: 600;
-    line-height: 70px;
+    line-height: 30px;
     display: block;
     width: 100%;
     font-family: inherit;
@@ -215,6 +212,24 @@ p {
 
 }
 
+.subtitle{
+    color: #c3c3c3;
+    z-index: 2;
+    position: absolute;
+    font-size: 2rem;
+    text-align: center;
+    bottom: -100p;
+
+    /*how to center a h1 tag*/
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -90%);
+
+
+}
+
+
+
 /*---------------------------
 
 
@@ -224,5 +239,171 @@ p {
 -----------------------------*/
 
 
+/* run on everty sectino except */
+section:not(:first-of-type) {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    
+    
+}
+
+section .container {
+    max-width: 1360px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 70px;
+    color: #c3c3c3;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+section.three .container {
+    grid-template-areas: 'content ..';
+}
+
+section.four .container {
+    grid-template-areas: '.. content';
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+    padding-top: 10px;    
+
+    grid-area: content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
 
 
+h3 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 70px;
+    display: block;
+    width: 100%;
+    font-family: inherit;
+}
+
+h3 span {
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 80px;
+    display: block;
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    width: 100%;
+    display: block;
+}
+
+.five {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #c3c3c3;
+
+    font-size: 60px;
+    line-height: 100px;
+    font-weight: 700;
+    width: 100%;
+    height: 100px;
+    padding: 200px;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: 3, 1fr;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2;
+
+}
+
+/*---------------------------
+
+
+        Mobile setup
+
+
+-----------------------------*/
+
+@media screen and (max-width: 800px) {
+
+        /*Explore About Contact */
+        nav{
+            color: rgb(255, 255, 255);
+            z-index: 2;
+            position: relative;
+            padding: 4rem 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 0 1%;
+        } 
+
+        nav ul{
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+        }
+    
+    
+        section .container {
+            max-width: 1360px;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 0 30px;
+    
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: center;
+            justify-content: flex-start;
+        
+        }
+    
+        .five {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            
+        
+            font-size: 60px;
+            line-height: 100px;
+            font-weight: 700;
+            width: 100%;
+            height: 100px;
+            padding: 200px;
+            text-align: center;
+        
+            display: grid;
+            grid-template-columns: 3, 1fr;
+            align-items: center;
+            justify-content: center;
+            grid-row: 2;
+        
+        }
+    }
+    
