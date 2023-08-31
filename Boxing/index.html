@@ -1,13 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>YO!</title>
-  </head>
-  <body>
-    <canvas class="webgl"></canvas>
-    <script type="module" src="/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="/stmain.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YO!</title>
+  <nav class="nav">
+    <ul>
+      <li><a href="default.asp">Home</a></li>
+      <li><a href="about.asp">About</a></li>
+      <li><a href="news.asp">News</a></li>
+      <li><a href="contact.asp">Contact</a></li>
+    </ul>
+  </nav>
+</head>
+
+<body>
+  <div class="con-title">
+    <div class="title">itwela ibomu</div>
+  </div>
+
+  <section class="padding"></section>
+  <section class="contcont">
+    <section class="three">
+      <h1 class="onesubtitle">I'm Itwela, a Creative Developer.</h1>
+    </section>
+  </section>
+
+  <section class="onesubcont">
+
+    <section class="four">
+      <h1 class="onesubtitle">
+        here's some info about me.
+      </h1>
+
+      <section class="threesubcont">
+
+        <section class="five">
+          <h1 class="threesubtitle">
+            PROJECTS.
+          </h1>
+
+          <section class="twosubcont">
+
+            <div id="app" class="cardcontainer">
+              <card
+                data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Coming Soon</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card
+                data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Web Scraper</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+              <card
+                data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+                <h1 slot="header">Coming Soon</h1>
+                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              </card>
+            </div>
+          </section>
+        </section>
+
+        <canvas class="webgl"></canvas>
+
+        <script type="module" src="/script.js"></script>
+        <script type="module" src="/sccard.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</body>
+
 </html>

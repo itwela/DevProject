@@ -1,0 +1,103 @@
+/* fullscreen and remove scroll bar */
+@import url('sttextnnav.css');
+@import url('stscrollbar.css');
+@import url('stsecond.css');
+@import url('stcard.scss');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /*
+    box-sizing: border-box;
+    */
+}
+
+@font-face {
+    font-family: b;
+    /* Font import 1 */
+    src: url(./font/MADEOkineSansPERSONALUSE-Bold.otf);
+  }
+
+  @font-face {
+    font-family: l;
+    /* Font import 1 */
+    src: url(./font/MADEOkineSansPERSONALUSE-Light.otf);
+  }
+
+body, html{
+    overflow-x: hidden;
+    font-family: b;
+    
+}
+
+.padding {
+    margin-top: 1000px;
+    z-index: -2;
+}
+
+.webgl{
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: none;
+    z-index: 1;
+}
+
+.contcont {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 0 15px;
+    bottom: 0;
+
+}
+
+.onesubcont {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0 15px;
+    bottom: 0;
+
+}
+
+.twosubcont {
+    padding: 40px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: l;
+
+
+    /*  */
+    margin: 40px 0;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #bcaaa400;
+    -webkit-font-smoothing: antialiased;
+
+}
+.threesubcont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    /*  */
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #bcaaa400;
+    -webkit-font-smoothing: antialiased;
+
+}
+
+/* @media screen { 950
+} */
+
+
+
+
+
+/* -------------------------------- */
+
