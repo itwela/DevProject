@@ -1,0 +1,105 @@
+.con-title {
+  color: rgb(255, 255, 255);
+  letter-spacing: 5px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  align-content: center;
+  z-index: 6;
+}
+
+
+
+.nav ul {
+    list-style-type: none;
+    background-color: #ffffff;
+    font-weight: bold;
+    z-index: 2;
+
+
+  }
+
+  .nav li {
+    float: right;
+
+  }
+
+  .nav li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-family: l;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    transform: scalex(-1);
+    transform: scalez(-1);
+  }
+
+
+
+  .nav li :hover {
+    background-color: #0095ff00;
+  }
+
+/* USE VH, VW VARIABLES FOR INTEGERS
+TO MAKE PAGE RESPONSIVE!! */
+nav {
+  top: 45%;
+  position: fixed;
+  justify-content: space-between;
+  font-weight: bold;
+  z-index: 2;
+  transform:  translate(65vw) rotate(-90deg);
+  z-index: 60;
+}
+
+@media screen and (max-width: 850px) {
+
+  nav {
+    top: 45%;
+    position: fixed;
+    justify-content: space-between;
+    font-weight: bold;
+    z-index: 2;
+    transform:  translate(50vw) rotate(-90deg);
+    z-index: 60;
+  }
+
+}
+
+/*  */
+@media screen and (max-width: 600px) {
+
+  nav {
+    /* top: 45%; */
+    position: fixed;
+    justify-content: space-between;
+    z-index: 2;
+    transform:  translate(60vw) rotate(-90deg);
+    top: 55vw;
+    z-index: 60;
+  }
+
+  .nav li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-family: l;
+    text-align: center;
+    font-size: 10px;
+    padding: 0px;
+    text-decoration: none;
+    transform: scalex(-1);
+    transform: scalez(-1);
+    transform:  translate(25vw) rotate(90deg);
+  }
+
+
+
+  
+}
+
+
+  
+
+

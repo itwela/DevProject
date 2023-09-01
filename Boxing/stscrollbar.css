@@ -8,8 +8,8 @@
 
   /* Track */
   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px rgb(255, 255, 255); 
-    border-radius: 60px;
+    box-shadow: inset 50 50 50px #14131a; 
+    border-radius: 600px;
   }
    
   /* Handle */

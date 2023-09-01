@@ -7,60 +7,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>YO!</title>
   <nav class="nav">
+    
     <ul>
-      <li><a href="default.asp">Home</a></li>
-      <li><a href="about.asp">About</a></li>
-      <li><a href="news.asp">News</a></li>
-      <li><a href="contact.asp">Contact</a></li>
+      <li class="iconh"><a href="">---</a></li>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Projects</a></li>
+      <li><a href="ItwelaIbomuresume.pdf" download>Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+  <!-- Add scroll-behavior: smooth to the html element -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="con-title">
-    <div class="title">itwela ibomu</div>
+  <!-- Add id="home" to the home section -->
+  <div id="top"></div>
+  <div id="home" class="con-title">
+    <div class="ititle">itwela ibomu</div>
   </div>
 
   <section class="padding"></section>
   <section class="contcont">
-    <section class="three">
-      <h1 class="onesubtitle">I'm Itwela, a Creative Developer.</h1>
+    <section id="about" class="three">
+      <h1 class="onesubtitle">Hi, I'm Itwela, a Creative Developer.</h1>
     </section>
   </section>
 
+  <!-- Add id="about" to the about section -->
   <section class="onesubcont">
 
     <section class="four">
       <h1 class="onesubtitle">
-        here's some info about me.
+        About Me:
       </h1>
 
-      <section class="threesubcont">
+      <section class="six">
+        <h1 class="oneabout">
+          Over the past few years, I took up an interest in Software Development. <br>
+          It all started when i got an idea to make a small game in <br> Unity that showed me my love for developing.
+          <br>
+          <br>
+          Since then, I have worked on projects that span from <br>
+          trading indicators, to websites, to web scrapers. <br>
+          <br>
+          These days I'm powering through school <br>
+          and am constantly learning frameworks <br>
+          and ways to grow as a developer and person.
+        </h1>
 
-        <section class="five">
-          <h1 class="threesubtitle">
-            PROJECTS.
-          </h1>
+        <!-- Add id="resume" to the resume section -->
+        <section id="resume" class="threesubcont">
 
-          <section class="twosubcont">
+          <section class="five">
+            <h1 class="threesubtitle">
+              PROJECTS
+            </h1>
 
-            <div id="app" class="cardcontainer">
-              <card
-                data-image="https://images.unsplash.com/photo-1479660656269-197ebb83b540?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Coming Soon</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card
-                data-image="https://images.unsplash.com/photo-1479659929431-4342107adfc1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Web Scraper</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-              <card
-                data-image="https://images.unsplash.com/photo-1479644025832-60dabb8be2a1?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
-                <h1 slot="header">Coming Soon</h1>
-                <p slot="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              </card>
-            </div>
+            <section class="twosubcont">
+
+              <div id="app" class="cardcontainer">
+                <!-- <a href="pages/webscraperpage/webscraper.html"> -->
+                  <card data-image="">
+                    <h1 slot="header">Web Scraper</h1>
+                    <p slot="content">This pulls public financial record data from clerk.house.gov. provides you with special id that you can search online to find any financial record you desire.<br><br>Built with Python.</p>
+                  </card>
+                </a>
+                <!-- <a href="pages/tipage/tipage.html"> -->
+                  <card data-image="">
+                    <h1 slot="header">Trading Indicators</h1>
+                    <p slot="content">I have built countless trading indicators to track different phenomena in the market. Finance is also a huge passion of mine.<br><br> Built with Pinescript (a native tradingview scripting language).</p>
+                  </card>
+                </a>
+                <!-- <a href="pages/2Dugame/2dugame.html"> -->
+                  <card data-image="">
+                    <h1 slot="header">2D Unity Game</h1>
+                    <p slot="content"><br><br> I built a 2d platforming game in Unity. I learned many fundamentals creating this game including funtions, loops, creating ai's, etc <br><br> Built with C#.</p>
+                  </card>
+                </a>
+              </div>
+            </section>
+            <!-- Add id="contact" to the contact section -->
+            <section id="contact" class="seven">
+              <h1 class="contact">
+                Contact Me! <br>
+              </h1>
+            </section>
+          <section class='contactform'>
+            <form>      
+              <input name="name" type="text" class="feedback-input" placeholder="Name" />   
+              <input name="email" type="text" class="feedback-input" placeholder="Email" />
+              <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+              <input type="submit" value="SUBMIT"/>
+            </form>
+          </section>
           </section>
         </section>
 

@@ -18,11 +18,13 @@ h1+p, p+p {
   margin-top: 55px;
 }
 
+
 .cardcontainer {
-  padding: 40px 80px;
+  padding: 10px 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  z-index: 3;
 }
 
 
@@ -80,6 +82,7 @@ h1+p, p+p {
     inset rgba(#ffffff10, 0.5) 0 0 0 6px;
   transition: 1s $returnEasing;
   z-index: 5;
+  
 }
 
 .card-bg {
@@ -102,7 +105,7 @@ h1+p, p+p {
   padding: 20px;
   position: absolute;
   bottom: 0;
-  color: #fff;
+  color: #ffffff;
   transform: translateY(40%);
   transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
   
@@ -114,7 +117,7 @@ h1+p, p+p {
   
   * {
     position: relative;
-    z-index: 1;
+    z-index: 10;
   }
   
   &:after {
@@ -133,8 +136,10 @@ h1+p, p+p {
 }
 
 .card-info h1 {
-  font-family: "Playfair Display";
-  font-size: 36px;
+  font-family: l;
+  font-size: 33px;
   font-weight: 700;
   text-shadow: rgba(black, 0.5) 0 10px 10px;
+  z-index: 30;
+
 }

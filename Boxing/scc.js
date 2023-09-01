@@ -25,16 +25,10 @@ let mixer = null
  */
 
 // ADD FULL MODEL!!!
-
 const gltfLoader = new GLTFLoader()
 
 
-
-let myGLTF;
-
-
-// // idle guy
-gltfLoader.load('/lowpoly.glb',
+gltfLoader.load('/media/tree/low poly survival character.glb',
 
     (gltf) => {
         // const children = [...gltf.scene.children]
@@ -44,7 +38,7 @@ gltfLoader.load('/lowpoly.glb',
         //     scene.add(child)
         // }
         const textureLoader = new THREE.TextureLoader()
-        const matcapTexture = textureLoader.load('/3.png')
+        const matcapTexture = textureLoader.load('media/matcaps/8.png')
 
         // Material
         const material = new THREE.MeshMatcapMaterial({ matcap: matcapTexture }) 
@@ -64,9 +58,8 @@ gltfLoader.load('/lowpoly.glb',
 
 
         gltf.scene.scale.set(0.005, 0.005, 0.005)
-        gltf.scene.position.setX(-1.85,0,0)
+        gltf.scene.position.set(-0.3,0,0)
 
-        myGLTF = gltf;
 
 
         scene.add(gltf.scene)
@@ -74,6 +67,7 @@ gltfLoader.load('/lowpoly.glb',
   
     }
 )
+
 
 
 
@@ -104,14 +98,14 @@ scene.add(lightHelperone)//, gridHelper)
  * Sizes
  */
 const sizes = {
-    width: innerWidth / 2, 
-    height: innerHeight
+    width: window.innerWidth / 2, 
+    height: window.innerHeight
 }
 
 window.addEventListener('resize', () =>
 {
     // Update sizes
-    sizes.width = window.innerWidth 
+    sizes.width = window.innerWidth / 2
     sizes.height = window.innerHeight
 
     // Update camera
@@ -119,10 +113,8 @@ window.addEventListener('resize', () =>
     camera.updateProjectionMatrix()
 
     // Update renderer
-    renderer.setSize(sizes.width, sizes.height) 
+    renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
-
 })
 
 /**
@@ -133,21 +125,17 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(4, sizes.width / sizes.height, 0.1, 100)
-camera.position.z = 1
-camera.position.y = -3
-camera.position.x = 12.5
+const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 100)
+camera.position.z = 3
+camera.position.y = 3
 scene.add(camera)
 
 // Controls
 const controls = new OrbitControls(camera, canvas)
-// controls.target.set(4, -1.2)
+controls.target.set(0.2, 0.9, 0.5)
 controls.enableDamping = true
 controls.enablePan = true
 controls.enableZoom = false
-controls.enableRotate = false
-
-
 
 
 
@@ -165,10 +153,6 @@ renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
-
-// 
-
 
 
 /**
@@ -194,18 +178,8 @@ const tick = () =>
     // Update controls
     controls.update()
 
-        // Update glTF object scale
-        if (myGLTF) {
-            const scale = Math.min(scene.width) / 300;
-            myGLTF.scene.scale.set(0.005, 0.005, 0.005);
-        }
-
     // animations
-    if (myGLTF) {
-        myGLTF.scene.rotation.y += deltaTime / 4
-    } 
-    
-    
+
     // Render
     renderer.render(scene, camera)
 
@@ -238,4 +212,3 @@ window.addEventListener('keydown', (event) =>
 
 
 tick()
-
