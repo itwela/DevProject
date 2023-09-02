@@ -1,3 +1,8 @@
+.onesubtitle{
+    z-index: 3;
+    position: relative;
+}
+
 .three {
     text-align: center;
     z-index: 3;
@@ -27,6 +32,8 @@
 .six {
     text-align: center;
     z-index: 3;
+
+
 
 
 

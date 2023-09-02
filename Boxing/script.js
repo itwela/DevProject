@@ -104,7 +104,7 @@ scene.add(lightHelperone)//, gridHelper)
  * Sizes
  */
 const sizes = {
-    width: innerWidth / 2, 
+    width: innerWidth / 1, 
     height: innerHeight
 }
 
@@ -112,7 +112,7 @@ window.addEventListener('resize', () =>
 {
     // Update sizes
     sizes.width = window.innerWidth 
-    sizes.height = window.innerHeight
+    // sizes.height = window.innerHeight
 
     // Update camera
     camera.aspect = sizes.width / sizes.height
@@ -135,7 +135,7 @@ window.addEventListener('resize', () =>
 // Base camera
 const camera = new THREE.PerspectiveCamera(4, sizes.width / sizes.height, 0.1, 100)
 camera.position.z = 1
-camera.position.y = -3
+camera.position.y = -4
 camera.position.x = 12.5
 scene.add(camera)
 
@@ -202,7 +202,7 @@ const tick = () =>
 
     // animations
     if (myGLTF) {
-        myGLTF.scene.rotation.y += deltaTime / 4
+        myGLTF.scene.rotation.y += deltaTime * 1
     } 
     
     
