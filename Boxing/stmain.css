@@ -214,8 +214,8 @@ body, html{
         text-align: center;
         /* tech stack edits */
     
-        margin-top: 92%;
-        left: 0.3%;
+        margin-top: 80%;
+        left: 0.7%;
         width: 100vw;
     }
 
@@ -223,7 +223,7 @@ body, html{
 
         width: 100vw;
         left: 100%;
-        top: 41%;
+        top: 44%;
         margin-left: -11px;
         position: absolute;
         transform: translate(-50%, -50%);
@@ -231,6 +231,10 @@ body, html{
         z-index: 6;
     
     
+    }
+
+    body {
+        overflow-x: hidden;
     }
     
 
