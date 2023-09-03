@@ -34,7 +34,7 @@ let myGLTF;
 
 
 // // idle guy
-gltfLoader.load('/lowpoly.glb',
+gltfLoader.load('lowpoly.glb',
 
     (gltf) => {
         // const children = [...gltf.scene.children]
@@ -238,4 +238,3 @@ window.addEventListener('keydown', (event) =>
 
 
 tick()
-
