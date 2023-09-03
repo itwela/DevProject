@@ -42,14 +42,33 @@ body, html{
     background-image: linear-gradient(0deg, #1f2321 0%, #6c6c6c 100%); 
 }
 
+.padding1 {
+
+    width: 100vw;
+    left: 100%;
+    top: 57%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    align-content: center;
+    z-index: 6;
+
+
+}
 
 
 .padding {
     position: relative;
-    z-index: 3;
-    margin-top: 1000px;
-    width: 30vw;
-    height: vh;
+    z-index: 100;
+    /*  */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    /* tech stack edits */
+
+    margin-top: 33.5%;
+    left: 0.3%;
+    width: 100vw;
 }
 
 .webgl{
@@ -71,8 +90,9 @@ body, html{
     padding: 0 15px;
     bottom: 0;
     font-size: 80px;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     z-index: 3;
+    margin-top: 500px;
 
 
 
@@ -162,6 +182,7 @@ body, html{
         width: 80vw;
         margin: 0 auto;
         padding: 0 15px;
+        margin-top: 200%;
         bottom: 0;
         z-index: 3;
 
@@ -182,6 +203,36 @@ body, html{
         outline: none;
         z-index: 1;
     }
+
+    .padding {
+        position: relative;
+        z-index: 100;
+        /*  */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        /* tech stack edits */
+    
+        margin-top: 92%;
+        left: 0.3%;
+        width: 100vw;
+    }
+
+    .padding1 {
+
+        width: 100vw;
+        left: 100%;
+        top: 41%;
+        margin-left: -11px;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        align-content: center;
+        z-index: 6;
+    
+    
+    }
+    
 
     
 }
