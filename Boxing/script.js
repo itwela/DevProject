@@ -64,7 +64,9 @@ gltfLoader.load('lowpoly.glb',
 
 
         gltf.scene.scale.set(0.005, 0.005, 0.005)
-        gltf.scene.position.setX(-1.85,0,0)
+        gltf.scene.position.setX(-1.83)
+        gltf.scene.position.setY(0.07)
+        gltf.scene.position.setZ(0.07)
 
         myGLTF = gltf;
 

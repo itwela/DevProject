@@ -77,7 +77,6 @@ body, html{
     position: fixed;
     top: 0;
     left: 0;
-    margin-left: -300px;
     outline: none;
     z-index: 1;
 }
@@ -190,19 +189,16 @@ body, html{
     }
 
     .webgl{
-        width: 50%;
-        height: 50%;
+        width: 100vw;
+        height: 100vh;
         position: fixed;
         top: 0;
         left: 0;
-        margin-top: 78px;
-        margin-left: 0px;
-        opacity: 30%;
-
-    
         outline: none;
         z-index: 1;
-    }
+        opacity: 30%;
+
+        }
 
     .padding {
         position: relative;
