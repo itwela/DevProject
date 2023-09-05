@@ -6,5 +6,5 @@ Hello,
   use Github more to show how much work I do. I still have so much to learn and so I hope from looking at my projects you can see that.
 
 
-"Boxing" - is the source code for my portfolio site.
-"WebScraperCongress" - is the source code for my Webscraper.
+- "Boxing" - is the source code for my portfolio site. <br>
+- "WebScraperCongress" - is the source code for my Webscraper.
