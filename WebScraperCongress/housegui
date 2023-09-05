@@ -3,6 +3,7 @@
 import tkinter as tk
 from tkinter import ttk 
 from tkinter import messagebox
+from tkinter import font
 import subprocess
 import os
 import customtkinter
@@ -17,7 +18,7 @@ import openai
 
 
 # OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 #customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
@@ -29,7 +30,7 @@ app.geometry('720x580')
 app.title('CONGRESS WEB SCRAPER')
 
 #
-
+cfont = customtkinter.CTkFont(family='Arial', size=16)
 
 # funciton for year input (excited as i figured this out myself :)
 def startdownload():
@@ -65,14 +66,14 @@ def houseparse():
                 file_contents = file.read()
 
             # Use OpenAI GPT-3 API to generate text based on file_contents
-            prompt = f"Give me the last names and docid please. Dont do any kind of explinations just give me exactly what im asking for thank you: {file_contents}"
+            prompt = f"Give me the first and last names and docids in a table view please. Dont do any kind of explinations just give me exactly what im asking for thank you. Put it in the format like this, Name: , DocID:. so that means literally only give me this: Name: , DocID:   {file_contents}"
             response = openai.ChatCompletion.create (
                 model="gpt-4",
                 temperature=0,
                 messages=[
                     {
                 "role": "system",
-                "content": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the following text and summarize it into a concise paragraph."
+                "content": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the following text and summarize it into a easy to read table."
                     },
                     {
                 "role": "user",
@@ -85,6 +86,8 @@ def houseparse():
             generated_summary = response['choices'][0]['message']['content']
 
             print(generated_summary)
+            #success
+            finishLabel.configure(text='Success!', text_color='green')
             output_label.configure(text=generated_summary, justify="center")
     except subprocess.CalledProcessError as e:
         print("Error:", e)
@@ -130,7 +133,7 @@ finishLabel = customtkinter.CTkLabel(app, text='')
 finishLabel.pack()
 
 #custom data
-output_label = customtkinter.CTkLabel(app, text='')
+output_label = customtkinter.CTkLabel(app, text='', wraplength=500, font=cfont)
 output_label.place(relx=0.5, rely=0.8, anchor="center")
 
 # instructions
