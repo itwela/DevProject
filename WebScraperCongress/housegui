@@ -18,7 +18,7 @@ import openai
 
 
 # OpenAI API key
-openai.api_key = "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"
+openai.api_key = "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"
 
 #customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
