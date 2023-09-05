@@ -31,6 +31,7 @@ app.title('CONGRESS WEB SCRAPER')
 
 #
 cfont = customtkinter.CTkFont(family='Arial', size=16)
+tfont = customtkinter.CTkFont(family='Arial', size=24, weight='bold')
 
 # funciton for year input (excited as i figured this out myself :)
 def startdownload():
@@ -98,11 +99,11 @@ def houseparse():
 
 
 #title
-title = customtkinter.CTkLabel(app, text='CONGRESS PTR WEB SCRAPER')
+title = customtkinter.CTkLabel(app, text='CONGRESS PTR WEB SCRAPER', font=tfont)
 title.pack(padx=10, pady=25)
 
 #year text
-year_title = customtkinter.CTkLabel(app, text='Insert a year')
+year_title = customtkinter.CTkLabel(app, text='Insert a year', font=cfont)
 year_title.pack(padx=10, pady=10)
 
 #input for the year
@@ -115,7 +116,7 @@ download = customtkinter.CTkButton(app, text="Download", command=startdownload)
 download.pack(padx=10, pady=10)
 
 #year text
-last_name_title = customtkinter.CTkLabel(app, text='Insert a last name')
+last_name_title = customtkinter.CTkLabel(app, text='Insert a last name', font=cfont)
 last_name_title.pack(padx=10, pady=10)
 
 #input for the last name
