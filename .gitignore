@@ -1,0 +1,8 @@
+# Ignore API key file
+.env
+
+# Ignore log files
+*.log
+
+# Ignore the virtual environment directory
+venv/
