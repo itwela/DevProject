@@ -13,9 +13,11 @@ import downloadFile2023 as df23
 import house as ho
 import pandas as pd
 import fileinput
+import openai
 
 
-
+# OpenAI API key
+openai.api_key = "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"
 
 #customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
@@ -53,27 +55,43 @@ def houseparse():
 
         # Get a list of all .txt files in the current directory
         txt_files = [file for file in os.listdir() if file.endswith(".txt")]
-        
+
         # Sort the files by their creation time
         txt_files.sort(key=lambda x: os.path.getctime(x), reverse=True)
-        
+
         if txt_files:
             most_recent_txt_file = txt_files[0]
             with open(most_recent_txt_file, "r") as file:
                 file_contents = file.read()
-                output_label.configure(text=file_contents, justify="center")
 
-        
- 
+            # Use OpenAI GPT-3 API to generate text based on file_contents
+            prompt = f"Give me the last names and docid please. Dont do any kind of explinations just give me exactly what im asking for thank you: {file_contents}"
+            response = openai.ChatCompletion.create (
+                model="gpt-4",
+                temperature=0,
+                messages=[
+                    {
+                "role": "system",
+                "content": "You are a highly skilled AI trained in language comprehension and summarization. I would like you to read the following text and summarize it into a concise paragraph."
+                    },
+                    {
+                "role": "user",
+                "content": prompt
+                    }
+                ],
+                max_tokens=2000  # Adjust the max_tokens as needed
+             )
 
-        
+            generated_summary = response['choices'][0]['message']['content']
+
+            print(generated_summary)
+            output_label.configure(text=generated_summary, justify="center")
     except subprocess.CalledProcessError as e:
         print("Error:", e)
-
-        #success popup
-        #messagebox.showinfo("Success", "Success")
-        #---------------
-
+        # Handle the error
+    except Exception as e:
+        print("An error occurred:", str(e))
+        # Handle other exceptions
 
 
 #title

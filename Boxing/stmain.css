@@ -166,6 +166,9 @@ body, html{
 
 }
 
+a, a:active, a:visited {
+    color: white;
+}
 
 
 /* 
