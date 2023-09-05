@@ -1,1 +1,5 @@
 Prefix	Last	First	Suffix	FilingType	StateDst	Year	FilingDate	DocID
+Hon.	Banks	James E Hon		A	IN03	2022	2023-06-26	10055189
+Hon.	Banks	James E Hon		O	IN03	2022	2023-04-11	10051603
+-	Banks	Subrina		C	OK05	2022	2022-05-23	10048289
+-	Banks	Subrina		X	OK05	2022	2022-05-13	8218738

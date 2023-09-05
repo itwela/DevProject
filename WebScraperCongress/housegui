@@ -16,9 +16,19 @@ import pandas as pd
 import fileinput
 import openai
 
+# OpenAI API key setup start----
+from dotenv import load_dotenv
 
-# OpenAI API key
-openai.api_key = "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"
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
+
+if api_key is None:
+    raise Exception("API key not found in .env file")
+
+openai.api_key = api_key
+# OpenAI API key setup finish----
+
 
 #customtkinter.set_appearance_mode('Dark')
 customtkinter.set_default_color_theme('blue')
