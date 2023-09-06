@@ -8,6 +8,7 @@
   <script type="module" src="/sccard.js"></script>
   <script type="module" src="/scc.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://smtpjs.com/v3/setup.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hi, I'm Itwela</title>
   <nav class="nav">
@@ -102,7 +103,7 @@
                     special id that you can search online to find any financial record you desire.<br><br>Built with
                     Python.
                     <br>
-                    <a href="">see more</a>
+                    <a href="https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926?pvs=4">see more</a>
                   </p>
                 </card>
                 <!-- <a href="pages/tipage/tipage.html"> -->
@@ -112,7 +113,7 @@
                     market. Finance is also a huge passion of mine.<br><br> Built with Pinescript (a native tradingview
                     scripting language).
                     <br>
-                    <a href="">see more</a>
+                    <a href="https://topaz-mink-ddd.notion.site/Trading-Indicators-Documentation-Itwela-ba8a7cd763314bd19a50e4b0e3f62729?pvs=4">see more</a>
                   </p>
                 </card>
                 <!-- <a href="pages/2Dugame/2dugame.html"> -->
@@ -121,7 +122,7 @@
                   <p slot="content"><br><br> I built a 2d platforming game in Unity. I learned many fundamentals
                     creating this game including funtions, loops, creating ai's, etc <br><br> Built with C#.
                     <br>
-                    <a href="">see more</a>
+                    <a href="https://topaz-mink-ddd.notion.site/2D-Platformer-Documentation-Itwela-8e92227843b04187930910f62a62a046?pvs=4">see more</a>
                   </p>
                 </card>
               </div>
@@ -133,13 +134,32 @@
               </h1>
             </section>
             <section class='contactform'>
-              <form>
-                <input name="name" type="text" class="feedback-input" placeholder="Name" />
-                <input name="email" type="text" class="feedback-input" placeholder="Email" />
-                <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
+              <form onsubmit="sendEmail(); reset(); return false">
+                <input name="name" type="text" class="feedback-input" id="Name" />
+                <input name="email" type="text" class="feedback-input" id="Email" />
+                <textarea name="text" class="feedback-input" id="Comment"></textarea>
                 <input type="submit" value="SUBMIT" />
               </form>
             </section>
+            <script>
+
+              function sendEmail(){
+
+                Email.send({
+
+                  Host : "smtp.gmail.com",
+                  Username : "deanandnostrand@gmail.com",
+                  Password : "",
+                  To : "deanandnostrand@gmail.com",
+                  From : document.getElementById("Email").value,
+                  Subject : "New Contact Form Inquiry",
+                  Body: "This is the body",
+
+                });
+
+              };
+
+            </script>
           </section>
         </section>
 

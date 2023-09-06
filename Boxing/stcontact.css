@@ -6,6 +6,8 @@ form { max-width:300px; margin:50px auto; }
     src: url(./font/MADEOkineSansPERSONALUSE-BlackOutline.otf);
   }
 
+
+
 .feedback-input {
   width: 50vw;
   color:white;
@@ -23,6 +25,7 @@ form { max-width:300px; margin:50px auto; }
   box-sizing: border-box;
   outline:0;
 }
+
 
 .feedback-input:focus { border:1px solid #ffffff; }
 
