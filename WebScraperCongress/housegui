@@ -51,7 +51,7 @@ def startdownload():
         filename = "downloadFile{}.py".format(year)
         subprocess.call(["python", filename])
         #success
-        finishLabel.configure(text='Your files are ready!', text_color='green')
+        finishLabel.configure(text='Your files are ready!', text_color='#90ee90')
     except:
         #error
         finishLabel.configure(text='There has been an Error!', text_color='red')
