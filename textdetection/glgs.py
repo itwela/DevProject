@@ -1,7 +1,6 @@
 from PIL import Image
 import pytesseract
 import cv2
-import matplotlib.pyplot as plt
 import pyautogui as pa
 
 
@@ -15,18 +14,28 @@ import pyautogui as pa
 
 # print(img2char)
 
+nobimage = pa.locateCenterOnScreen("2nobuy.png")
+nosimage = pa.locateCenterOnScreen("4nosell.png")
 
 # opens tradingview window
-# pa.hotkey("alt", "esc")
+pa.hotkey("alt", "esc")
 
 # Function to buy once i get a better image identifier.
-# if x:
+if nobimage:
 #         opens buy panel guarenteed
-#         pa.hotkey("shift", "b")
+    pa.hotkey("shift", "b")
 #         locks in trade
-#         pa.hotkey("enter")
-#     else:
-#         pa.hotkey("alt", "esc")
+    pa.hotkey("enter")
+else:
+    pa.hotkey("alt", "esc")
+
+# if nosimage:
+# #         opens buy panel guarenteed
+#     pa.hotkey("shift", "s")
+# #         locks in trade
+#     pa.hotkey("enter")
+# else:
+#     pa.hotkey("alt", "esc")
 
 # confidence is a pyautogui parameter that helps with the confidence meter of identifying something
 # image = pa.locateCenterOnScreen("bflag.png", confidence=0.68)
