@@ -26,6 +26,7 @@ section.section = class shortcut
 .box = div class shortcut
 
 npx serv = starts a basic server for hthml site
+
 css: -------------------
 
 note tag = /* */ = shortcut = ctrl + /
@@ -42,6 +43,8 @@ body,html {
   margin: 0;
   padding: 0;
 }
+
+its s good practice ive seen to have 2 different media query size. 900 and 600
 
 -----------------------
 
