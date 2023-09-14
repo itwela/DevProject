@@ -1,5 +1,8 @@
-# git rm --cached .env
+#you have to commit the file empty to github first to ignore it:
 
-# git add .
-# git commit -m "Removed .env file"
-# git push origin master
+# gitignore method:
+    # git rm --cached .env
+
+    # git add .
+    # git commit -m "Removed .env file"
+    # git push origin master

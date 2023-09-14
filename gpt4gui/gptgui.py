@@ -31,7 +31,7 @@ customtkinter.set_appearance_mode('Dark')
 
 # window
 app = customtkinter.CTk()
-app.geometry('720x580')
+app.geometry('720x800')
 app.title('Yinsen')
 
 # font
@@ -81,12 +81,12 @@ def get_user_input():
 # ---------------------------------------------------------------------
 
 submit_button = customtkinter.CTkButton(app, text="Submit", font=gptfont, command=get_user_input, height=14, width=70)
-submit_button.place(relx=0.5, rely=0.44, anchor="center")
+submit_button.place(relx=0.5, rely=0.40, anchor="center")
 
 # 
 output_var = tk.StringVar()
-_output = customtkinter.CTkTextbox(app, font=gptfont, width=500, height=290)
-_output.place(relx=0.5, rely=0.73, anchor="center")
+_output = customtkinter.CTkTextbox(app, font=gptfont, width=600, height=390)
+_output.place(relx=0.5, rely=0.68, anchor="center")
 
 # ---------------------------------------------------------------------------
 
