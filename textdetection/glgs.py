@@ -39,7 +39,6 @@ buyfunction()
 
 
 
-
 # if nosimage:
 # #         opens buy panel guarenteed
 #     pa.hotkey("shift", "s")

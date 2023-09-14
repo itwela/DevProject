@@ -1,0 +1,5 @@
+# git rm --cached .env
+
+# git add .
+# git commit -m "Removed .env file"
+# git push origin master
