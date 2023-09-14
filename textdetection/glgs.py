@@ -1,6 +1,5 @@
 from PIL import Image
-import pytesseract
-import cv2
+import sys
 import pyautogui as pa
 
 
@@ -13,21 +12,33 @@ import pyautogui as pa
 # img2char = pytesseract.image_to_string(img)
 
 # print(img2char)
-
-nobimage = pa.locateCenterOnScreen("2nobuy.png")
-nosimage = pa.locateCenterOnScreen("4nosell.png")
-
-# opens tradingview window
 pa.hotkey("alt", "esc")
 
-# Function to buy once i get a better image identifier.
-if nobimage:
+
+
+nosimage = pa.locateCenterOnScreen("opensell.png", confidence=.90)
+nobimage = pa.locateCenterOnScreen("openbuy.png", confidence=.90)
+
+def buyfunction():
+    if nosimage:
 #         opens buy panel guarenteed
-    pa.hotkey("shift", "b")
+        pa.hotkey("shift", "s")
 #         locks in trade
-    pa.hotkey("enter")
-else:
-    pa.hotkey("alt", "esc")
+        pa.hotkey("enter")
+
+#     if nosimage:
+# # #         opens buy panel guarenteed
+#         pa.hotkey("shift", "s")
+# # #         locks in trade
+#         pa.hotkey("enter")
+        
+buyfunction()
+# opens tradingview window
+
+
+
+
+
 
 # if nosimage:
 # #         opens buy panel guarenteed

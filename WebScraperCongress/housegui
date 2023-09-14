@@ -1,13 +1,12 @@
 # This is a GUI for a web scraper that pulls PTR (Periodic Trading Records) from whoever I choose.
-
-m tkinter import ttk 
+import tkinter as tk
+from tkinter import ttk 
 from tkinter import messagebox
 from tkinter import font
 import subprocess
 import os
 import customtkinter
-imporimport tkinter as tk
-frot downloadFile2020 as df20
+import downloadFile2020 as df20
 import downloadFile2021 as df21
 import downloadFile2022 as df22
 import downloadFile2023 as df23
