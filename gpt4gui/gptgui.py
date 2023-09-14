@@ -43,13 +43,15 @@ tfont = customtkinter.CTkFont(family='Arial', size=24, weight='bold')
 prompt = ""
 
 #title
-title = customtkinter.CTkLabel(app, text='TALK TO GPT-4', font=tfont)
-title.pack(padx=10, pady=35)
+Atitle = customtkinter.CTkLabel(app, text='Hi Im Yinsen, Use me to:', font=gptfont)
+Atitle.pack(pady=10)
+Btitle = customtkinter.CTkLabel(app, text='TALK TO GPT-4', font=tfont)
+Btitle.pack(padx=10, pady=3)
 
 # 
 input_var = tk.StringVar()
 _input = customtkinter.CTkTextbox(app, font=gptfont, width=500, height=150)
-_input.place(relx=0.5, rely=0.27, anchor="center")
+_input.place(relx=0.5, rely=0.22, anchor="center")
 
 def get_user_input():
 
@@ -81,12 +83,12 @@ def get_user_input():
 # ---------------------------------------------------------------------
 
 submit_button = customtkinter.CTkButton(app, text="Submit", font=gptfont, command=get_user_input, height=14, width=70)
-submit_button.place(relx=0.5, rely=0.40, anchor="center")
+submit_button.place(relx=0.5, rely=0.35, anchor="center")
 
 # 
 output_var = tk.StringVar()
 _output = customtkinter.CTkTextbox(app, font=gptfont, width=600, height=390)
-_output.place(relx=0.5, rely=0.68, anchor="center")
+_output.place(relx=0.5, rely=0.63, anchor="center")
 
 # ---------------------------------------------------------------------------
 

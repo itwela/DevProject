@@ -1,5 +1,7 @@
 #you have to commit the file empty to github first to ignore it:
 
+# create the .gitinogre file
+
 # gitignore method:
     # git rm --cached .env
 
