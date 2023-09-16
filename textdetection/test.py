@@ -58,9 +58,7 @@ while True:
 #       # presses enter
         pa.hotkey("enter")
     else:
-        pa.moveTo(50,50)
-        time.sleep(60)
-        pa.moveTo(500,50)
+        pa.hotkey('alt')
         time.sleep(60)
 
 
