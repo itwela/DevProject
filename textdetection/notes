@@ -6,3 +6,5 @@ you may have hide the price chart by going to the "page with a plus on it" icon 
 //
 
 pip install streamlit fbprohpet plotly
+
+streamlit run 
