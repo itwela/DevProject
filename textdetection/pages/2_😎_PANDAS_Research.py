@@ -15,7 +15,7 @@ longdata = pd.read_csv('long.csv')
 bdfbal = pd.DataFrame(data,columns=['#', 'Profit', 'Balance'])
 # ------------------------------------
 col1, col2 = st.columns(2)
-col1.write("The good stuff:")
+col1.write("The Good Stuff:")
 col2.write("Raw Data:")
 col1.write(bdfbal)
 col2.write(data)
@@ -92,7 +92,7 @@ with col1:
         )
     st.altair_chart(bdfbchart)
 
-    st.subheader("We ended with $12,458.77!")
+    st.subheader("We ended with $12,458.77 Balance!")
 
 # ------------------------------------
 with col2:
@@ -173,6 +173,8 @@ with col2:
     st.subheader("But in the long only simulation, We ended with $14892.47!")
 
 st.title("This is a 17.79% increase in profits we've discovered just from analyzing the data we have so far.")
+
+st.write("I've learned alot so far about so many things and I plan to dive deeper into improving my algo.")
 
 # ------------------------------------
 
