@@ -3,6 +3,7 @@ import os
 import openai
 import time
 from PIL import Image 
+from streamlit_extras.stoggle import stoggle
 from dotenv import load_dotenv
 
 # OpenAI API key setup start----
@@ -152,7 +153,15 @@ if 'logged_in' in st.session_state.keys():
         signuptitle.empty()
         signuplink.empty()
         st.title("MealMaster:")
-        st.write('''Please choose a mode below.''')
+        stoggle(
+        "Instructions:",
+        """
+            For Ingredients mode: Provide what ingredients you would like a recipe with in the text field.
+            For the Dish mode: Provide a name of a dish you would like to make MealMaker will come up with a recipe for you. If you have any allergies, dont forget to put them in the allergy text field. Then click 'Cook me a meal!' to generate your recipe.
+        """,
+        ) 
+        st.divider()         
+        st.write('''Please choose a mode below:''')
         input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
         # Get user input
     if input_type == "Ingredients" :
