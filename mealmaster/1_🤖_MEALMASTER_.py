@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import openai
+import time
 from PIL import Image 
 from dotenv import load_dotenv
 
@@ -38,7 +39,14 @@ def chat_with_gpt(prompt):
         max_tokens=1000  # Adjust the max_tokens as needed
     )
 
+    prg = st.progress(0)
+  
+    for i in range(100):
+        time.sleep(0.1)
+        prg.progress(i+1)
+
     return response['choices'][0]['message']['content']
+
 
 
 
@@ -59,15 +67,18 @@ with col1:
         - Can input your own ingredients and have a recipie generated
         """
     )
-st.subheader(
-    """Click here to sign up:
-    """,
-)
 
-st.markdown(
+signuptitle = st.empty()
+with signuptitle:
+    st.subheader(
+    """Click the link below to start using today!
+    """)
+
+signuplink = st.empty()
+with signuplink:    
+    st.write(
     """https://buy.stripe.com/cN2eVu4CG0rg8Lu4gg
-    """,
-)
+    """)
 
 faq = st.empty()
 
@@ -145,6 +156,8 @@ if 'logged_in' in st.session_state.keys():
         login.empty()
         logintitle.empty()
         faq.empty()
+        signuptitle.empty()
+        signuplink.empty()
         st.title("MealMaster:")
         # Get user input
     if input_type == "Ingredients" :
