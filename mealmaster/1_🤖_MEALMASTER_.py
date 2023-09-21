@@ -27,7 +27,7 @@ def chat_with_gpt(prompt):
     openai.api_key = api_key
 
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         temperature=0,
         messages=[
             {

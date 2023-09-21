@@ -27,7 +27,7 @@ def chat_with_gpt4(prompt):
     openai.api_key = api_key
 
     gpt4response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo",
         temperature=0,
         messages=[
             {
@@ -201,7 +201,7 @@ if st.button("Cook me a meal!"):
     prg = st.progress(0)
   
 
-    recipe_response = chat_with_gpt3(prompt)
+    recipe_response = chat_with_gpt4(prompt)
             
     # Split the response into lines and find the recipe name
     lines = recipe_response.split('\n')
@@ -217,9 +217,9 @@ if st.button("Cook me a meal!"):
         time.sleep(0.2)
         prg.progress(i+1)
         # Output
-with st.container():
-    st.markdown(f"## {recipe_name}")
-    st.markdown(ingredients_and_steps)
+    with st.container():
+        st.markdown(f"## {recipe_name}")
+        st.markdown(ingredients_and_steps)
 
     #  ----------------------------------------
 
