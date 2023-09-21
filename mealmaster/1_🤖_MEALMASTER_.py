@@ -53,7 +53,7 @@ def chat_with_gpt(prompt):
 
 col1, col2 = st.columns((2,1))
 with col1:
-    st.markdown('## Welcome to MealMaster!')
+    st.markdown('## Welcome to MealMaster! 🥗')
     st.subheader("Recipies in seconds.")
     st.divider()
     st.markdown(
