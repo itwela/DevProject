@@ -55,7 +55,7 @@ def chat_with_gpt(prompt):
 col1, col2 = st.columns((2,1))
 with col1:
     mtitle = ('## Welcome to MealMaster! 🥗')
-    subhead = ("Recipies in seconds.")
+    subhead = ("Recipes in seconds.")
     def stream_example():
         for word in mtitle.split():
             yield word + " "
@@ -73,7 +73,7 @@ with col1:
         Features included:
         - Can add allergies / dietary restrictions
         - Can input just a name like "pasta" to get you started
-        - Can input your own ingredients and have a recipie generated
+        - Can input your own ingredients and have a recipe generated
         """
     )
 

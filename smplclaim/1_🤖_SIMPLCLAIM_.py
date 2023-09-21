@@ -23,10 +23,10 @@ openai.api_key = api_key
 
 
 # Function to communicate with ChatGPT
-def chat_with_gpt(prompt):
+def chat_with_gpt4(prompt):
     openai.api_key = api_key
 
-    response = openai.ChatCompletion.create(
+    gpt4response = openai.ChatCompletion.create(
         model="gpt-4",
         temperature=0,
         messages=[
@@ -43,8 +43,19 @@ def chat_with_gpt(prompt):
     )
             
 
-    return response['choices'][0]['message']['content']
+    return gpt4response['choices'][0]['message']['content']
 
+def chat_with_gpt3(prompt):
+    openai.api_key = api_key
+    response = openai.Completion.create(
+        engine="text-babbage-001",
+        prompt=prompt,
+        max_tokens=1000,
+        n=1,
+        stop=None
+    )
+
+    return response.choices[0].text.strip()
 
 
 
@@ -160,61 +171,55 @@ with st.sidebar:
 
 #  ----------------------------------------------------
 
-if 'logged_in' in st.session_state.keys():
-    if st.session_state['logged_in']:
-        login.empty()
-        logintitle.empty()
-        faq.empty()
-        signuptitle.empty()
-        signuplink.empty()
-        st.title("MealMaster:")
-        stoggle(
-        "Instructions:",
-        """
-            For Ingredients mode: Provide what ingredients you would like a recipe with in the text field.
-            For the Dish mode: Provide a name of a dish you would like to make MealMaker will come up with a recipe for you. If you have any allergies, dont forget to put them in the allergy text field. Then click 'Cook me a meal!' to generate your recipe.
-        """,
-        ) 
-        st.divider()         
-        st.write('''Please choose a mode below:''')
-        input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
-        # Get user input
-    if input_type == "Ingredients" :
-        allergies = st.text_input("Any Allergies? If not you can leave blank:")
-        ingredients = st.text_input("Enter ingredients separated by commas:")
-        prompt = f"Create a recipe using the following ingredients: {ingredients}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together. Add calories for the recipe as well"
-    else:
-        allergies = st.text_input("Any Allergies? If not you can leave blank:")
-        recipe_name = st.text_input("Enter the dish name:")
-        prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
+
+st.title("MealMaster:")
+stoggle(
+"Instructions:",
+"""
+For Ingredients mode: Provide what ingredients you would like a recipe with in the text field.
+For the Dish mode: Provide a name of a dish you would like to make MealMaker will come up with a recipe for you. If you have any allergies, dont forget to put them in the allergy text field. Then click 'Cook me a meal!' to generate your recipe.
+""",
+) 
+st.divider()         
+st.write('''Please choose a mode below:''')
+input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
+# Get user input
+if input_type == "Ingredients" :
+    allergies = st.text_input("Any Allergies? If not you can leave blank:")
+    ingredients = st.text_input("Enter ingredients separated by commas:")
+    prompt = f"Create a recipe using the following ingredients: {ingredients}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together. Add calories for the recipe as well"
+else:
+    allergies = st.text_input("Any Allergies? If not you can leave blank:")
+    recipe_name = st.text_input("Enter the dish name:")
+    prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
 
 
-    recipe_response = ""
+recipe_response = ""
 
-    # Send query to the chatbot
-    if st.button("Cook me a meal!"):
-        prg = st.progress(0)
+# Send query to the chatbot
+if st.button("Cook me a meal!"):
+    prg = st.progress(0)
   
 
-        recipe_response = chat_with_gpt(prompt)
-        
-        # Split the response into lines and find the recipe name
-        lines = recipe_response.split('\n')
-        recipe_name = ""
-        ingredients_and_steps = ""
-        for line in lines:
-            if "recipe name" in line.lower():
-                recipe_name = line.strip()
-            else:
-                ingredients_and_steps += line.strip() + "\n"
-        
-        for i in range(100):
-            time.sleep(0.2)
-            prg.progress(i+1)
+    recipe_response = chat_with_gpt3(prompt)
+            
+    # Split the response into lines and find the recipe name
+    lines = recipe_response.split('\n')
+    recipe_name = ""
+    ingredients_and_steps = ""
+    for line in lines:
+        if "recipe name" in line.lower():
+            recipe_name = line.strip()
+        else:
+            ingredients_and_steps += line.strip() + "\n"
+            
+    for i in range(100):
+        time.sleep(0.2)
+        prg.progress(i+1)
         # Output
-        with st.container():
-            st.markdown(f"## {recipe_name}")
-            st.markdown(ingredients_and_steps)
+with st.container():
+    st.markdown(f"## {recipe_name}")
+    st.markdown(ingredients_and_steps)
 
-#  ----------------------------------------
+    #  ----------------------------------------
 
