@@ -16,7 +16,6 @@ if api_key is None:
 openai.api_key = api_key
 # OpenAI API key setup finish----
 
-
 # -----------------------------------
 
 
