@@ -4,6 +4,7 @@ import openai
 import time
 from PIL import Image 
 from streamlit_extras.stoggle import stoggle
+from streamlit_extras.streaming_write import write
 from dotenv import load_dotenv
 
 # OpenAI API key setup start----
@@ -53,8 +54,19 @@ def chat_with_gpt(prompt):
 
 col1, col2 = st.columns((2,1))
 with col1:
-    st.markdown('## Welcome to MealMaster! 🥗')
-    st.subheader("Recipies in seconds.")
+    mtitle = ('## Welcome to MealMaster! 🥗')
+    subhead = ("Recipies in seconds.")
+    def stream_example():
+        for word in mtitle.split():
+            yield word + " "
+            time.sleep(0.4)
+
+    def stream_2():
+         for word in subhead.split():
+            yield word + " "
+            time.sleep(0.2)   
+    write(stream_example)
+    write(stream_2)
     st.divider()
     st.markdown(
         """      
