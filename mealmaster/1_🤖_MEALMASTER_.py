@@ -82,11 +82,11 @@ with faq.expander("Tips for use/FAQ's:"):
 # https://buy.stripe.com/cN2eVu4CG0rg8Lu4gg
 # 4b3a9z
 
-password = "4b3a9z"
+# password = "4b3a9z"
 
-with col2:
-    image = Image.open('cutlery-knife-svgrepo-com.png')
-    st.image(image)
+# with col2:
+#     image = Image.open('cutlery-knife-svgrepo-com.png')
+#     st.image(image)
 
 
 logintitle = st.empty()
