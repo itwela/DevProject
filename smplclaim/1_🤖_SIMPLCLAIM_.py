@@ -23,7 +23,7 @@ openai.api_key = api_key
 
 
 # Function to communicate with ChatGPT
-def chat_with_gpt4(prompt):
+def chat_with_gpt3_5(prompt):
     openai.api_key = api_key
 
     gpt4response = openai.ChatCompletion.create(
@@ -198,10 +198,10 @@ recipe_response = ""
 
 # Send query to the chatbot
 if st.button("Cook me a meal!"):
-    prg = st.progress(0)
-  
+    pbtext = ("Please wait, your recipe will load shortly......")
+    prg = st.progress(0, text=pbtext)
 
-    recipe_response = chat_with_gpt4(prompt)
+    recipe_response = chat_with_gpt3_5(prompt)
             
     # Split the response into lines and find the recipe name
     lines = recipe_response.split('\n')
@@ -213,9 +213,14 @@ if st.button("Cook me a meal!"):
         else:
             ingredients_and_steps += line.strip() + "\n"
             
-    for i in range(100):
+    for i in range(99):
         time.sleep(0.2)
-        prg.progress(i+1)
+        prg.progress(i+1, text=pbtext)
+    
+    for i in range(1):
+        time.sleep(0.2)
+        prg.progress(0, text="All done!")
+
         # Output
     with st.container():
         st.markdown(f"## {recipe_name}")

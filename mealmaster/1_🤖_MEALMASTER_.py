@@ -199,7 +199,8 @@ if 'logged_in' in st.session_state.keys():
 
     # Send query to the chatbot
     if st.button("Cook me a meal!"):
-        prg = st.progress(0)
+        pbtext = ("Please wait, your recipe will load shortly......")
+        prg = st.progress(0, text=pbtext)
   
 
         recipe_response = chat_with_gpt(prompt)
@@ -214,9 +215,15 @@ if 'logged_in' in st.session_state.keys():
             else:
                 ingredients_and_steps += line.strip() + "\n"
         
-        for i in range(100):
+        for i in range(99):
             time.sleep(0.2)
-            prg.progress(i+1)
+            prg.progress(i+1, text=pbtext)
+        
+        for i in range(1):
+            time.sleep(0.2)
+            prg.progress(100, text="All done!")
+
+        
         # Output
         with st.container():
             st.markdown(f"## {recipe_name}")
