@@ -45,6 +45,7 @@ def chat_with_gpt3_5(prompt):
 
     return gpt4response['choices'][0]['message']['content']
 
+
 def chat_with_gpt3(prompt):
     openai.api_key = api_key
     response = openai.Completion.create(
@@ -57,52 +58,22 @@ def chat_with_gpt3(prompt):
 
     return response.choices[0].text.strip()
 
-
-
 #  ------------------------------------------------------------
 
 
 
 col1, col2 = st.columns((2,1))
 with col1:
-    mtitle = ('## Welcome to MealMaster! 🥗')
-    subhead = ("Recipies in seconds.")
-    def stream_example():
+    mtitle = ('## Simpl Claim!')
+    def sclaim():
         for word in mtitle.split():
             yield word + " "
-            time.sleep(0.23)
-
-    def stream_2():
-         for word in subhead.split():
-            yield word + " "
-            time.sleep(0.13)   
-    write(stream_example)
-    write(stream_2)
+            time.sleep(0.23)  
+    write(sclaim)
     st.divider()
-    st.markdown(
-        """      
-        Features included:
-        - Can add allergies / dietary restrictions
-        - Can input just a name like "pasta" to get you started
-        - Can input your own ingredients and have a recipie generated
-        """
-    )
+ 
 
-signuptitle = st.empty()
-with signuptitle:
-    st.subheader(
-    """Click the link below to start using today!
-    """)
-
-signuplink = st.empty()
-with signuplink:    
-    st.write(
-    """https://buy.stripe.com/cN2eVu4CG0rg8Lu4gg
-    """)
-
-faq = st.empty()
-
-with faq.expander("Tips for use/FAQ's:"):
+with st.expander("Expander:"):
         st.write('''
            - Once you subscribe to MealMaster, you will see a thank you message on your screen with your password.
             This is the password you will enter in the password field below.
@@ -118,51 +89,22 @@ with faq.expander("Tips for use/FAQ's:"):
 #     image = Image.open('cutlery-knife-svgrepo-com.png')
 #     st.image(image)
 
-
-logintitle = st.empty()
-
-with logintitle:
-    st.subheader(
-    """Already signed up? Sign in below:
-    """,
-    )
-
-login = st.empty()
-
-with login.form("login_form"):
-
-    st.write("Login")
-    email = st.text_input('Enter Your Email')
-    password = st.text_input('Enter Your Password')
-    submitted = st.form_submit_button("Login")
-
-
-if submitted:
-    if password == "4b3a9z":
-        st.session_state['logged_in'] = True
-        st.text('Succesfully Logged In!')
-    if password == "nkosua":
-        st.session_state['logged_in'] = True
-        st.text('Succesfully Logged In!')
-    else:
-        st.text('Incorrect, login credentials.')
-        st.session_state['logged_in'] = False
-
-#  ---------------------------------------------------
-
-# Choose input type
+ 
 
 with st.sidebar:
-    st.header("Instructions")
+    st.header("Add what you know here:")
 
-    st.write('''  
-    - For Ingredients mode: Provide what ingredients you would like a recipe with in the text field.
-    ''')
-    st.write('''  
-    - For the Dish mode: Provide a name of a dish you would like to make MealMaker will come up with a recipe for you. If you have any allergies, dont forget to put them in the allergy text field. Then click 'Cook me a meal!' to generate your recipe.
-    ''')
-    st.caption("Brought to you by Itwela Ibomu")
-    
+    opt_form = st.form("Options Form")   
+    placeholder1 = opt_form.text_input("placeholder 1") 
+    placeholder2 = opt_form.text_input("placeholder 2")
+    placeholder3 = opt_form.text_input("placeholder 3") 
+    placeholder4 = opt_form.text_input("placeholder 4")
+    placeholder5 = opt_form.text_input("placeholder 5") 
+    placeholder6 = opt_form.text_input("placeholder 6")
+    add_data = opt_form.form_submit_button() 
+
+if add_data:
+    st.write(placeholder1,placeholder2,placeholder3,placeholder4,placeholder5,placeholder6)
 
 
 
@@ -172,7 +114,7 @@ with st.sidebar:
 #  ----------------------------------------------------
 
 
-st.title("MealMaster:")
+st.title("Simpl Claim:")
 stoggle(
 "Instructions:",
 """
@@ -181,20 +123,20 @@ For the Dish mode: Provide a name of a dish you would like to make MealMaker wil
 """,
 ) 
 st.divider()         
-st.write('''Please choose a mode below:''')
-input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
-# Get user input
-if input_type == "Ingredients" :
-    allergies = st.text_input("Any Allergies? If not you can leave blank:")
-    ingredients = st.text_input("Enter ingredients separated by commas:")
-    prompt = f"Create a recipe using the following ingredients: {ingredients}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together. Add calories for the recipe as well"
-else:
-    allergies = st.text_input("Any Allergies? If not you can leave blank:")
-    recipe_name = st.text_input("Enter the dish name:")
-    prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
+# st.write('''Please choose a mode below:''')
+# input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
+# # Get user input
+# if input_type == "Ingredients" :
+#     allergies = st.text_input("Any Allergies? If not you can leave blank:")
+#     ingredients = st.text_input("Enter ingredients separated by commas:")
+#     prompt = f"Create a recipe using the following ingredients: {ingredients}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together. Add calories for the recipe as well"
+# else:
+#     allergies = st.text_input("Any Allergies? If not you can leave blank:")
+#     recipe_name = st.text_input("Enter the dish name:")
+#     prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
 
 
-recipe_response = ""
+# recipe_response = ""
 
 # Send query to the chatbot
 if st.button("Cook me a meal!"):
@@ -219,7 +161,7 @@ if st.button("Cook me a meal!"):
     
     for i in range(1):
         time.sleep(0.2)
-        prg.progress(0, text="All done!")
+        prg.progress(100, text="All done!")
 
         # Output
     with st.container():
