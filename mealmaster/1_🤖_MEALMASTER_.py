@@ -98,7 +98,9 @@ with faq.expander("Tips for use/FAQ's:"):
         ''')
         st.write('''
            - Press the button ONCE and let the recipe generate. It may be slower than you're used to but your recipe is coming.
-            If you click the button more than once, it will restart your time.     
+        ''')
+        st.write('''
+            - If you click the button more than once, it will restart your time.     
         ''')
 
 # 48fnsl489dj
