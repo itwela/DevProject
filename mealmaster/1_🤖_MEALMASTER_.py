@@ -23,6 +23,7 @@ openai.api_key = api_key
 # Function to communicate with ChatGPT
 def chat_with_gpt(prompt):
     openai.api_key = api_key
+
     response = openai.ChatCompletion.create(
         model="gpt-4",
         temperature=0,
@@ -38,12 +39,7 @@ def chat_with_gpt(prompt):
             ],  
         max_tokens=1000  # Adjust the max_tokens as needed
     )
-
-    prg = st.progress(0)
-  
-    for i in range(100):
-        time.sleep(0.1)
-        prg.progress(i+1)
+            
 
     return response['choices'][0]['message']['content']
 
@@ -131,9 +127,6 @@ if submitted:
 
 with st.sidebar:
     st.header("Instructions")
-    st.write('''Please choose a mode below.''')
-    
-    input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
 
     st.write('''  
     - For Ingredients mode: Provide what ingredients you would like a recipe with in the text field.
@@ -159,6 +152,8 @@ if 'logged_in' in st.session_state.keys():
         signuptitle.empty()
         signuplink.empty()
         st.title("MealMaster:")
+        st.write('''Please choose a mode below.''')
+        input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
         # Get user input
     if input_type == "Ingredients" :
         allergies = st.text_input("Any Allergies? If not you can leave blank:")
@@ -169,10 +164,14 @@ if 'logged_in' in st.session_state.keys():
         recipe_name = st.text_input("Enter the dish name:")
         prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
 
+
     recipe_response = ""
 
     # Send query to the chatbot
     if st.button("Cook me a meal!"):
+        prg = st.progress(0)
+  
+
         recipe_response = chat_with_gpt(prompt)
         
         # Split the response into lines and find the recipe name
@@ -184,7 +183,10 @@ if 'logged_in' in st.session_state.keys():
                 recipe_name = line.strip()
             else:
                 ingredients_and_steps += line.strip() + "\n"
-
+        
+        for i in range(100):
+            time.sleep(0.2)
+            prg.progress(i+1)
         # Output
         with st.container():
             st.markdown(f"## {recipe_name}")
