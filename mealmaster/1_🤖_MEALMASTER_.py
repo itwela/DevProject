@@ -59,12 +59,12 @@ with col1:
     def stream_example():
         for word in mtitle.split():
             yield word + " "
-            time.sleep(0.4)
+            time.sleep(0.23)
 
     def stream_2():
          for word in subhead.split():
             yield word + " "
-            time.sleep(0.2)   
+            time.sleep(0.13)   
     write(stream_example)
     write(stream_2)
     st.divider()
@@ -128,6 +128,9 @@ with login.form("login_form"):
 
 if submitted:
     if password == "4b3a9z":
+        st.session_state['logged_in'] = True
+        st.text('Succesfully Logged In!')
+    if password == "nkosua":
         st.session_state['logged_in'] = True
         st.text('Succesfully Logged In!')
     else:
