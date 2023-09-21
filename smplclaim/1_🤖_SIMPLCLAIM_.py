@@ -96,10 +96,6 @@ with faq.expander("Tips for use/FAQ's:"):
            - Once you subscribe to MealMaster, you will see a thank you message on your screen with your password.
             This is the password you will enter in the password field below.
         ''')
-        st.write('''
-           - Press the button ONCE and let the recipe generate. It may be slower than you're used to but your recipe is coming.
-            If you click the button more than once, it will restart your time.     
-        ''')
 
 # 48fnsl489dj
 # https://buy.stripe.com/cN2eVu4CG0rg8Lu4gg
