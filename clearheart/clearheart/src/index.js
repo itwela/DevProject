@@ -1,12 +1,42 @@
-import {createRoot} from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
+import Experience from './Experience.js'
+import Homehtml from './homepage.js'
+import { Canvas } from '@react-three/fiber'
 
-const root = createRoot(document.querySelector('#root'));
 
-root.render(
-  <h1>CLEARHEART</h1>
-);
+const root = ReactDOM.createRoot(document.querySelector('#root'));
+const homepage = ReactDOM.createRoot(document.querySelector('#homepage'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+
+const camsettings = {
+    fov: 45,
+    zoom: 100,
+    near: 0.1,
+    far: 200
+  } 
+
+homepage.render(
+
+  <Homehtml />
+
+
+)
+
+
+// root.render(
+//   <>
+//     <Canvas 
+//       orthographic
+//       camera={ 
+//         camsettings 
+//       }
+//     >
+//     {/* <color 
+//       args={ [ 'black' ] } attach='background'
+//     /> */}
+//     <Experience/>
+//     </Canvas>
+//   </>
+// );
+
 
