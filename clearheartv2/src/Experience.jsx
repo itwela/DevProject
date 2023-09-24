@@ -10,8 +10,11 @@ extend ({ OrbitControls })
 
 export default function Experience()
 {
-    const { camera, gl } = useThree()
+    const { camera, gl } = useThree() 
+    // && useScroll()
     const circleRef = useRef()
+    const sparkleRef = useRef()
+ 
     
     useFrame((state, delta) =>
     {
@@ -27,7 +30,16 @@ export default function Experience()
         // state.camera.position.y = Math.sin(angle) * 1
         // state.camera.position.z = Math.cos(angle) * 6
         // state.camera.lookAt(0,0,0)
+        
     })
+
+    // useScroll ((state) =>
+    // {
+
+    //     state.camera.position.x = Math.sin(angle) * 8
+    //     state.camera.position.z = Math.cos(angle) * 8
+
+    // })
 
     return <>
 

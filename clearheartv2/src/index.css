@@ -1,0 +1,94 @@
+body
+{
+    overflow-x: hidden;
+}
+
+#root
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    text-align: center;
+
+}
+
+
+/* --------------------------fonts------------- */
+
+@font-face {
+  font-family: Main;
+  src: url("./font/rubik/Rubik-ExtraBold.ttf");
+
+}
+
+@font-face {
+  font-family: Main2;
+  src: url("./font/rubik/Rubik-Medium.ttf");
+
+}
+
+/*         ------------animations? */
+
+/* fade in */
+@keyframes fade-in {
+  
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+}
+
+}
+
+@keyframes drop-in {
+  
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+}
+
+}
+
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #FFF27A;
+  --gradient-color: linear-gradient(-25deg,#000000,#409DEE,#fff27a);
+  --title-color: #ffffff;
+  --text-color: #ffffff;
+  --white-color: #fff;
+  --body-color: #409DEE;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: Main, sans-serif;
+  --second-font: Main2, serif;
+  --biggest-font-size: 2.25rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+    
+  /*========== z index ==========*/
+  --padding: 0.5rem;
+  --margin: 2rem;
+
+}
+

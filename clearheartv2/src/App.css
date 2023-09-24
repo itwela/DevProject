@@ -1,0 +1,352 @@
+
+/* ---------------------- gradients */
+
+
+.tgradient-effect
+{
+
+  position: absolute;
+  width: 100vw;
+  height: 300vh;
+  background-image: var(--gradient-color);
+  margin: 0;
+  padding: 0;
+  transform: translateY(-7rem);
+  z-index: -1;
+
+}
+
+
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration-line: none;
+}
+
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+
+
+.main {
+  overflow: hidden; /* For animation */
+  /* border: 1px solid green; */
+  position: absolute;
+  width: 100vw;
+
+}
+
+/*=============== HEADER & NAV ===============*/
+
+.primary-header{ 
+
+  display: flex;
+  gap: var(--gap, 1rem);
+  align-items: center;
+  /* border: 1px solid red; */
+  margin: var(--margin);
+  padding: var(--padding);
+  justify-content: space-between;
+
+  animation: drop-in 3.18s ;
+
+}
+
+.primary-navigation{ 
+
+  display: flex;
+  gap: var(--gap, 5rem); 
+  padding: var(--padding); 
+}
+
+.logo
+{
+  max-width: 161px;
+}
+
+.chat-button
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  width: 5rem;
+  height: 3rem;
+  margin-top: -3.2%;
+  margin-left: -6%;
+  border-radius: 10px;
+}
+
+.chat-text
+{
+  color: black;
+}
+
+
+/* -------------------------------------------- */
+
+/* Navigation for mobile devices */
+
+
+/* Show menu */
+
+
+/* Change background header */
+
+
+/*=============== HOME GRID ===============*/
+.home
+{
+
+  height: 50vh;
+  margin: var(--margin);
+  /* border: 1px solid var(--first-color); */
+
+  /* here is how to set up a grid */
+  /* start here */
+  display: grid;
+  /* this is how may rows */
+  grid-template-columns: 1fr 1fr;
+  /* this is how many columns */
+  grid-template-rows: 50px 1fr 1fr 100px;
+  gap: 10px;
+  padding: 10px;
+  /* box-sizing: border-box; */
+
+}
+
+.home div {
+
+  /* border: 1px solid black; */
+}
+
+.body-grid-1{
+
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+  /* this "pt * unit makes the text scalabe 
+  when paired with vw. So, pt + vw = scalable text. */
+  font-size: 150pt;
+  font-size: 11vw;
+  text-align: center;
+
+  /* centering text in the div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fade-in 3.18s;
+
+}
+.body-grid-2{
+
+  /* centering text in the div */
+  display: flex 0 0 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 50pt;
+  font-size: 2.4vh;
+
+  animation: fade-in 6.18s;
+
+
+
+}
+.body-grid-3{
+
+    /* centering text in the div */
+    display: flex 0 0 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    font-size: 50pt;
+    font-size: 2.4vh;
+
+    animation: fade-in 6.18s;
+
+
+}
+
+/* ------------GAP */
+
+.gap
+{
+  width: 100vw;
+  height: 20vh;
+}
+
+/* --------------------------------- ABOUT ----------- */
+
+.about
+{
+
+  margin: var(--margin);
+  /* border: 1px solid var(--first-color); */
+
+  gap: 10px;
+  padding: 10px;
+
+}
+
+.about div
+{
+}
+
+.about-grid-title
+{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 150pt;
+  font-size: 11vw;
+}
+
+#about-grid-text
+{
+  justify-content: left;
+  align-items: center;
+  text-align: left;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 15pt;
+  font-size: 1.5vw;
+
+  margin: 0;
+  padding: 0;
+
+
+}
+
+#about-container
+{
+  border: 2px solid var(--first-color);
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: var(--margin);
+  padding: 2rem;
+}
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 760px) {
+
+
+  .primary-header{ 
+
+    gap: var(--gap, 0.1rem);
+    align-items: center;
+    /* border: 1px solid red; */
+    margin: 0;
+    padding: 0;
+  
+    animation: drop-in 3.18s ;
+  
+  }
+  
+  .primary-navigation{ 
+  
+    gap: var(--gap, 1rem); 
+    justify-content: center;
+    transform: translateX(-4rem);
+    scale: 0.7;
+
+
+  }
+  
+  .logo
+  {
+    max-width: 131px;
+  }
+  
+  .chat-button
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+    width: 4rem;
+    height: 3rem;
+    margin-top: -5.9%;
+    transform: translateX(3rem);
+    border-radius: 10px;
+  }
+  
+  .chat-text
+  {
+    color: black;
+  }
+  
+  #about-grid-text
+  {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 15pt;
+    font-size: 2.5vw;
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+}
+
+
+
+
+
+/* For taller devices */
+
+
+/* For medium devices */
+
+
+/* For large devices */
+
+
+/* For 2K resolutions (2048 x 1152) */
