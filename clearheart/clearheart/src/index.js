@@ -1,11 +1,10 @@
 import ReactDOM from 'react-dom/client'
 import Experience from './Experience.js'
-import Homehtml from './homepage.js'
 import { Canvas } from '@react-three/fiber'
+import "./index.css"
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
-const homepage = ReactDOM.createRoot(document.querySelector('#homepage'));
 
 
 const camsettings = {
@@ -15,15 +14,12 @@ const camsettings = {
     far: 200
   } 
 
-homepage.render(
-
-  <Homehtml />
 
 
-)
 
 
-// root.render(
+
+// root.render (
 //   <>
 //     <Canvas 
 //       orthographic
@@ -37,6 +33,6 @@ homepage.render(
 //     <Experience/>
 //     </Canvas>
 //   </>
-// );
-
+  
+// )
 
