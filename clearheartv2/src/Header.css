@@ -11,13 +11,14 @@
     justify-content: space-between;
     margin: 0;
     animation: drop-in 3.18s ;
-    max-height: 13vh;
+    max-height: 10vh;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     z-index: 1;
     transition: all 1s ease;
+    font-size: medium;
 
     background-color: rgba(255, 255, 255, 0.075);
   
@@ -29,8 +30,7 @@
   
     display: flex;
     gap: var(--gap, 5rem); 
-    padding-right: 5rem;
-    
+    padding-right: 5rem;    
   
   
   }
@@ -45,6 +45,16 @@
     color: white;
   }
   
+
+
+  a:not(#ctoday):hover{ 
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 2rem;
+    padding: var(--padding);
+    transition:  0.618s ease-in-out;
+  }
+
+
   
   /* -------------------------------------------- */
 
@@ -90,7 +100,7 @@
     }
 
     .primary-navigation:not(.chat-text){ 
-      font-size: medium;
+      font-size: small;
     }
     
     .logo

@@ -38,9 +38,10 @@
   
   }
 
+
   /* ------ Header Animations (js) ------ */
 
   .primary-header.scrolled {
-    background-color: #b4b4b43f; /* color after scrolling */
+    background-color: var(--body-color); /* color after scrolling */
   }
 

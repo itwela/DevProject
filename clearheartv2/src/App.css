@@ -91,9 +91,10 @@
   /* this is how may rows */
   grid-template-columns: 1fr 1fr;
   /* this is how many columns */
-  grid-template-rows: 50px 1fr 1fr 100px;
+  grid-template-rows: 50px 1fr 1fr 1fr 100px;
   gap: 10px;
   padding: 10px;
+  padding-top: 10rem;
   /* box-sizing: border-box; */
 
 }
@@ -109,13 +110,14 @@
   grid-column-start: 1;
   grid-column-end: 4;
   grid-row-start: 1;
-  grid-row-end: 4;
+  grid-row-end: 2;
 
   /* this "pt * unit makes the text scalabe 
   when paired with vw. So, pt + vw = scalable text. */
   font-size: 150pt;
   font-size: 11vw;
   text-align: center;
+
 
   /* centering text in the div */
   display: flex;
@@ -125,6 +127,24 @@
   animation: fade-in-2 8.18s;
 
 }
+
+#title-clearheart
+{
+  border: 4px double rgb(255, 255, 255);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 4rem;
+  transition: all 0.618s ease-in-out;
+
+}
+
+#title-clearheart:hover
+{
+  padding: 2.1rem;
+  transition: all 0.618s ease-in-out;
+
+}
+
 .body-grid-2{
 
   /* centering text in the div */
@@ -136,11 +156,29 @@
   font-size: 50pt;
   font-size: 2.4vh;
 
+  padding-top: 8rem;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+
   animation: fade-in 6.18s;
+
+  transition: all 0.618s ease-in-out;
+
 
 
 
 }
+
+.body-grid-2:hover
+{
+  color: var(--first-color);
+  transition: all 0.618s ease-in-out;
+}
+
 .body-grid-3{
 
     /* centering text in the div */
@@ -152,10 +190,59 @@
     font-size: 50pt;
     font-size: 2.4vh;
 
-    animation: fade-in 6.18s;
+    padding-top: 8rem;
 
+    grid-row-start: 2;
+    grid-row-end: 2;
+
+
+    animation: fade-in 6.18s;
+    transition: all 0.618s ease-in-out;
 
 }
+
+.body-grid-3:hover
+{
+  color: var(--first-color);
+  transition: all 0.618s ease-in-out;
+}
+
+.body-grid-4{
+
+  /* centering text in the div */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 50pt;
+  font-size: 2.4vh;
+
+  padding-top: 3rem;
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 3;
+
+  animation: fade-in 6.18s;
+
+}
+
+#ctoday
+{
+  border: 1px solid white;
+  padding: 2rem;
+  border-radius: 4rem;
+  transition: all 0.618s ease-in-out;
+}
+
+#ctoday:hover
+{
+  background-color: black;
+  transition: all 0.618s ease-in-out;
+}
+
 
 /* ------------GAP */
 
@@ -225,6 +312,16 @@
   flex-wrap: wrap;
   margin: var(--margin);
   padding: 2rem;
+  transition: all 0.218s ease-in-out;
+
+}
+
+#about-container:hover
+{
+  border: 2px solid var(--second-color);
+  background-color: rgba(0, 0, 0, 0.099);
+  transition: all 0.318s ease-in-out;
+
 }
 
 /* --------------- TEAM *-------------------------------------------*/ 
