@@ -122,7 +122,7 @@
   justify-content: center;
   align-items: center;
 
-  animation: fade-in 3.18s;
+  animation: fade-in-2 8.18s;
 
 }
 .body-grid-2{
@@ -283,6 +283,7 @@
   flex-wrap: wrap;
 
 }
+
 
 }
 
