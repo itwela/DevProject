@@ -4,6 +4,7 @@ import Experience from './Experience.jsx'
 import { Canvas } from '@react-three/fiber'
 import "./index.css"
 
+
 const camsettings = 
 {
   fov: 45,

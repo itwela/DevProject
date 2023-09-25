@@ -34,7 +34,7 @@
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  border: 3px solid var(--first-color);
+  outline: 3px solid var(--first-color);
   background: #00000000;
   margin-bottom: 1rem;
   top: 50%;

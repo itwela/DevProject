@@ -47,24 +47,6 @@
   max-width: 161px;
 }
 
-.chat-button
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--first-color);
-  width: 5rem;
-  height: 3rem;
-  margin-top: -3.2%;
-  margin-left: -6%;
-  border-radius: 10px;
-}
-
-.chat-text
-{
-  color: #292826;
-}
-
 
 /* -------------------------------------------- */
 
@@ -130,18 +112,22 @@
 
 #title-clearheart
 {
-  border: 4px double rgb(255, 255, 255);
+  border: 0px solid rgb(238, 238, 238);
   padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
   border-radius: 4rem;
   transition: all 0.618s ease-in-out;
+  color: rgb(255, 255, 255);
 
 }
 
 #title-clearheart:hover
 {
-  padding: 2.1rem;
   transition: all 0.618s ease-in-out;
+  border: 2px solid white;
+
 
 }
 
@@ -231,7 +217,7 @@
 
 #ctoday
 {
-  border: 1px solid white;
+  outline: 1px solid white;
   padding: 2rem;
   border-radius: 4rem;
   transition: all 0.618s ease-in-out;
@@ -239,7 +225,8 @@
 
 #ctoday:hover
 {
-  background-color: black;
+  background-color: var(--body-color);
+  outline: 0px solid white;
   transition: all 0.618s ease-in-out;
 }
 
@@ -306,7 +293,7 @@
 
 #about-container
 {
-  border: 2px solid var(--first-color);
+  outline: 1px solid var(--first-color);
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -318,7 +305,7 @@
 
 #about-container:hover
 {
-  border: 2px solid var(--second-color);
+  outline: 0px solid var(--body-color);
   background-color: rgba(0, 0, 0, 0.099);
   transition: all 0.318s ease-in-out;
 
@@ -346,6 +333,14 @@
 /* For small devices */
 @media screen and (max-width: 760px) {
 
+
+  .home
+  {
+
+    padding-top: 2rem;
+    /* box-sizing: border-box; */
+
+  }
   
   #about-grid-text
   {
@@ -366,7 +361,7 @@
 
   #about-container
 {
-  border: 2px solid var(--first-color);
+  outline: 2px solid var(--first-color);
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
