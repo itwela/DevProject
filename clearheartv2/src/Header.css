@@ -1,0 +1,132 @@
+
+/*=============== HEADER & NAV ===============*/
+
+.primary-header{ 
+
+    display: flex;
+    gap: var(--gap, 1rem);
+    align-items: center;
+    /* border: 1px solid red; */
+    padding-right: 5rem;
+    justify-content: space-between;
+    margin: 0;
+    animation: drop-in 3.18s ;
+    max-height: 13vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 1;
+    transition: all 1s ease;
+
+    background-color: rgba(255, 255, 255, 0.075);
+  
+  }
+
+
+  
+  .primary-navigation{ 
+  
+    display: flex;
+    gap: var(--gap, 5rem); 
+    padding-right: 5rem;
+    
+  
+  
+  }
+  
+  .logo
+  {
+    max-width: 140px;
+  }
+  
+  .chat-button
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+    width: 5rem;
+    height: 3rem;
+    margin-top: -2.7%;
+    margin-left: -6%;
+    border-radius: 10px;
+  }
+  
+  .chat-text
+  {
+    color: #ffffff;
+    font-size: large;
+  }
+  
+  
+  /* -------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  /*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 760px) {
+
+
+    .primary-header{ 
+  
+      gap: var(--gap, 0.1rem);
+      align-items: center;
+      /* border: 1px solid red; */
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    
+      animation: drop-in 3.18s ;
+
+    
+    }
+    
+    .primary-navigation{ 
+    
+      gap: var(--gap, 1rem); 
+      justify-content: center;
+  
+    }
+
+    .primary-navigation:not(.chat-text){ 
+      font-size: medium;
+    }
+    
+    .logo
+    {
+      max-width: 131px;
+      height: 100px;
+    }
+    
+    .chat-button
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--first-color);
+      width: 3.6rem;
+      height: 2rem;
+      transform: translateX(3rem);
+      border-radius: 10px;
+    }
+    
+    .chat-text
+    {
+      color: rgb(255, 255, 255);
+    }
+}

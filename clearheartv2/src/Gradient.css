@@ -1,0 +1,16 @@
+
+/* ---------------------- gradients */
+.tgradient-effect
+{
+
+  position: absolute;
+  width: 100vw;
+  height: 600vh;
+  background-image: var(--gradient-color);
+  margin: 0;
+  padding: 0;
+  transform: translateY(-7rem);
+  z-index: -1;
+
+}
+

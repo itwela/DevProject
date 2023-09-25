@@ -1,0 +1,108 @@
+.team {
+  text-align: center;
+  position: relative;
+}
+
+.team div
+{
+  /* border: 1px solid var(--first-color); */
+
+}
+
+/* --------------------------------------------- Text */
+
+.text-half-title
+{
+  font-size: var(  --biggest-font-size);
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin: var(--margin);
+}
+
+
+
+.team .text-half-title {
+  text-align: left; 
+}
+
+
+/*-----------------------------------  Pictures */
+
+#circle{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 3px solid var(--first-color);
+  background: #00000000;
+  margin-bottom: 1rem;
+  top: 50%;
+  left: 50%;
+  
+
+}
+
+.text-half-one, .text-half-two, .text-half-three, .text-half-four, .text-half-five
+{
+
+  margin: var(--margin);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#lorem
+{
+  color: #00000000;
+}
+
+
+@media screen and (max-width: 750px) {
+
+
+  .text-half-one, .text-half-two, .text-half-three, .text-half-four, .text-half-five
+  {
+  
+    margin: var(--margin);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: wrap;
+    font-size: var(--mobile-font-size);
+  
+
+}
+
+}
+
+
+/* .text-half-one
+{
+  font-size: var(--small-font-size);
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+
+  text-align: center;
+
+  padding: var(--margin);
+} */
+
+/* .text-half-four
+{
+  font-size: var(--small-font-size);
+
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 4;
+
+  text-align: center;
+
+  padding: var(--margin);
+}  */

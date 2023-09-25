@@ -1,63 +1,19 @@
 
-/* ---------------------- gradients */
-
-
-.tgradient-effect
-{
-
-  position: absolute;
-  width: 100vw;
-  height: 300vh;
-  background-image: var(--gradient-color);
-  margin: 0;
-  padding: 0;
-  transform: translateY(-7rem);
-  z-index: -1;
-
-}
-
-
-
-/*========== Responsive typography ==========*/
+/* ========== Responsive typography ==========
 @media screen and (min-width: 1024px) {
   :root {
     --biggest-font-size: 4rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
   }
-}
-
-/*=============== BASE ===============*/
-* {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
-  color: var(--text-color);
-}
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: var(--text-color);
-  text-decoration-line: none;
-}
-
-
-/*=============== REUSABLE CSS CLASSES ===============*/
-
+} */
 
 .main {
   overflow: hidden; /* For animation */
   /* border: 1px solid green; */
   position: absolute;
   width: 100vw;
+
 
 }
 
@@ -82,6 +38,8 @@ a {
   display: flex;
   gap: var(--gap, 5rem); 
   padding: var(--padding); 
+
+
 }
 
 .logo
@@ -104,7 +62,7 @@ a {
 
 .chat-text
 {
-  color: black;
+  color: #292826;
 }
 
 
@@ -216,8 +174,13 @@ a {
   /* border: 1px solid var(--first-color); */
 
   gap: 10px;
-  padding: 10px;
+  padding-bottom: 10%;
 
+}
+
+#big-about
+{
+  font-size: x-large;
 }
 
 .about div
@@ -264,58 +227,28 @@ a {
   padding: 2rem;
 }
 
+/* --------------- TEAM *-------------------------------------------*/ 
 
+
+
+.team
+{
+  margin: var(--margin);
+  padding: var(--padding);
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  /* border: 1px solid var(--first-color); */
+  transform: translateY(2rem);
+}
+
+/* ----------------------------------------------------------- */
 
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 760px) {
 
-
-  .primary-header{ 
-
-    gap: var(--gap, 0.1rem);
-    align-items: center;
-    /* border: 1px solid red; */
-    margin: 0;
-    padding: 0;
-  
-    animation: drop-in 3.18s ;
-  
-  }
-  
-  .primary-navigation{ 
-  
-    gap: var(--gap, 1rem); 
-    justify-content: center;
-    transform: translateX(-4rem);
-    scale: 0.7;
-
-
-  }
-  
-  .logo
-  {
-    max-width: 131px;
-  }
-  
-  .chat-button
-  {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--first-color);
-    width: 4rem;
-    height: 3rem;
-    margin-top: -5.9%;
-    transform: translateX(3rem);
-    border-radius: 10px;
-  }
-  
-  .chat-text
-  {
-    color: black;
-  }
   
   #about-grid-text
   {
@@ -332,6 +265,50 @@ a {
     margin: 0;
     padding: 0;
 
+  }
+
+  #about-container
+{
+  border: 2px solid var(--first-color);
+  border-radius: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  padding: 1.2rem;
+}
+
+.team
+{
+
+  flex-wrap: wrap;
+
+}
+
+}
+
+
+@media screen and (max-width: 500px) {
+
+  #about-grid-text
+  {
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 15pt;
+    font-size: 4.0vw;
+
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .about
+  {
+    margin: 10px;
   }
 
 }
