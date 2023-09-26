@@ -112,21 +112,47 @@
 
 #title-clearheart
 {
-  border: 0px solid rgb(238, 238, 238);
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
   border-radius: 4rem;
-  transition: all 0.618s ease-in-out;
-  color: rgb(255, 255, 255);
+  transition: all 1.618s ease-in-out;
+  /* color: rgb(255, 255, 255); */
 
+
+}
+
+@keyframes textShine {
+  to {
+    background-position: 200% center;
+    
+  }
 }
 
 #title-clearheart:hover
 {
-  transition: all 0.618s ease-in-out;
-  border: 2px solid white;
+  transition: all 1.618s ease-in-out;
+    
+  background: linear-gradient(
+    -25deg,
+    #ffffff 0%,
+    #e4e4e4 10%,
+    #409DEE 40%,
+    #f8a909 60%,
+    #FFF27A 70%,
+    #e7e7e7 88%,
+    #ffffff 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  animation: textShine 5s linear infinite;
 
 
 }
@@ -293,7 +319,7 @@
 
 #about-container
 {
-  outline: 1px solid var(--first-color);
+  outline: 1px solid white;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -361,7 +387,7 @@
 
   #about-container
 {
-  outline: 2px solid var(--first-color);
+  outline: 2px solid white;
   border-radius: 30px;
   display: flex;
   flex-wrap: wrap;

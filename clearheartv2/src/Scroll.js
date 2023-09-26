@@ -7,3 +7,5 @@ window.onscroll = function() {
       navbar.classList.remove('scrolled');
     }
 }
+
+// ----------- hide team text ---------

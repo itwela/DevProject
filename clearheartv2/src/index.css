@@ -71,7 +71,7 @@ body
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: #FFF27A;
-  --gradient-color: linear-gradient(60deg,#000000,#409DEE,#fff27a);
+  --gradient-color: linear-gradient(-60deg,#000000,#409DEE,#f2e35d, #409DEE);
   --title-color: #ffffff;
   --text-color: #ffffff;
   --white-color: #fff;

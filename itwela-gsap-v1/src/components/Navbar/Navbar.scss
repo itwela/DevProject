@@ -1,0 +1,170 @@
+
+
+.nav-close
+{
+    position: absolute;
+    right: 2em;
+    top: 2em;
+}
+
+
+
+.overlay
+{
+    position: fixed;
+    background: #fffeff15;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    clip-path: circle(0%);
+    
+    
+}
+
+
+.menu
+{
+    display: grid;
+    text-align: center;
+    place-content: center;
+    height: 100vh;
+    background-color: #707070;
+    text-transform: uppercase;
+}   
+
+.-nav
+{
+    margin: 0;
+    padding: 0;
+    place-content: center;    
+    display: grid;
+    height: 100vh;
+    
+
+    align-items: center;
+    
+
+    
+}
+
+.navbar-logo
+{
+    animation: hover 5s ease-in-out infinite;
+    position: fixed;
+}
+
+
+
+.menu-container {
+
+    opacity: 0;
+    transform: translateY(-61.8px);
+
+    .home-nav-bt
+    {
+        display: block;
+        
+        padding: .4em 2em .4em;
+        font-family: main;
+        font-size: 1.618em;
+        margin-top: 1.618em;
+    
+
+         &:hover{
+        outline: 1px solid rgb(255, 255, 255);
+        border-radius: 2em;
+        scale: 1.1;
+        }
+
+    }
+
+     li a
+    {
+        display: block;
+        
+        padding: .4em 2em .4em;
+        font-family: main;
+        font-size: 1.618em;
+        margin-top: 1.618em;
+    
+
+         &:hover{
+        outline: 1px solid rgb(255, 255, 255);
+        border-radius: 2em;
+        scale: 1.1;
+        }
+
+
+    }
+}
+
+.hello-category
+{
+    font-size: 4.5em;
+
+
+}
+
+
+
+#close-bt
+{
+    cursor: pointer;
+    animation: hover 2s infinite;
+    transition: all 2s ease-in-out;
+    align-content: center;
+
+    &:hover
+    {
+        animation: hover 0.7s step-start;
+    }
+}
+
+
+@keyframes hover {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+.hoverEffect {
+    animation: hover 1s infinite;
+}
+
+
+.navbar-logo
+{
+    position: absolute;
+    width: 80px;
+    outline: .618px solid;
+    border-radius: 3.618em;
+    cursor: pointer;
+    top: 0;
+    margin: 2em;
+    transition: all 0.31s ease-in-out;
+
+    &:hover{
+        scale: 1.1;
+        outline: 3.618px dotted;
+        transition: all 0.11s ease-in-out;
+    }
+}
+
+@media screen and (max-height: 600px){ 
+    
+    .menu{
+        margin: 0;
+        padding: 0;
+
+            li a
+            {
+                margin-top: -5%;
+            }
+    }
+
+
+
+}

@@ -30,14 +30,15 @@
   
     display: flex;
     gap: var(--gap, 5rem); 
-    padding-right: 5rem;    
+    padding-right: 4rem;    
   
   
   }
   
   .logo
   {
-    max-width: 140px;
+    max-width: 80px;
+    padding: 1rem;
   }
   
   .the-cb
@@ -85,7 +86,7 @@
       /* border: 1px solid red; */
       margin: 0;
       padding: 0;
-      justify-content: center;
+      justify-content: space-between;
     
       animation: drop-in 3.18s ;
 
@@ -105,8 +106,8 @@
     
     .logo
     {
-      max-width: 131px;
-      height: 100px;
+      max-width: 80px;
+      height: 80px;
     }
     
 }

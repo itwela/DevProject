@@ -21,26 +21,8 @@
   margin: var(--margin);
 }
 
-
-
 .team .text-half-title {
   text-align: left; 
-}
-
-
-/*-----------------------------------  Pictures */
-
-#circle{
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-  outline: 3px solid var(--first-color);
-  background: #00000000;
-  margin-bottom: 1rem;
-  top: 50%;
-  left: 50%;
-  
-
 }
 
 .text-half-one, .text-half-two, .text-half-three, .text-half-four, .text-half-five
@@ -51,13 +33,104 @@
   justify-content: center;
   display: flex;
   flex-direction: column;
+  
+}
+
+
+#ab-text {
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: left;
+  padding: 20px;
+  height: auto;
 
 }
 
-#lorem
+#ab-text:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.099);
+  transition: all 0.318s ease-in-out;
+  border-radius: 1rem;
+}
+
+#ital-text
 {
-  color: #00000000;
+  color: var(--first-color);
 }
+
+/*-----------------------------------  Pictures */
+
+
+/* ----------------- Social media icons -- */
+.socials-cont
+{
+  width: 5rem;
+  height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  transition: opacity 0.5s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.099);
+  border-radius: 0.5rem;
+  
+}
+
+
+
+
+
+.socials-circles-1, .socials-circles-2
+{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  top: 5%;
+  left: 50%;
+}
+
+.socials-circles-1
+{
+ background-image: url('../public/icons8-instagram-48.png'); 
+ background-repeat: no-repeat;
+ background-size: cover;
+
+}
+
+.socials-circles-2
+{
+  background-image: url('../public/icons8-linkedin-48.png'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+/* ---------------- profile pics */
+
+#circle{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  outline: 3px solid white;
+  margin-bottom: 1rem;
+  top: 50%;
+  left: 50%;
+  
+
+}
+
+.circle-2
+{
+  background-image: url("../public/headshot-kw.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 
 
 @media screen and (max-width: 750px) {
@@ -78,6 +151,12 @@
 
 .team .text-half-title {
   text-align: center; 
+}
+
+#ab-text {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-align: center;
 }
 
 }
