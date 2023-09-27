@@ -1,0 +1,20 @@
+.hero-wrapper
+{
+
+}
+
+.hero-container
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+}
+
+#grid-column
+{
+    background-color: #ddd;
+    padding: 10px;
+    
+}
+
