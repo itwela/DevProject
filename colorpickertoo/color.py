@@ -13,6 +13,8 @@ app.geometry('271x761')
 app.title('ColorPickerToo')
 tfont = customtkinter.CTkFont(family='Arial', size=20, weight='bold')
 
+Atitle = customtkinter.CTkLabel(app, text='Ctrl + Shift = #', font=tfont)
+Atitle.pack(pady=25)
 
 my_image = customtkinter.CTkImage(light_image=Image.open(r'C:\Users\Judy Sanders\Desktop\code\DevProject\colorpickertoo\colors.png'),
                                   dark_image=Image.open(r'C:\Users\Judy Sanders\Desktop\code\DevProject\colorpickertoo\colors.png'),
