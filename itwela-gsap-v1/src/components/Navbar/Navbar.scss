@@ -66,13 +66,10 @@
         
         padding: .4em 2em .4em;
         font-family: main;
-        font-size: 1.618em;
         margin-top: 1.618em;
     
 
          &:hover{
-        outline: 1px solid rgb(255, 255, 255);
-        border-radius: 2em;
         scale: 1.1;
         }
 
@@ -100,7 +97,7 @@
 
 .hello-category
 {
-    font-size: 4.5em;
+    font-size: 1.5em;
 
 
 }
@@ -121,14 +118,6 @@
 }
 
 
-@keyframes hover {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
 
 .hoverEffect {
     animation: hover 1s infinite;

@@ -1,6 +1,8 @@
 import React from 'react'
 import './App.css'
+import './index.css'
 import Navbar from './components/Navbar/Navbar';
+import { motion } from 'framer-motion'
 import './components/Navbar/Navbar.scss'
 
 
@@ -8,15 +10,17 @@ function App() {
   return (
       <>
       <Navbar/>
-      <h1>
-      <span id='t-w'>W</span>
-      <span id='t-e'>e</span>
-      <span id='t-l'>l</span>
-      <span id='t-c'>c</span>
-      <span id='t-o'>o</span>
-      <span id='t-m'>m</span>
-      <span id='t-e'>e</span>
+      <section className='welcome-section'>
+        <h1 className='letters-home'>
+        <motion.div className='t-w' animate={{ color: '#ff2945' }}>W</motion.div>
+        <motion.div className='t-e' animate={{ color: '#ffcc00' }}>E</motion.div>
+        <motion.div className='t-l' animate={{ color: '#40cc0' }}>L</motion.div>
+        <motion.div className='t-c' animate={{ color: '#2190ff' }}>C</motion.div>
+        <motion.div className='t-o' animate={{ color: '#e8eaed' }}>O</motion.div>
+        <motion.div className='t-m' animate={{ color: '#e8e' }}>M</motion.div>
+        <motion.div className='t-ee' animate={{ color: '#e78d30' }}>E</motion.div>
         </h1>
+        </section>
       </>
     );
 }

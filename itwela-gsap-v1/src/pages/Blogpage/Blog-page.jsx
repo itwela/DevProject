@@ -6,9 +6,9 @@ function Blog() {
     return (
         <>
         <Navbar/>
-        <div>
+        <section>
             <h1>Blog Page</h1>
-        </div>
+        </section>
         <section>
             
         </section>

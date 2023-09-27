@@ -33,10 +33,44 @@
   }
 }
 
-.card {
+.letters-home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+.t-w 
+{
+  animation: hover infinite 4.318s ease-out;
+}
+ .t-e 
+{
+  animation: hover infinite 4.218s ease-out;
+}
+.t-l
+{
+  animation: hover infinite 4.18s ease-out;
+}
+.t-c
+{
+  animation: hover infinite 3.918s ease-out;
+}
+.t-o
+{
+  animation: hover infinite 3.818s ease-out;
+}
+.t-m
+{
+  animation: hover infinite 3.710s ease-out;
+}
+.t-ee
+{
+  animation: hover infinite 3.610s ease-out;
+}
+
+/* .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
-}
+} */

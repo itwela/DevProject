@@ -1,18 +1,29 @@
 import pyautogui
 from PIL import Image
 import tkinter as tk
+from tkinter import PhotoImage
 import customtkinter
 import time
 import keyboard
 
+customtkinter.set_appearance_mode('Dark')
+
 app = customtkinter.CTk()
-app.geometry('200x200')
+app.geometry('271x761')
 app.title('ColorPickerToo')
 tfont = customtkinter.CTkFont(family='Arial', size=20, weight='bold')
 
+
+my_image = customtkinter.CTkImage(light_image=Image.open(r'C:\Users\Judy Sanders\Desktop\code\DevProject\colorpickertoo\colors.png'),
+                                  dark_image=Image.open(r'C:\Users\Judy Sanders\Desktop\code\DevProject\colorpickertoo\colors.png'),
+                                  size=(260, 400))
+
+pic = customtkinter.CTkLabel(app, image=my_image, text='')
+pic.place(relx=0.5, rely=0.4, anchor='center')
+
 output_var = tk.StringVar()
-_output = customtkinter.CTkTextbox(app, font=tfont, width=110, height=100, wrap='word')
-_output.place(relx=0.5, rely=0.63, anchor="center")
+_output = customtkinter.CTkTextbox(app, font=tfont, width=150, height=150, wrap='word')
+_output.place(relx=0.5, rely=0.83, anchor="center")
 
 
 
@@ -23,10 +34,11 @@ def get_color():
     x, y = pyautogui.position()
     screenshot = pyautogui.screenshot()
     pixel = screenshot.getpixel((x, y))
-    return rgb_to_hex(pixel)
+    return rgb_to_hex(pixel) + '\n'
 
 def check_keys():
-    if keyboard.is_pressed('ctrl'):
+    if keyboard.is_pressed('shift') and keyboard.is_pressed('ctrl'):
+        time.sleep(0.2)
         color = get_color()
         print(color)
         _output.insert(index="0.0", text=color, tags=None)

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0;
   margin: 0;
@@ -99,10 +103,17 @@ body {
 
 }
 
+
 section
 {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
+  outline: 1px solid #dddddd;
 }
 
 h1 {
@@ -139,5 +150,14 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
+  }
+}
+
+@keyframes hover {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

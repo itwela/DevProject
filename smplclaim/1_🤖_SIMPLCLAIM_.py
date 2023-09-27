@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 import openai
+import pandas as pd
 import time
 from PIL import Image 
 from streamlit_extras.stoggle import stoggle
@@ -89,27 +90,22 @@ with st.expander("Expander:"):
 #     image = Image.open('cutlery-knife-svgrepo-com.png')
 #     st.image(image)
 
- 
+df = pd.read_csv('baba-test.csv', encoding='ISO-8859-1')
+st.write(df)
 
 with st.sidebar:
     st.header("Add what you know here:")
 
-    opt_form = st.form("Options Form")   
-    placeholder1 = opt_form.text_input("placeholder 1") 
-    placeholder2 = opt_form.text_input("placeholder 2")
-    placeholder3 = opt_form.text_input("placeholder 3") 
-    placeholder4 = opt_form.text_input("placeholder 4")
-    placeholder5 = opt_form.text_input("placeholder 5") 
-    placeholder6 = opt_form.text_input("placeholder 6")
-    add_data = opt_form.form_submit_button() 
-
-if add_data:
-    st.write(placeholder1,placeholder2,placeholder3,placeholder4,placeholder5,placeholder6)
-
-
-
-
-
+    opt_form = st.form("Add data")   
+    item_number = opt_form.text_input("Item Number") 
+    room = opt_form.text_input("Room")
+    brand = opt_form.text_input("Brand") 
+    add_data = opt_form.form_submit_button()
+    if add_data:
+        new_data = pd.DataFrame({ 'Item #': [int(item_number)], 'Room': [room], 'Brand or Manufacturer': [brand] })
+        df = pd.concat([df, new_data], ignore_index=True)
+        df.to_csv('baba-test.csv', index=False)
+        st.write(df)
 
 #  ----------------------------------------------------
 
@@ -123,23 +119,9 @@ For the Dish mode: Provide a name of a dish you would like to make MealMaker wil
 """,
 ) 
 st.divider()         
-# st.write('''Please choose a mode below:''')
-# input_type = st.selectbox("Choose a mode:", ["Ingredients", "Dish"])
-# # Get user input
-# if input_type == "Ingredients" :
-#     allergies = st.text_input("Any Allergies? If not you can leave blank:")
-#     ingredients = st.text_input("Enter ingredients separated by commas:")
-#     prompt = f"Create a recipe using the following ingredients: {ingredients}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together. Add calories for the recipe as well"
-# else:
-#     allergies = st.text_input("Any Allergies? If not you can leave blank:")
-#     recipe_name = st.text_input("Enter the dish name:")
-#     prompt = f"Provide ingredients and detailed steps for the following recipe: {recipe_name}. Provide a recipe name, ingredients and detailed steps. If I have any allergies, I will input them here: {allergies}. If this is blank, you can ignore the allergies all together Add calories for the recipe as well."
-
-
-# recipe_response = ""
 
 # Send query to the chatbot
-if st.button("Cook me a meal!"):
+if st.button("Generate"):
     pbtext = ("Please wait, your recipe will load shortly......")
     prg = st.progress(0, text=pbtext)
 
