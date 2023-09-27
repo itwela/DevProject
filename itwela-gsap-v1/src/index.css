@@ -15,7 +15,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #252320;
+  background-color: var(--green);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,6 +31,11 @@
   --big-padding: 3.618rem;
 
   --border-r: 2.618rem;
+
+  --orange: #f97b22;
+  --white: #e6d19c;
+  --green: #9ca777;
+  --d-green: #7c9070;
 }
 
 .dflex

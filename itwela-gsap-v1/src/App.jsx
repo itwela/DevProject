@@ -12,6 +12,7 @@ function App() {
   return (
       <>
       <Navbar/>
+      <div className='home-gradient'>
       <motion.div className='home-container'
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}>
@@ -29,9 +30,17 @@ function App() {
         </motion.div>
 
         {/* Hero */}
-        <Hero/>
+        <section className='hero'>
+
+        </section>
         {/* contact */}
-        <Contact/>
+        <section className='hero-2'>
+
+        </section>
+        <section className='hero-3'>
+
+        </section>
+        </div>
       </>
     );
 }

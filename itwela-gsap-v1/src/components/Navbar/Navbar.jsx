@@ -11,11 +11,11 @@ function Navbar() {
     const exitRef = useRef(null);
 
     useEffect(() => {
-        const tl = gsap.timeline({defaults: {duration: 1.618, ease: "back.out(2)"}});
+        const tl = gsap.timeline({ defaults: { duration: 1.618, ease: "back.out(2)" } });
 
         tl.paused(true);
-        tl.to(".overlay", {clipPath: 'circle(300% at 50% -90%)'});
-        tl.to('.menu-container', {opacity: 1, y: '30', stagger: 0.0618}, '-=1');
+        tl.to(".overlay", { clipPath: 'circle(300% at 50% -90%)' });
+        tl.to('.menu-container', { opacity: 1, y: '30', stagger: 0.0618 }, '-=1');
 
         buttonRef.current.addEventListener('click', () => {
             tl.play();
@@ -31,31 +31,39 @@ function Navbar() {
     return (
         <>
             <div className="psedo body">
-            <div className="-nav">
-            <img src={logo} className="navbar-logo" id="Itwela-logo" ref={buttonRef} />
-                <div className="overlay">
-                    <li className='nav-close' id="close-bt" ref={exitRef}>
-                        <img src={close} />
-                    </li>
-                    <div className="menu">
-                        <div className="menu-container">
-                            <p className="hello-category">MENU</p>
-                            <ul>
-                                <li id="home-nav-bt" className="home-nav-bt" ref={homebuttonRef}>
-                                    <Link to="/">Home</Link>
-                                </li>
-                                <li id="blog-nav-bt">
-                                    <Link to="/blog">Blog</Link>
-                                </li>
-                                <li id="contact-nav-bt">
-                                    <Link to="/contact">Contact</Link>
-                                </li>
-                            </ul>
+                <div className="-nav">
+                    <img src={logo} className="navbar-logo" id="Itwela-logo" ref={buttonRef} />
+                    <div className="overlay">
+                        <li className='nav-close' id="close-bt" ref={exitRef}>
+                            <img src={close} />
+                        </li>
+                        <div className="menu">
+                            <div className="menu-container">
+                                <p className="hello-category">MENU</p>
+                                <ul>
+                                    <li id="home-nav-bt" ref={homebuttonRef}>
+                                        <Link to="/">Home</Link>
+                                    </li>
+                                    <li id="blog-nav-bt">
+                                        <Link to="/blog">Blog</Link>
+                                    </li>
+                                    <li id="contact-nav-bt">
+                                        <Link to="/contact">Contact</Link>
+                                    </li>
+                                </ul>
+
+                                <div className="social-container">
+                                    <div className="social-items">
+                                        <a href="https://github.com/itwela/DevProject">Github</a>
+                                        <a href="https://www.linkedin.com/in/itwela/">LinkedIn</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            </div>
+
         </>
     );
 }

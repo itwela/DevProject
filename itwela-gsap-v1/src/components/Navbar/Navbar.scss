@@ -1,7 +1,4 @@
-
-
-.nav-close
-{
+.nav-close {
     position: absolute;
     right: 2em;
     top: 2em;
@@ -9,8 +6,7 @@
 
 
 
-.overlay
-{
+.overlay {
     background: #fffeff15;
     overflow-x: hidden;
     clip-path: circle(0%);
@@ -19,38 +15,38 @@
     overflow-y: hidden;
     transform: translateY(50%);
     z-index: 100;
-    
-    
-    
+
+
+
 }
 
 
 
-.menu
-{
+.menu {
     display: grid;
     text-align: center;
     place-content: center;
-    background-color: #707070;
+    background: var(--white);
+    overflow: hidden;
+
     // text-transform: uppercase;
     // min-height: 100vh; /* This line will make your navbar fill the entire vertical height of the screen */
 
-    
-}   
 
-.-nav
-{
+}
+
+.-nav {
     padding: 0;
-    place-content: center;    
+    place-content: center;
     display: grid;
 
     // outline:2px solid white;
-    
+
     align-items: center;
     overflow: hidden;
-    
 
-    
+
+
 }
 
 
@@ -61,47 +57,35 @@
 
     height: 100vh;
     opacity: 0;
+    margin-top: 10vh;
+    color: var(--d-green);
     text-transform: uppercase;
     // transform: translateY(61.8em);
 
 
-    .home-nav-bt
-    {
+
+
+    li a {
         display: block;
-        
-        padding: .4em 0em .4em;
-        font-family: main;
-        margin-top: 0.618em;
-    
 
-         &:hover{
-        scale: 1.1;
-        }
-
-    }
-
-     li a
-    {
-        display: block;
-        
         padding: .2em 2em .4em;
         font-family: main;
         font-size: 1.118em;
-        margin-top: 1.618em;
-    
+        color: var(--d-green);
+        margin-top: 2.0em;
 
-         &:hover{
-        outline: 1px solid rgb(255, 255, 255);
-        border-radius: 2em;
-        scale: 1.1;
+
+        &:hover {
+            outline: 1px solid var(--orange);
+            border-radius: 2em;
+            scale: 1.1;
         }
 
 
     }
 }
 
-.hello-category
-{
+.hello-category {
     font-size: 1.5em;
 
 
@@ -109,16 +93,14 @@
 
 
 
-#close-bt
-{
+#close-bt {
     cursor: pointer;
     animation: hover 4s infinite ease-in-out;
     transition: all 2s ease-in-out;
     align-content: center;
     z-index: 101;
 
-    &:hover
-    {
+    &:hover {
         animation: hover 0.7s step-start;
     }
 }
@@ -130,8 +112,7 @@
 }
 
 
-.navbar-logo
-{
+.navbar-logo {
     position: absolute;
     width: 35px;
     outline: .618px solid;
@@ -144,24 +125,42 @@
     animation: hover 10s ease-in-out infinite;
     position: fixed;
 
-    &:hover{
+    &:hover {
         scale: 1.1;
         outline: 1.618px dotted;
         transition: all 0.11s ease-in-out;
     }
 }
 
-@media screen and (max-height: 400px){ 
-    
-    .menu{
+.social-container
+{
+    display: block;
+    margin-top: 4.619vh;
+
+}
+
+.social-items
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.social-items a
+{
+    color: var(--d-green);
+}
+
+@media screen and (max-height: 500px) {
+
+    .menu {
         margin: 0;
         padding: 0;
 
-            li a
-            {
-                
-                margin-top: -15%;
-            }
+
+        li a {
+            margin-top: 0%;
+        }
     }
 
 

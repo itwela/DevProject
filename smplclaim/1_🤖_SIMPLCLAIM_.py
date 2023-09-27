@@ -93,20 +93,20 @@ with st.expander("Expander:"):
 df = pd.read_csv('baba-test.csv', encoding='ISO-8859-1')
 st.write(df)
 
-with st.sidebar:
-    st.header("Add what you know here:")
 
-    opt_form = st.form("Add data")   
-    item_number = opt_form.text_input("Item Number") 
-    room = opt_form.text_input("Room")
-    brand = opt_form.text_input("Brand") 
-    add_data = opt_form.form_submit_button()
-    if add_data:
-        new_data = pd.DataFrame({ 'Item #': [int(item_number)], 'Room': [room], 'Brand or Manufacturer': [brand] })
-        df = pd.concat([df, new_data], ignore_index=True)
-        df.to_csv('baba-test.csv', index=False)
-        st.write(df)
+st.header("Add what you know here:")
 
+opt_form = st.form("Add data")   
+quantity = opt_form.number_input("Quantity?", min_value=0.00, step=1.00) 
+room = opt_form.text_input("Room")
+brand = opt_form.text_input("Brand") 
+add_data = opt_form.form_submit_button()
+if add_data:
+    new_data = pd.DataFrame({ 'Room': [room], 'Brand or Manufacturer': [brand], "Quantity Lost": [int(quantity)] })
+    df = pd.concat([new_data, new_data], ignore_index=True)
+    # df.to_csv('baba-test.csv', index=False)
+
+st.dataframe(df)
 #  ----------------------------------------------------
 
 

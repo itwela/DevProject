@@ -67,6 +67,25 @@
   animation: hover infinite 3.610s ease-out;
 }
 
+.welcome-section
+{
+  background: var(--d-green);
+}
+
+.hero
+{
+  background: var(--green);
+}
+
+.hero-2
+{
+  background: var(--white);
+}
+
+.hero-3
+{
+  background: var(--orange);
+}
 /* .card {
   padding: 2em;
 }
