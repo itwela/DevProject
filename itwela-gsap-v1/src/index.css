@@ -9,7 +9,7 @@
 }
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: main, sans-serif;
   line-height: 2.618;
   font-weight: 800;
 
@@ -23,12 +23,22 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  --min-width: 300px
+  --max-width: 1220px
+
+  --min-height: 400px
+  --max-height: 900px
+
+  --font-size-big: 
+  --font-size-medium: 
+  --font-size-small: 
+
   /* ------ variables */
   --gap: 1.618rem;
   --margin: 0.618rem;
   --big-gap: 3.618rem;
-  --padding: 0.618em;
-  --big-padding: 3.618rem;
+  --padding: 0.18em;
+  --big-padding: 1.618rem;
 
   --border-r: 2.618rem;
 
@@ -72,9 +82,10 @@
 
 @font-face {
   font-family: secondary;
-  src: url("./fonts/Comfortaa-VariableFont_wght.ttf");
+  src: url("./fonts/DelaGothicOne-Regular.ttf");
 
 }
+
 
 
 a {
@@ -166,5 +177,14 @@ button:focus-visible {
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

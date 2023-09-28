@@ -31,21 +31,23 @@ function Navbar() {
     return (
         <>
             <div className="psedo body">
-                <div className="-nav">
+                <div className="nav">
+                    <div className="n-cont">
                     <img src={logo} className="navbar-logo" id="Itwela-logo" ref={buttonRef} />
+                    </div>
                     <div className="overlay">
                         <li className='nav-close' id="close-bt" ref={exitRef}>
                             <img src={close} />
                         </li>
                         <div className="menu">
                             <div className="menu-container">
-                                <p className="hello-category">MENU</p>
+                                <div className="hello-category">MENU</div>
                                 <ul>
                                     <li id="home-nav-bt" ref={homebuttonRef}>
                                         <Link to="/">Home</Link>
                                     </li>
                                     <li id="blog-nav-bt">
-                                        <Link to="/blog">Blog</Link>
+                                        <Link to="/blog">Life</Link>
                                     </li>
                                     <li id="contact-nav-bt">
                                         <Link to="/contact">Contact</Link>
@@ -56,6 +58,7 @@ function Navbar() {
                                     <div className="social-items">
                                         <a href="https://github.com/itwela/DevProject">Github</a>
                                         <a href="https://www.linkedin.com/in/itwela/">LinkedIn</a>
+                                        <a href="">Extras</a>
                                     </div>
                                 </div>
                             </div>
