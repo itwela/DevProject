@@ -1,8 +1,11 @@
+/*  
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
+
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -15,7 +18,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: var(--green);
+  /* background-color: var(--green); 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -33,7 +36,7 @@
   --font-size-medium: 
   --font-size-small: 
 
-  /* ------ variables */
+  /* ------ variables 
   --gap: 1.618rem;
   --margin: 0.618rem;
   --big-gap: 3.618rem;
@@ -58,10 +61,22 @@
 #root
 {
 
+  position: absolute;
   padding: 0;  
   margin: 0;
-  max-width: 100vw;
-  max-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  background-color: #0d0302;
+}
+
+#canvas-container {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  margin: var(--margin);
+  width: 30vw;
+  height: 100%;
 }
 
 
@@ -72,11 +87,11 @@
 /* @font-face {
   font-family: secondary;
   src: url();
-} */
+} 
 
 @font-face {
   font-family: main;
-  src: url("./fonts/DelaGothicOne-Regular.ttf");
+  src: url("./fonts/Keiner-Bold.otf");
 
 }
 
@@ -109,14 +124,14 @@ li {
 
 }
 
-body {
+body, html {
   margin: 0;
   padding: 0;
   place-items: center;
-  min-width: 320px;
+  width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  /* outline: 1px solid #dddddd; */
+  /* outline: 1px solid #dddddd; 
 
 
 }
@@ -131,11 +146,11 @@ section
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  /* outline: 1px solid #dddddd; */
+  /* outline: 1px solid #dddddd; 
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 5.2em;
   line-height: 1.1;
 }
 
@@ -151,7 +166,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  /* border-color: #646cff; 
 }
 button:focus,
 button:focus-visible {
@@ -188,3 +203,5 @@ button:focus-visible {
     stroke-dashoffset: 0;
   }
 }
+
+*/

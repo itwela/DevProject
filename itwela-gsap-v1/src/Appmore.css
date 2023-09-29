@@ -35,6 +35,7 @@
     border-top: 0;
     border-left: 0;
     top: -2.318vh;
+    left: 50%;
     border-bottom-color: var(--white);
 }
 
@@ -53,11 +54,13 @@
 .m-a-1 {
     color: var(--orange);
     cursor: cell;
+    z-index: 1;
 
 }
 
 .m-a-2 {
     color: var(--green);
+    z-index: 1;
 }
 
 /* --------------------------- */
@@ -82,11 +85,22 @@
     border-top: 0;
     border-left: 0;
     top: -2.318vh;
+    left: 50%;
     border-bottom-color: var(--orange);
 }
 
 .more-text-2 {
     color: var(--d-green);
+}
+
+#more-text-2
+{
+    font-size: 10.618vw;
+}
+
+#more-text-3
+{
+    font-size: 10.618vw;
 }
 
 .more-3-wrapper {
@@ -96,6 +110,8 @@
 
 .more-text-3 {
     color: var(--white);
+    
+    
 }
 
 .more-3-wrapper::after {
@@ -105,6 +121,7 @@
     border-top: 0;
     border-left: 0;
     top: -2.318vh;
+    left: 50%;
     border-bottom-color: var(--green);
 }
 

@@ -1,13 +1,30 @@
-.hero-wrapper {
+#hero-page
+{
     width: 100vw;
-    padding: var(--margin);
+    height: 100vh;
+    background-color: var(--green);
+    position: relative;
+}
+
+.hero-wrapper {
+    
+    padding: var(--padding);
+    display: grid;
+    margin: var(--margin);
+    min-width: var(--min-width);
+    max-width: var(--max-width);
+    min-height: var(--min-height);
+    color: var(--white);
+
+    
 
 }
 
 .hero-container {
     display: grid;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    color: var(--white);
 
 }
 
@@ -15,6 +32,7 @@
 
 #grid-column {
     padding: 10px;
+    
     /* outline: 2px solid white; */
 }
 
