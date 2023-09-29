@@ -1,4 +1,94 @@
-/*  
+
+#dacanvas {
+  place-content: center;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+
+  /* background-image: url(../public/cave/cav10.jfif);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-color: var(--brown);
+  background-blend-mode:multiply ; */
+}
+
+#root{
+  /* display: grid; */
+
+}
+
+* {
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: main;
+  font-weight:900;
+  src: url("./fonts/CroMagnum-eZzJO.ttf");
+
+}
+@font-face {
+  font-family: secondary;
+  src: url("./fonts/DelaGothicOne-Regular.ttf");
+
+}
+
+:root
+{
+  --white: #fff6d6;
+  --brown: #5e4218;
+}
+
+.dd
+{
+  color: #fff6d6
+
+}
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: var(--white);
+  font-family: main;
+  background-color: var(--brown);
+}
+/* @media screen and (max-width: 320px) {
+  #canvas-container {
+    display: flex
+  }
+}    */
+section
+{
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-image: url(../public/cave/cavetxt.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-color: var(--brown);
+  background-blend-mode:multiply ;
+
+}
+
+/* 
 
 @tailwind base;
 @tailwind components;
@@ -18,7 +108,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: var(--green); 
+  background-color: var(--green); 
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -36,7 +126,7 @@
   --font-size-medium: 
   --font-size-small: 
 
-  /* ------ variables 
+   variables 
   --gap: 1.618rem;
   --margin: 0.618rem;
   --big-gap: 3.618rem;
@@ -69,6 +159,7 @@
   background-color: #0d0302;
 }
 
+
 #canvas-container {
   position: fixed;
   z-index: 1;
@@ -80,11 +171,12 @@
 }
 
 
-/* @font-face {
+ @font-face {
   font-family: main;
   src: url();
-} */
-/* @font-face {
+} 
+
+ @font-face {
   font-family: secondary;
   src: url();
 } 
@@ -131,7 +223,7 @@ body, html {
   width: 100vw;
   min-height: 100vh;
   overflow-x: hidden;
-  /* outline: 1px solid #dddddd; 
+ outline: 1px solid #dddddd; 
 
 
 }
@@ -146,7 +238,7 @@ section
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;
-  /* outline: 1px solid #dddddd; 
+  outline: 1px solid #dddddd; 
 }
 
 h1 {
@@ -166,7 +258,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  /* border-color: #646cff; 
+ border-color: #646cff; 
 }
 button:focus,
 button:focus-visible {
@@ -204,4 +296,7 @@ button:focus-visible {
   }
 }
 
-*/
+
+ */
+
+/*  ----- */

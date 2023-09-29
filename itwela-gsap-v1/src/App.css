@@ -1,3 +1,68 @@
+.welcome-section
+{
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* welcome section img */
+.hands
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode:multiply;
+  rotate: 30deg;
+}
+/* welcome section text */
+.we-make
+{
+  font-size: min(17vw, 260px);
+  line-height: min(0.1em, 0.4em);
+  margin-top: 1em;
+}
+.happen
+{
+  font-size: min(20vw, 325px);
+}
+.subhead
+{
+  margin: 0;
+  font-family: secondary;
+  font-size: min(2.5vw, 25px);
+}
+.more-bt
+{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: min(3em, 5em);
+
+}
+.torch-left-1
+{
+  top: 0;
+  left: 0;
+  transform: translate(-30%, 30%);
+  position: absolute;
+  mix-blend-mode: exclusion;
+}
+
+/*  IM A CREATIVE DEVELOPER --------- PROJECT SECTION */
+
+.torch-right-1
+{
+  right:0;
+  position: absolute;
+  transform: translate(30%, -30%) scaleX(-1);
+  mix-blend-mode: exclusion;
+}
+
+/* 
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -22,19 +87,18 @@
 }
 
 
-/* ------------------------------- */
 .welcome-section
 {
-  /* border: 1px solid var(--orange); */
-  /* background: var(--d-green); */
+   border: 1px solid var(--orange); 
+   background: var(--d-green); 
 
-  /* background: #A63A14; */
+   background: #A63A14; 
 
 }
 
 #welcome-section
 {
-  /* border: 1px solid var(--orange); */
+  border: 1px solid var(--orange); 
   position: absolute;
   width: 100%;
   transform: translateX(50%);
@@ -47,10 +111,9 @@
 .letters-home {
   line-height: 0.919em;
   font-size: 23px;
-  /* text-align: center; */
-  /* font-weight: 800; */
-  /* padding: var(--padding); */
-  /* margin: 0; */
+  text-align: center;
+  font-weight: 800;
+  padding: var(--padding);
   overflow: hidden;
   position: absolute;
   cursor: default;
@@ -62,7 +125,6 @@
 
 .subhead
 {
-  /* background-color: black; */
   font-size: 25px;
   display:grid;
   justify-content: center;
@@ -70,14 +132,13 @@
   transform: translateY(50%);
   align-items: center;  
 }
-/* ---------------------------- */
 
 .welcome-section-2
 {
-  /* background-color: var(--green); */
+  background-color: var(--green);
   
-  /* position: absolute;
-  min-width: 100vw; */
+  position: absolute; 
+  min-width: 100vw; 
 
 }
 
@@ -91,11 +152,10 @@
   right: 0;
   bottom: 0;
   padding: var(--padding);
-  /* transform: translateY(-10%); */
   position: absolute;
   cursor: default;
 
-  /* margin: 0.1em; */
+  margin: 0.1em; 
 }
 
 @media screen and (max-height: 700px ){
@@ -115,10 +175,9 @@
   
 }
 
-/* --------------------------- */
 .welcome-section-3
 {
-  /* background: var(--white); */
+  background: var(--white); 
   position: relative;
 
 
@@ -139,10 +198,10 @@
 
 }
 
-/* -------------------------- */
+
 .hero-3
 {
-  /* background: var(--orange); */
+  background: var(--orange); 
   position: relative;
   display: flex;
 
@@ -164,7 +223,7 @@
 
 }
 
-/* #top-right-cont, #top-left-cont, #bottom-right-cont
+ #top-right-cont, #top-left-cont, #bottom-right-cont
 {
   background-color: rgb(27, 83, 83);
   position: relative;
@@ -175,7 +234,7 @@
 
   
   overflow: hidden;
-} */
+} 
 
 
 
@@ -243,15 +302,15 @@
 }
 
 
-/* .card {
+.card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
-} */
+} 
 
 .t-s
 {
   color: var(--green);
-}
+} */

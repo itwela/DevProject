@@ -2,8 +2,6 @@
 {
     position: absolute;
     top: 2%;
-        /* background: black; */
-
 }
 
 #screener
@@ -16,10 +14,7 @@
     display: grid;
     place-content: center;
     position: absolute;
-    color: var(--d-green);
-    
-   
-    
+    color: var(--d-green); 
 }
 
 .screener-cont
@@ -30,17 +25,14 @@
     font-size: 0.7em;
     width: 100vw;
     display: grid;
-    /* outline: 1px solid var(--white); */
-    
+    /* outline: 1px solid var(--white); */  
 }
-
-/*  */
+/* --------------------- */
 
 .screener-wrapper-2
 {
     position: absolute;
     bottom: 3%;
-    /* background: black; */
 }
 
 #screener-2
@@ -54,11 +46,7 @@
     place-content: center;
     position: absolute;
     color: var(--d-green);
-    /* background: black; */
 
-    
-   
-    
 }
 
 .screener-cont-2
@@ -68,12 +56,8 @@
     max-height: 30px;
     font-size: 0.7em;
     width: 100vw;
-    display: grid;
-    /* outline: 1px solid var(--white); */
-    
+    display: grid;   
 }
-
-
 
 @keyframes marquee-1 {
     0% { transform: translateX(0); }

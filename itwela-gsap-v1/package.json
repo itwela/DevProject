@@ -1,6 +1,6 @@
 {
   "name": "itwela-gsap-v1",
-  "private": true,
+  "homepage": "https://itwela.vercel.app/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -19,6 +19,7 @@
     "framer-motion": "^10.16.4",
     "framer-motion-3d": "^10.16.4",
     "gsap": "^3.12.2",
+    "maath": "^0.10.4",
     "r3f-perf": "6.5",
     "react": "^18.2.0",
     "react-avatar": "^5.0.3",

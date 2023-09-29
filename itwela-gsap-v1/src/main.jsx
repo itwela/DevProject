@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Blog from './pages/Hero/Hero.jsx'
+import Blog from './pages/Play/Play.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import App from './App.jsx'
 import ApExp from './ApExp.jsx'
@@ -31,16 +31,23 @@ const root =ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <>
-  <div id="canvas-container">
-    <Canvas
-    shadows camera= {{ position: [0,0,10], fov:30 }}
-    >
-      <Html>
-      </Html>
-      <ApExp/>
-    </Canvas>
-    </div>
     <RouterProvider router={router}></RouterProvider>
   </>
 
 )
+
+
+export default function R3fasset() {
+
+  return (
+  <>
+  <div id='dacanvas'>
+    <Canvas
+    camera= 
+    {{ position: [0, 14, -15] , fov: 60,  }}>
+      <ApExp/>
+    </Canvas>
+    </div>
+  </>
+  )
+}

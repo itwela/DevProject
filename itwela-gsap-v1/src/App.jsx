@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { gsap } from 'gsap'
+// import hand from '../public/cave/cave9.png'
+import torch from '../public/cave/torch1.gif'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScroll, useTransform } from 'framer-motion'
@@ -66,29 +68,38 @@ function App() {
 
     <>
       <Navbar />
-      {/* <ApExp /> */}
-      {/* {['element1', 'element2', 'element3'].map(id => */}
-      <div className='home-gradient'>
-        <motion.div className='home-container'
+      {/* <div className='wrapper-all'> */}
+        <div className='home-container'
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}>
+          
 
           {/* HI IM ITWELA */}
           <section className='welcome-section' id='home-section'>
             {!isVisible['more-1-wrapper'] && (
               
               <div className="letters-home">
-                <h1 className=''>
-                <motion.div className='t-w'
+                <motion.div className='title-container'
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}>
-                  WE MAKE <br></br> HAPPEN
-                  <p className='subhead'>
-                    Im Itwela, Lets build.
-                  </p>
+                  viewport={{ once: true }}
+                  >
+
+                    {/* <img className='hands' src={hand}></img> */}
+                    <img className='torch-left-1' src={torch}></img>
+
+
+                  <h1 className='we-make'>WE MAKE </h1> <h1 className='happen'> HAPPEN</h1>
                 </motion.div>
-              </h1>
+                  <p className='subhead'>
+                    
+                  </p>
+                  <br></br>
+                  <p className='subhead'>
+                    Itwela Ibomu 
+                    <br></br>
+                    "mordern caveman" software engineer
+                  </p>
               </div>
             )}
 
@@ -108,7 +119,9 @@ function App() {
                   animate='show'
                   variants={fadeIn}
                   exit={'exit'}
-                  transition={{ duration: 1 }}>
+                  transition={{ duration: 1 }}
+                  delay={ 3 }
+                  >
                   <Stock />
                   <h1 className='more-text-1' id='more-text-all'>Background:</h1>
                   <p id='dropdown-text'>Hello,<br></br><br></br> My name is Itwela Ibomu and I love
@@ -130,6 +143,8 @@ function App() {
             </AnimatePresence>
           </section>
 
+
+
           {/* IM A SOFTWARE DEV */}
           <section className='welcome-section-2' id='home-section'>
             {!isVisible2['more-2-wrapper'] && (
@@ -138,9 +153,12 @@ function App() {
                   initial={{ color: 'var(--green)' }}
                   animate={{ color: 'var(--orange)' }}
                   transition={{ duration: 1.618 }}
-                >I'm a<br></br>Creative<br></br>Developer</motion.div>
+                  delay={ 3 }
+                  >
+                  I'm a<br></br>Creative<br></br>Developer</motion.div>
               </h1>
             )}
+                                <img className='torch-right-1' src={torch}></img>
             <div className="more-2-cont">
               <div className='m-a-1' id='m-a-1'
                 onClick={() => {
@@ -157,7 +175,8 @@ function App() {
                   animate='show'
                   variants={fadeIn}
                   exit={'exit'}
-                  transition={{ duration: 1 }}>
+                  transition={{ duration: 1 }}
+                  delay={ 3 }>
                   <div id='top-left-cont'>
                     <h1 className='more-text-3' id='more-text-2'>
                       <motion.div
@@ -165,6 +184,7 @@ function App() {
                         animate='enterxleft'
                         transition={{ duration: 2 }}
                         exit='exitxleft'
+                        delay={ 3 }
                         className="project-bt">
                         Projects</motion.div>
                     </h1>
@@ -183,7 +203,7 @@ function App() {
               )}
             </AnimatePresence>
           </section>
-        </motion.div>
+        </div>
 
         {/* I LIKE SIMPLE */}
         <section className='welcome-section-3' id='home-section'>
@@ -244,7 +264,7 @@ function App() {
           </h1>
 
         </section>
-      </div>
+      {/* </div> */}
       {/* )} */}
 
     </>

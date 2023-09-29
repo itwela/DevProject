@@ -1,7 +1,6 @@
 .more-1-cont {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-
 }
 
 #more-wrapper {
@@ -18,9 +17,6 @@
     color: var(--green);
     /* position: absolute; */
     font-size: 10.618vw;
-
-
-
 }
 
 .more-1-wrapper {
