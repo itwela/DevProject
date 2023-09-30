@@ -6,7 +6,7 @@ import App from './App.jsx'
 import ApExp from './ApExp.jsx'
 import { Html } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import './index.css'
+import '../index.css'
 import { createBrowserRouter,RouterProvider,Route, Routes, HashRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([

@@ -1,0 +1,91 @@
+
+#dacanvas {
+  place-content: center;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+
+  background-image: url("./public/cave/cavetxt.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-color: var(--brown);
+  background-blend-mode:multiply ;
+}
+
+
+* {
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  /* --white: #fff6d6;
+  --brown: #782a1a; */
+}
+
+@font-face {
+  font-family: main;
+  font-weight:900;
+  src: url("./src/fonts/CroMagnum-eZzJO.ttf");
+
+}
+@font-face {
+  font-family: secondary;
+  src: url("./src/fonts/Keiner-Bold.otf");
+}
+
+/* :root
+{
+  --white: #fff6d6;
+  --brown: #782a1a;
+} */
+
+ html{
+  color: #fff6d6;
+  overflow-x: hidden;
+} 
+
+.dd
+{
+  color: #fff6d6
+
+}
+
+
+
+body
+{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #fff6d6;
+  font-family: main;
+
+}
+
+section
+{
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  background-image: url("./public/cave/cavetxt.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-blend-mode:multiply ;
+
+  background-color: #782a1a;
+
+}  
