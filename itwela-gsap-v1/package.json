@@ -1,6 +1,6 @@
 {
   "name": "itwela-gsap-v1",
-  "homepage": "https://itwela.vercel.app/",
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

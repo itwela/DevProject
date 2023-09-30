@@ -35,39 +35,36 @@
     border-bottom-color: var(--white);
 }
 
-
 /* ---------- */
 
-
-
-
-
-
-.m-a {
+.m-a 
+{
     color: var(--white);
 }
 
-.m-a-1 {
+.m-a-1 
+{
     color: var(--orange);
     cursor: cell;
     z-index: 1;
 
 }
 
-.m-a-2 {
+.m-a-2 
+{
     color: var(--green);
     z-index: 1;
+    cursor: cell;
+
 }
 
 /* --------------------------- */
-
 
 .more-2-cont {
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 
 }
-
 
 .more-2-wrapper {
     position: relative;
@@ -99,18 +96,19 @@
     font-size: 10.618vw;
 }
 
-.more-3-wrapper {
+.more-3-wrapper 
+{
     position: relative;
     background: var(--green);
 }
 
-.more-text-3 {
-    color: var(--white);
-    
-    
+.more-text-3 
+{
+    color: var(--white);    
 }
 
-.more-3-wrapper::after {
+.more-3-wrapper::after 
+{
     content: '';
     position: absolute;
     border: 20px solid transparent;
@@ -121,18 +119,15 @@
     border-bottom-color: var(--green);
 }
 
-
-
-.more-3-cont {
+.more-3-cont 
+{
     align-items: center;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-
-
-
 /* ----------- */
 
-#dropdown-text {
+#dropdown-text 
+{
     color: var(--green);
     font-family: secondary;
     font-size: 1em;

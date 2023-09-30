@@ -8,15 +8,7 @@
   padding: 0;
   overflow: hidden;
 }
-/* welcome section img */
-.hands
-{
-  position: absolute;
-  top: 0;
-  left: 0;
-  mix-blend-mode:multiply;
-  rotate: 30deg;
-}
+
 /* welcome section text */
 .we-make
 {
@@ -48,7 +40,7 @@
   left: 0;
   transform: translate(-30%, 30%);
   position: absolute;
-  mix-blend-mode: exclusion;
+  mix-blend-mode:screen;
 }
 
 /*  IM A CREATIVE DEVELOPER --------- PROJECT SECTION */
@@ -57,10 +49,57 @@
 {
   right:0;
   position: absolute;
-  transform: translate(30%, -30%) scaleX(-1);
-  mix-blend-mode: exclusion;
+  transform: translate(30%, -10%) scaleX(-1);
+  mix-blend-mode:screen;
 }
 
+.welcome-section-2
+{
+  position: relative;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+
+/* IM LIKE SIMPLE THINGS ------------ INTERESTS SECTION */
+.torch-left-2
+{
+  left: 0;
+  transform: translate(-30%, 30%);
+  position: absolute;
+  mix-blend-mode:screen;
+}
+
+
+
+
+/* LETS CONNECT -------------- INTERESTS SECTION */
+.hero-3
+{
+  overflow: hidden;
+}
+
+
+.torch-bottom-left
+{
+  left: 0;
+  transform: translate(-30%, 30%);
+  position: absolute;
+  mix-blend-mode:screen;
+}
+
+.torch-bottom-right
+{
+  right:0;
+  position: absolute;
+  transform: translate(30%, 30%) scaleX(-1);
+  mix-blend-mode:screen;
+}
 /* 
 
 #root {

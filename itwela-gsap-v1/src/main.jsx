@@ -7,7 +7,7 @@ import ApExp from './ApExp.jsx'
 import { Html } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import './index.css'
-import { createBrowserRouter,RouterProvider,Route } from 'react-router-dom'
+import { createBrowserRouter,RouterProvider,Route, Routes, HashRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([
   {
@@ -30,10 +30,14 @@ const root =ReactDOM.createRoot(document.getElementById('root'))
 
 
 root.render(
+  // return (
   <>
+  {/* <HashRouter> */}
     <RouterProvider router={router}></RouterProvider>
+    {/* </HashRouter> */}
   </>
 
+  // )
 )
 
 

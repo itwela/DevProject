@@ -18,10 +18,6 @@
   background-blend-mode:multiply ; */
 }
 
-#root{
-  /* display: grid; */
-
-}
 
 * {
 
@@ -33,19 +29,18 @@
 @font-face {
   font-family: main;
   font-weight:900;
-  src: url("./fonts/CroMagnum-eZzJO.ttf");
+  src: url("./fonts/CroMagnumShadow-WyE59.ttf");
 
 }
 @font-face {
   font-family: secondary;
-  src: url("./fonts/DelaGothicOne-Regular.ttf");
-
+  src: url("./fonts/Keiner-Bold.otf");
 }
 
 :root
 {
   --white: #fff6d6;
-  --brown: #5e4218;
+  --brown: #782a1a;
 }
 
 .dd
@@ -55,6 +50,7 @@
 }
 
 
+
 body
 {
   margin: 0;
@@ -62,7 +58,9 @@ body
   overflow-x: hidden;
   color: var(--white);
   font-family: main;
-  background-color: var(--brown);
+
+  
+  /* background-color: var(--brown); */
 }
 /* @media screen and (max-width: 320px) {
   #canvas-container {
@@ -75,6 +73,7 @@ section
   place-items: center;
   margin: 0;
   padding: 0;
+  overflow: hidden;
   
   min-width: 320px;
   min-height: 100vh;
