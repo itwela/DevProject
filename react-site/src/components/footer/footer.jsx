@@ -1,0 +1,66 @@
+import * as React from 'react';
+import '../../index.css'
+import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
+import Link from '@mui/material/Link';
+
+function Copyright() {
+  return (
+    <Typography variant="body2" 
+    className='
+    text-lightbrown'>
+      {'Copyright © '}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+}
+
+// TODO remove, this demo shouldn't need to reset the theme.
+const defaultTheme = createTheme();
+
+export default function StickyFooter() {
+  return (
+    <ThemeProvider theme={defaultTheme}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          placeItems: 'center',
+          minWidth: '80vw',
+        }}
+      >
+        <CssBaseline />
+        <Box
+          component="footer"
+          sx={{
+            py: 2,
+            px: 1,
+            mt: 'auto',
+            zIndex: '1',
+            backgroundColor: '#4b3d2d',
+            position: 'fixed',
+            bottom: '0',
+            width: '100vw',
+          }}
+        >
+          <Container maxWidth="sm">
+            <Typography variant="body1" className='
+            text-lightbrown
+            font-main
+            italic'>
+              Itwela Ibomu - Creative Software Developer
+            </Typography>
+            <Copyright />
+          </Container>
+        </Box>
+      </Box>
+    </ThemeProvider>
+  );
+}

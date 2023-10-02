@@ -24,37 +24,30 @@ function App() {
     show: { opacity: 1 },
     exit: { opacity: 0 } // define exit animation
   }
-
   const [isVisible, setIsVisible] = useState(false);
   const [isVisible2, setIsVisible2] = useState(false);
   const [isVisible3, setIsVisible3] = useState(false);
-
   const handleClick = (id) => {
     setIsVisible(prevState => ({
       ...prevState,
       [id]: !prevState[id]
     }));
   };
-
   const handleClick2 = (id) => {
     setIsVisible2(prevState => ({
       ...prevState,
       [id]: !prevState[id]
     }));
   };
-
   const handleClick3 = (id) => {
     setIsVisible3(prevState => ({
       ...prevState,
       [id]: !prevState[id]
     }));
   };
-
   const [isMinimized, setIsMinimized] = useState(false);
   const [isMinimized2, setIsMinimized2] = useState(false);
   const [isMinimized3, setIsMinimized3] = useState(false);
-  // --------------------------------
-
   const currentlifestatus = "and am currently looking for internships and or work opportunities."
   const variants = {
     enterxleft: { x: [-100, 700, 0] },
@@ -66,13 +59,12 @@ function App() {
       <Navbar />
       {/* <div className='wrapper-all'> */}
       <div className='home-container'>
-
+        <div class="container">
         {/* HI IM ITWELA */}
-        <section className='welcome-section' id='home-section'>
-          {!isVisible['more-1-wrapper'] && (
-
-            <div className="letters-home">
-              <img className='torch-left-1' src={torch}></img>
+        {!isVisible['more-1-wrapper'] && (
+          <div className="letters-home">
+            <img className='torch-left-1' src={torch}></img>
+            <div className='absolut-welcome-wrapper'>
               <motion.div className='title-container'
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -83,68 +75,52 @@ function App() {
                   }
                 }}
               >
-
-                {/* <img className='hands' src={hand}></img> */}
-
-                <h1 className='we-make'>WE MAKE </h1> <h1 className='happen'> HAPPEN</h1>
               </motion.div>
-              <p className='subhead'>
-
-              </p>
-              <br></br>
-              <p className='subhead'>
-                Itwela Ibomu
-                <br></br>
-                "mordern caveman" software engineer
-              </p>
-            </div>
-          )}
-
-          <div className="more-1-cont">
-            <div id='m-a' className='m-a'
-              onClick={() => {
-                handleClick('more-1-wrapper');
-                setIsMinimized(!isMinimized);
-              }}>
-              {isMinimized ? "X" : ""} <div id='bottom-right-cont'> <div className="more-bt">More</div></div>
             </div>
           </div>
-          <AnimatePresence>
-            {isVisible['more-1-wrapper'] && (
-              <motion.div className="more-1-wrapper" id='more-wrapper'
-                initial='hidden'
-                animate='show'
-                variants={fadeIn}
-                exit={'exit'}
-                transition={{ duration: 1 }}
-                delay={3}
-              >
-                <Stock />
-                <h1 className='more-text-1' id='more-text-all'>Background:</h1>
-                <p id='dropdown-text'>Hello,<br></br><br></br> My name is Itwela Ibomu and I love
-                  design and development. Im 22 years old, from Atlanta, Ga {currentlifestatus}
-                  <br></br>
-                  <br></br>
-                  Currently, I attend WGU - Western Governors University pursuing my bachelors in Software Engineering.
-                  <br></br>
-                  <br></br>
-                  I wear many hats as far as a developer but my tech stack includes:
-                  <br></br>
-                  <br></br>
-                  <Skills />
-                </p>
-                <br>
-                </br>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </section>
+        )}
+        <div className="more-1-cont">
+          <div id='m-a' className='m-a'
+            onClick={() => {
+              handleClick('more-1-wrapper');
+              setIsMinimized(!isMinimized);
+            }}>
+            {isMinimized ? "X" : ""} <div id='bottom-right-cont'> <div className="more-bt">More</div></div>
+          </div>
+        </div>
+        <AnimatePresence>
+          {isVisible['more-1-wrapper'] && (
+            <motion.div className="more-1-wrapper" id='more-wrapper'
+              initial='hidden'
+              animate='show'
+              variants={fadeIn}
+              exit={'exit'}
+              transition={{ duration: 1 }}
+              delay={3}
+            >
+              <Stock />
+              <h1 className='more-text-1' id='more-text-all'></h1>
+              <p id='dropdown-text'>Hello,<br></br><br></br> My name is Itwela Ibomu and I love
+                design and development. Im 22 years old, from Atlanta, Ga {currentlifestatus}
+                <br></br>
+                <br></br>
+                Currently, I attend WGU - Western Governors University pursuing my bachelors in Software Engineering.
+                <br></br>
+                <br></br>
+              </p>
+              <div className='skills'>
+                <Skills />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        </div>
 
         {/* IM A SOFTWARE DEV */}
         <section className='welcome-section-2' id='home-section'>
           {!isVisible2['more-2-wrapper'] && (
-            <h1 className='letters-home-1'>
-              <img className='torch-right-1' src={torch}/>
+            <div className='letters-home-2'>
+              <img className='torch-right-1' src={torch} />
               <motion.div className='t-w'
                 initial={{ opacity: 0 }}
                 whileInView={{
@@ -154,8 +130,8 @@ function App() {
                     delay: 0.2
                   }
                 }}>
-                I'm a<br></br>Creative<br></br>Developer</motion.div>
-            </h1>
+              </motion.div>
+            </div>
           )}
           <div className="more-2-cont">
             <div className='m-a-1' id='m-a-1'
@@ -163,7 +139,7 @@ function App() {
                 handleClick2('more-2-wrapper');
                 setIsMinimized2(!isMinimized2);
               }}>
-              {isMinimized2 ? "Close" : ""} <div id='top-left-cont'><div className="project-bt">Projects</div></div>
+              {isMinimized2 ? "Close" : ""} <div id='top-left-cont'><div className="project-bt"></div></div>
             </div>
           </div>
           <AnimatePresence>
@@ -177,31 +153,11 @@ function App() {
                     delay: 0.2
                   }
                 }}>
-                <div id='top-left-cont'>
-                  <h1 className='more-text-3' id='more-text-2'>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{
-                        opacity: 1,
-                        transition: {
-                          duration: 1,
-                          delay: 0.2
-                        }
-                      }}
-                      className="project-bt">
-                      Projects</motion.div>
-                  </h1>
-                </div>
-                <p class='more-text-3'>Hello,<br></br><br></br> My name is Itwela Ibomu and I love
-                  design and development. Im 22 years old, from Atlanta, Ga {currentlifestatus}.
-                  <br></br>
-                  <br></br>
-                  Currently, I attend WGU - Western Governors University pursuing my bachelors in Software Engineering
-                  <br></br>
-                  <br></br>
-                  I wear many hats as far as a designer but my tech stack is as follows:
+                {/* <div id='top-left-cont'> */}
+                <h1 className='more-text-2' id='more-text-all'></h1>
+                {/* </div> */}
+                <p id='dropdown-text' class='dropdown-text-2'>Hello,<br></br><br></br> 
                 </p>
-
               </motion.div>
             )}
           </AnimatePresence>
@@ -223,7 +179,7 @@ function App() {
                 }
               }}
             >
-              I like the<br></br>Simple Things</motion.div>
+            </motion.div>
           </h1>
         )}
         <div className="more-3-cont">
@@ -233,7 +189,7 @@ function App() {
               handleClick3('more-3-wrapper');
               setIsMinimized3(!isMinimized3);
             }}>
-            {isMinimized3 ? "Close" : ""} <div id='top-right-cont'> <div id='interest-bt'>Interests</div></div>
+            {isMinimized3 ? "Close" : ""} <div id='top-right-cont'> <div id='interest-bt'></div></div>
           </div>
         </div>
         <AnimatePresence>
@@ -245,16 +201,8 @@ function App() {
               exit={'exit'}
               transition={{ duration: 1 }}>
               <div id="top-right-cont">
-                <h1 className='more-text-3' id='more-text-3'>Interests</h1>
-                <p className='more-text-3'>Hello,<br></br><br></br> My name is Itwela Ibomu and I love
-                  design and development. Im 22 years old, from Atlanta, Ga {currentlifestatus}.
-                  <br></br>
-                  <br></br>
-                  Currently, I attend WGU - Western Governors University pursuing my bachelors in Software Engineering
-                  <br></br>
-                  <br></br>
-                  I wear many hats as far as a designer but my tech stack is as follows:
-
+                <h1 className='more-text-3' id='more-text-3'>\</h1>
+                <p className='more-text-3'>   
                 </p>
               </div>
             </motion.div>

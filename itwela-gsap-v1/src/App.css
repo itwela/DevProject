@@ -1,60 +1,70 @@
-.welcome-section
-{
-  position: relative;
-  display: grid;
-  place-content: center;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+.welcome-section {
+  /* background-image: url("../public/cave-entrance-view-form-inside-underground-lake-r-2022-09-14-06-41-31-utc.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply; 
 }
 
-/* welcome section text */
-.we-make
-{
-  font-size: min(17vw, 260px);
-  line-height: min(0.1em, 0.4em);
-  margin-top: 1em;
+/* --------------------------------- */
+
+.container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  height: 100vh;
 }
-.happen
+
+/* -------------------------------- */
+
+.lets
 {
-  font-size: min(20vw, 325px);
+  grid-column-start: 20%;
+  grid-column-end: 40%;
+  grid-row-start: 20%;
+  grid-row-end: 40%;
+
 }
-.subhead
-{
-  margin: 0;
-  font-family: secondary;
-  font-size: min(2.5vw, 25px);
+
+.subhead {
+  font-family: main;
+  font-size: min(2vw, 20px);
+  position: absolute;
+  bottom: 0;
+  padding: 0.5em;
+  left: 0;
+  margin: min(4em, 2em);
+  border: 1px white solid;
 }
-.more-bt
-{
+
+.more-bt {
+  /* border: 20px red solid; */
   position: absolute;
   bottom: 0;
   right: 0;
-  margin: min(3em, 5em);
+  margin: min(2em, 3em);
 
 }
-.torch-left-1
-{
+
+
+
+.torch-left-1 {
   top: 0;
   left: 0;
   transform: translate(-30%, 30%);
   position: absolute;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
 
 /*  IM A CREATIVE DEVELOPER --------- PROJECT SECTION */
 
-.torch-right-1
-{
-  right:0;
+.torch-right-1 {
+  right: 0;
   position: absolute;
   transform: translate(30%, -10%) scaleX(-1);
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
 
-.welcome-section-2
-{
+.welcome-section-2 {
   position: relative;
   display: grid;
   place-content: center;
@@ -67,39 +77,36 @@
 
 
 /* IM LIKE SIMPLE THINGS ------------ INTERESTS SECTION */
-.torch-left-2
-{
+.torch-left-2 {
   left: 0;
   transform: translate(-30%, 30%);
   position: absolute;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
 
 
 
 
 /* LETS CONNECT -------------- INTERESTS SECTION */
-.hero-3
-{
+.hero-3 {
   overflow: hidden;
 }
 
 
-.torch-bottom-left
-{
+.torch-bottom-left {
   left: 0;
   transform: translate(-30%, 30%);
   position: absolute;
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
 
-.torch-bottom-right
-{
-  right:0;
+.torch-bottom-right {
+  right: 0;
   position: absolute;
   transform: translate(30%, 30%) scaleX(-1);
-  mix-blend-mode:screen;
+  mix-blend-mode: screen;
 }
+
 /* 
 
 #root {

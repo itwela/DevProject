@@ -11,7 +11,7 @@
   height: 100%;
 
 
-  background-image: url("./public/cave/cavetxt.png");
+  /* background-image: url("./public/cave/cave3.jpg"); */
   background-size:contain;
   background-repeat: no-repeat;
   background-color: var(--brown);
@@ -24,7 +24,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* --white: #fff6d6;
   --brown: #782a1a; */
 }
@@ -32,13 +32,18 @@
 @font-face {
   font-family: main;
   font-weight:900;
-  src: url("./src/fonts/CroMagnum-eZzJO.ttf");
+  src: url("./src/fonts/Franie-BlackItalic.otf");
 
 }
 @font-face {
   font-family: secondary;
-  src: url("./src/fonts/Keiner-Bold.otf");
+  src: url("./src/fonts/Franie-Hair.otf");
 }
+@font-face {
+  font-family: wide;
+  src: url("./src/fonts/SAAtlanticOcean.otf")
+} 
+
 
 /* :root
 {
@@ -47,7 +52,7 @@
 } */
 
  html{
-  color: #fff6d6;
+  color: #ffe4d6;
   overflow-x: hidden;
 } 
 
@@ -64,8 +69,10 @@ body
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  color: #fff6d6;
+  color: #fafafa;
   font-family: main;
+
+  background-color: #040404;
 
 }
 
@@ -81,11 +88,7 @@ section
   min-height: 100vh;
   overflow-x: hidden;
 
-  background-image: url("./public/cave/cavetxt.png");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-blend-mode:multiply ;
 
-  background-color: #782a1a;
+  /* background-color: #782a1a; */
 
 }  

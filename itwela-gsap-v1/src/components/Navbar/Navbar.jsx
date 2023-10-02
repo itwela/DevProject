@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import './Navbar.scss'
 import '../Projects/Pjects.jsx'
-import logo from '../../../public/itwela-smile.png'; // Import the image
+import torch from '../../../public/cave/torch1.gif'
+import logo from '../../../public/icons8-caveman-50.png'; // Import the image
 import close from '../../../public/icons8-close-30.png'
 
 function Navbar() {
@@ -39,7 +40,7 @@ function Navbar() {
                     <div className="n-cont">
 
                      <motion.img                            
-                        src={logo}
+                        src={torch}
                         className="navbar-logo"
                         id="Itwela-logo" ref={buttonRef} />
 
