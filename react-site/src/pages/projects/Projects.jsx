@@ -10,14 +10,11 @@ function Projects() {
     return (
         <>
             <section className='project-section
-flex
-place-content-center  
 relative
-            '>
+flex
+place-content-left
+h-[180vh]            '>
                 <div className='hero-container 
-m-0
-p-8
-bg-lightbrown
 '
                 >
                     <h1 className="
@@ -53,22 +50,12 @@ lg:text-[8em]
 leading-[0.75em]
 text-darkbrown
 tracking-tighter
-bottom-[8%]
+bottom-[-1.5%]
 right-0
 z-10
   ">
                         PROJECTS
                     </h1>
-
-                    <p className="
-text-2xl 
-font-main
-italic
-text-lightbrown
-text-right
-">
-                        we make fire
-                    </p>
 
                 </div>
                 <ImagesScroll/>

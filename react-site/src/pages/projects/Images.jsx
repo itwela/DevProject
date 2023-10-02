@@ -31,10 +31,10 @@ export default function ImagesScroll() {
         offset: ['start end', 'end start']
     })
 
-    const y = useTransform(scrollYProgress, [0,1], [0, height * 2])
-    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 1.5])
-    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 3.3])
-    const y4 = useTransform(scrollYProgress, [0,1], [0, 2000])
+    const y = useTransform(scrollYProgress, [0,1], [0, height * 5])
+    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 6.5])
+    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 6.3])
+    const y4 = useTransform(scrollYProgress, [0,1], [0, height * 5])
 
     useEffect( () => {
         const lenis = new Lenis()
@@ -50,11 +50,13 @@ requestAnimationFrame(raf)
 
     return (
         <>
+        <div className="gallery-wrapper">
         <div className='gallery' ref={scrollRef}>
             <Column images={[images[0], images[1], images[2]]}  y={y}/>
             <Column images={[images[3], images[4], images[5]]} y={y2}/>
             <Column images={[images[6], images[7], images[8]]} y={y3}/>
             <Column images={[images[9], images[10], images[11]]} y={y4}/>
+        </div>
         </div>
         </>
     )
@@ -72,4 +74,5 @@ const Column = ({images, y=0}) => (
                 </div>
             ))
         }
-    
+    </motion.div>
+)
