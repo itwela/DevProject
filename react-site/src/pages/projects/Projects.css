@@ -1,4 +1,117 @@
+
+
 .project-section
 {
     background-color: #c1b49a !important;
+}
+
+.slider-section
+{
+    background-color: #4b3d2d !important;
+    height: 70vh;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+    overflow: hidden;
+
+
+}
+.scroller
+{
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: #c1b49a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 110vw;
+    /* pointer-events: none; */
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    place-self: center;
+    z-index: 11;
+}
+
+#box{
+    border: 2px solid #c1b49a;
+    min-width: 350px;
+}
+.scroller__inner {
+    padding-block: 2em;
+    animation: scroll 20.1s linear infinite;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    position: absolute;
+        z-index: 1000;
+    /* transform: translate3d(0.5%, 0, 0); */
+    transition: opacity .1s;
+    gap:1em;
+    height: 60vh;
+}
+
+.scroller__inner:hover
+{
+    animation-play-state: paused;
+    -o-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    transition: all 1s ease-in-out;
+
+}
+
+
+.scroller div:not(.scroller__inner)
+{
+    border-radius: 10px;
+    padding: 1em;
+}
+
+@keyframes scroll {
+    
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        opacity: 1;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+
+    100% {
+        transform: matrix(1, 0, 0, 1, -2200.619140625, 0);
+        opacity: 1;
+    }
+
+}
+
+
+
+
+@media (max-width: 900px) {
+
+        .project-section
+        {
+            height: 100vh;
+        }
+
+}
+
+@media (max-width: 500px) {
+
+    @keyframes scroll {
+    
+        0% {
+            transform: matrix(1, 0, 0,1, 0, 0);
+            opacity: 1;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+    
+        100% {
+            transform: matrix(1, 0, 0, 1, -2198.619140625, 0);
+            opacity: 1;
+        }
+    
+    }
+
 }

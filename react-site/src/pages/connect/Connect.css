@@ -1,0 +1,28 @@
+.connect-section
+{
+    background-color: #4b3d2d !important;
+    background-image: url('../../assets/cave2.jpg');
+    background-size: cover;
+    background-blend-mode:multiply;
+    height: 150vh;
+    overflow: hidden;
+
+}
+
+.firegif
+{
+    mix-blend-mode:exclusion;
+    transform: rotate(105deg) translateX(20%) translateY(-10%) scale(2); 
+    transition: all 0.5s ease-in-out;
+    opacity: 100%;
+    overflow: hidden;
+    left: 47%;
+}
+
+.wemakefire-p:hover
+{
+    .firegif
+    {
+        opacity: 100%;
+    }
+}

@@ -44,7 +44,6 @@ export default function StickyFooter() {
             px: 1,
             mt: 'auto',
             zIndex: '1',
-            backgroundColor: '#4b3d2d',
             position: 'fixed',
             bottom: '0',
             width: '100vw',

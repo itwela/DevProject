@@ -1,5 +1,35 @@
-.nav-photo
+
+#navlinks
 {
-    width: 30px;
-    height: 30px;
+    cursor: pointer;
+    color: #c1b49a;
+    transform: translateX(-1em);
+}
+
+.itwela
+{
+    color: #c1b49a
+    
+}
+
+@media (max-width: 400px) {
+
+    .ibomu
+    {
+        display: none;
+    }
+
+    .itwela
+    {
+        top: 12px;
+        left: -35px;
+    }
+
+    #navlinks
+{
+    cursor: pointer;
+    color: #c1b49a;
+}
+
+    
 }

@@ -13,12 +13,17 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.11",
+    "@studio-freight/lenis": "^1.0.25",
     "autoprefixer": "^10.4.16",
     "framer-motion": "^10.16.4",
+    "gsap": "^3.12.2",
     "postcss": "^8.4.31",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.16.0"
+    "react-router-dom": "^6.16.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

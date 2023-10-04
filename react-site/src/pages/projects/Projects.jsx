@@ -13,11 +13,10 @@ function Projects() {
 relative
 flex
 place-content-left
-h-[180vh]            '>
-                <div className='hero-container 
-'
-                >
-                    <h1 className="
+h-[180vh]
+            '>
+                <div className='hero-container' id='projects'>
+                    {/* <h1 className="
 bold 
 absolute
 z-10
@@ -36,7 +35,7 @@ top-[0]
 left-0
   ">
                         PROJECTS
-                    </h1>
+                    </h1> */}
                     <h1 className="
 bold 
 absolute
@@ -50,7 +49,7 @@ lg:text-[8em]
 leading-[0.75em]
 text-darkbrown
 tracking-tighter
-bottom-[-1.5%]
+bottom-[-2.5%]
 right-0
 z-10
   ">

@@ -1,0 +1,73 @@
+.about-section
+{
+    background-color: #4b3d2d;
+    height: 65em;
+}
+
+.pic
+{
+    outline: 2px solid #c1b49a;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%
+}
+
+@media (max-width: 1020px) {
+    
+    .pic
+    {
+        top: 1%;
+        width: 10vw;
+        height: 10vh;
+        right: 10%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .about-section
+{
+    background-color: #4b3d2d;
+    height: 65em;
+}
+
+.pic
+{
+    display: none
+}
+
+.the-flex-text
+{
+    place-content: center
+}
+
+
+    
+}
+
+.column-1-about
+{
+    /* background-color: red;    */
+}
+
+.column-2-about
+{
+    border: 1px solid #c1b49a;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.column-3-about
+{
+    border: 1px solid #c1b49a;
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.the-flex-text {
+    font-size: calc(50px + 2vw); /* This will set a minimum font size of 10px and scale up based on the width of the viewport */
+    text-align: center; /* This will center the text */
+    width: 100%; /* This will make the text take up the full width of its container */
+    word-wrap: break-word; /* This will prevent the text from overflowing its container */
+}

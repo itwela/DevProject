@@ -31,13 +31,15 @@ export default function ImagesScroll() {
         offset: ['start end', 'end start']
     })
 
-    const y = useTransform(scrollYProgress, [0,1], [0, height * 5])
-    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 6.5])
-    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 6.3])
-    const y4 = useTransform(scrollYProgress, [0,1], [0, height * 5])
+    const y = useTransform(scrollYProgress, [0,1], [0, height * 4.5])
+    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 6])
+    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 5.7])
+    const y4 = useTransform(scrollYProgress, [0,1], [0, height * 4.5])
 
     useEffect( () => {
-        const lenis = new Lenis()
+        const lenis = new Lenis({
+            smooth: 0.4
+        })
 
 
 function raf(time) {

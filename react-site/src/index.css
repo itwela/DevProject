@@ -26,6 +26,7 @@ body {
 section{
   height: 100vh;
   display: flex;
+  width: 100vw;
   place-items: center;
 }
 

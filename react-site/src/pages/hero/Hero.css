@@ -1,5 +1,127 @@
 .hero-section
 {
     background-color: #4b3d2d;
+    background-image: url('../../assets/cave2.jpg');
+    background-size: cover;
+    background-blend-mode:multiply;
+    
+
+}
+
+.wrapper-dreams
+{
+    overflow: hidden;
+    border-style: solid;
+    overflow: hidden;
+    position: relative;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    /* pointer-events: none; */
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    place-content: start;
+    z-index: 11;
+    display: none;
+    transition: all 2s ease-in-out;
+}
+
+.wemakehappen-container
+{
+    transition: all 2s ease-in-out;
+
+}
+
+.wemakehappen-container:hover
+{
+    .wrapper-dreams
+    {
+        display: block;
+        transition: all 2s ease-in-out;
+
+    }
+
+
+}
+
+.wrapper__inner
+{
+    animation: scroll-hero 10s linear infinite;
+    height: 1em;
+    display: flex;
+    place-items: center;
+  
+    position: absolute;
+        z-index: 1000;
+    
+    /* transform: translate3d(0.5%, 0, 0); */
+    /* left: 100%; */
+    transition: all 2s ease-in-out;
+
+}
+
+.animate-multi
+{
+    transition: all 2s ease-in-out;
+    transform: translateY(57%);
+    opacity: 40%;
+    /* white-space: nowrap; */
+}
+
+
+
+.about-1-paragraph
+{
+    size: 0.9em;
+}
+
+@keyframes scroll-hero {
+    
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+    }
+
+    100% {
+        transform: matrix(1, 0, 0, 1, 0, -1600.619140625);
+    }
+
+}
+
+@media (max-width: 780px) {
+    
+    @keyframes scroll-hero {
+    
+        0% {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+    
+        100% {
+            transform: matrix(1, 0, 0, 1, 0, -1250.619140625);
+        }
+    
+    }
+
+}
+
+@media (max-width: 550px) {
+    
+    @keyframes scroll-hero {
+    
+        0% {
+            transform: matrix(1, 0, 0, 1, 0, 0);
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+    
+        100% {
+            transform: matrix(1, 0, 0, 1, 0, -1040.619140625);
+        }
+    
+    }
 
 }
