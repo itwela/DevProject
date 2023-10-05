@@ -3,13 +3,14 @@ import pandas as pd
 import altair as alt
 from annotated_text import annotated_text as anotxt
 
+
 # Define the CSS style for transforming the title
 st.title("SFX ALGO RESEARCH")
 # Display the text
 st.write("Here you will discover with me how Im learning many things, from c++ which is what I built this algorithim with, to pandas, streamlit, and much more. I'll also just be putting my thought process on here. ")
 
 
-data = pd.read_csv('../StrategyTester.csv')
+data = pd.read_csv('textdetection/StrategyTester.csv')
 longdata = pd.read_csv('long.csv')
 bdfbal = pd.DataFrame(data,columns=['#', 'Profit', 'Balance'])
 # ------------------------------------
@@ -35,7 +36,7 @@ with st.expander("See more information on how I created the table above:"):
         Now about this table. I was having an issue with my excel sheet where I had these blank 
         spaces on my balance colum and because of that, the chart would not print. See below the "issue":
              ''')
-    st.image("../pbtablepic.png")
+    st.image("textdetection/pbtablepic.png")
     st.write('''
         To fix this, I tried alot of things but ended up writing a python script to edit the excel sheet.
         There probably are alot of ways but I was sure I could fix the problem and it only took afew lines of code
@@ -72,7 +73,7 @@ with st.expander("See more information on how I created the table above:"):
              
         Below is an example of what the code ended up doing for me:
             ''')
-    st.image("../pbupdatetablepic.png")
+    st.image("textdetection/pbupdatetablepic.png")
 
 # ------------------------------------
 col1, col2 = st.columns(2)
