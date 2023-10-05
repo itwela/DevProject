@@ -2,15 +2,22 @@
 {
     background-color: #4b3d2d;
     height: 65em;
+    overflow: hidden;
 }
 
 .pic
 {
-    outline: 2px solid #c1b49a;
+    outline: 2px solid #4b3d2d;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     border-top-left-radius: 100%;
-    border-top-right-radius: 100%
+    border-top-right-radius: 100%;
+
+    background-image: url("../../../public/images/itwela-smile.png");
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #c1b49a;
 }
 
 @media (max-width: 1020px) {

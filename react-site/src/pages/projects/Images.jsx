@@ -7,14 +7,14 @@ import useDimension from './useDimension.jsx';
 
 
 const images = [
-    'img1.jpg',
+    'img1.gif',
     'img2.jpg',
     'img3.jpg',
     'img4.jpg',
-    'img5.jpg',
+    'img5.GIF',
     'img6.jpg',
-    'img7.jpg',
     'img8.jpg',
+    'img7.gif',
     'img9.jpg',
     'img10.jpg',
     'img11.jpg',
@@ -31,10 +31,10 @@ export default function ImagesScroll() {
         offset: ['start end', 'end start']
     })
 
-    const y = useTransform(scrollYProgress, [0,1], [0, height * 4.5])
-    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 6])
-    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 5.7])
-    const y4 = useTransform(scrollYProgress, [0,1], [0, height * 4.5])
+    const y = useTransform(scrollYProgress, [0,1], [0, height * 1.5])
+    const y2 = useTransform(scrollYProgress, [0,1], [0, height * 2])
+    const y3 = useTransform(scrollYProgress, [0,1], [0, height * 2.5])
+    const y4 = useTransform(scrollYProgress, [0,1], [0, height * 1.2])
 
     useEffect( () => {
         const lenis = new Lenis({

@@ -27,7 +27,7 @@ export default function Connect () {
     
     return (
         <>
-            <section className="connect-section relative">
+            <section className="connect-section absolute z-10">
                 <div className="connect-container
 flex
 place-content-center
@@ -66,7 +66,7 @@ flex
                     flex
                     pl-[1px]
                     absolute
-                    bottom-[-20.3%]
+                    bottom-[-18.3%]
                     justify-between 
                     flex-wrap
                     '>
@@ -74,7 +74,7 @@ flex
                         text-sm
                         outline
                         rounded-[2em]
-                        h-[90%]
+                        h-[60%]
                         pr-8
                         pl-8
                         place-self-center'>
@@ -84,7 +84,7 @@ flex
                         text-sm
                         outline
                         rounded-[2em]
-                        h-[90%]
+                        h-[60%]
                         pr-8
                         pl-8
                         place-self-center'>

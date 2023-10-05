@@ -34,7 +34,7 @@ export default function Items() {
                 <li className="nav-list font-main p-2"
                 onClick={() => window.location.replace("/#projects")}
                 id="navlinks">
-                Projects
+                Portfolio
                 </li>
                 <li className="nav-list font-main p-2"
                 onClick={() => window.location.replace("/#about")}

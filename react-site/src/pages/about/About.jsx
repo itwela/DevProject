@@ -96,11 +96,11 @@ lg:place-content-left
                                 })}
                                 <p className="about-1-paragraph font-main text-lightbrown text-left text-[1.2em]">
                                     Firstly, If you made it this far, thank you!
-                                    I want to take this time to just tell you a little about me. Im 22 years old, From Atlanta
+                                    A little about me: Im 22 years old, from Atlanta
                                     Ga, <span className='font-black'>I love technolgy, finance, boxing, design;</span> <em>what can I say I'm a man of many passions.</em>
                                     <br></br>
                                     <br></br>
-                                    Currently, I'm attending Western Govenors University with a pursuit of a Bachelors Degree in Software
+                                    Currently, I'm attending <a href="">WGU</a> pursuing a Bachelors Degree in Software
                                     Engineering.
                                 </p>
                             </p>
@@ -123,6 +123,13 @@ lg:place-content-left
         lg: place-self-start
         sm: w-[80vw]   
                 ">
+                                    <p className="about-1-paragraph font-main text-lightbrown text-left text-[1.2em]">
+                                    Caveman Creative is a way for me to summarize 
+                                    <br></br>
+                                    <br></br>
+                                    Currently, I'm attending <a href="">WGU</a> pursuing a Bachelors Degree in Software
+                                    Engineering.
+                                </p>
                         </div>
                     </div>
                 </div>

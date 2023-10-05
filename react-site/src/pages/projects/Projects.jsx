@@ -49,11 +49,11 @@ lg:text-[8em]
 leading-[0.75em]
 text-darkbrown
 tracking-tighter
-bottom-[-2.5%]
+bottom-[-1.5%]
 right-0
 z-10
   ">
-                        PROJECTS
+                        PORTFOLIO
                     </h1>
 
                 </div>

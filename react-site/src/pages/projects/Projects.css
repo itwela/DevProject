@@ -39,7 +39,7 @@
 }
 .scroller__inner {
     padding-block: 2em;
-    animation: scroll 20.1s linear infinite;
+    animation: scroll 25.1s linear infinite;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
@@ -60,12 +60,21 @@
     transition: all 1s ease-in-out;
 
 }
-
-
 .scroller div:not(.scroller__inner)
 {
     border-radius: 10px;
     padding: 1em;
+}
+
+.instructions:hover{
+    color: white;
+    transition: all 1s ease-in-out;
+}
+
+.see-more
+{
+    outline: 1px solid #c1b49a;
+    border-radius: 2em; 
 }
 
 @keyframes scroll {

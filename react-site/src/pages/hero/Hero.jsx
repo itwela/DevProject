@@ -103,10 +103,10 @@ text-shadow-custom
                 IDEAS 
                 <br />
                 <br />
-                APPS  
+                FINTECH 
                 <br />
                 <br />
-                TRADES
+                APPS 
                 <br />
                 <br />
                 SITES 

@@ -12,9 +12,12 @@ function Copyright() {
     <Typography variant="body2" 
     className='
     text-lightbrown'>
-      {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      {/* {'Copyright © '} */}
+      <Link color="inherit" href="https://www.linkedin.com/in/itwela/">
+        Linkedin
+      </Link>{' '}
+      <Link color="inherit" href="https://github.com/itwela">
+        Github
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}

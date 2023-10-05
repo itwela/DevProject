@@ -1,10 +1,10 @@
 .connect-section
 {
-    background-color: #4b3d2d !important;
+    background-color: #4b3d2d;
     background-image: url('../../assets/cave2.jpg');
     background-size: cover;
     background-blend-mode:multiply;
-    height: 150vh;
+    height: 100vh;
     overflow: hidden;
 
 }
@@ -17,12 +17,4 @@
     opacity: 100%;
     overflow: hidden;
     left: 47%;
-}
-
-.wemakefire-p:hover
-{
-    .firegif
-    {
-        opacity: 100%;
-    }
 }

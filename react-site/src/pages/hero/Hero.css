@@ -14,10 +14,6 @@
     border-style: solid;
     overflow: hidden;
     position: relative;
-    /* position: absolute;
-    top: 0;
-    left: 0; */
-    /* pointer-events: none; */
     height: 20vh;
     display: flex;
     align-items: center;
@@ -27,14 +23,9 @@
     transition: all 2s ease-in-out;
 }
 
-.wemakehappen-container
-{
-    transition: all 2s ease-in-out;
-
-}
-
 .wemakehappen-container:hover
 {
+
     .wrapper-dreams
     {
         display: block;
@@ -54,10 +45,6 @@
   
     position: absolute;
         z-index: 1000;
-    
-    /* transform: translate3d(0.5%, 0, 0); */
-    /* left: 100%; */
-    transition: all 2s ease-in-out;
 
 }
 
@@ -66,14 +53,22 @@
     transition: all 2s ease-in-out;
     transform: translateY(57%);
     opacity: 40%;
-    /* white-space: nowrap; */
 }
-
-
 
 .about-1-paragraph
 {
     size: 0.9em;
+}
+
+.about-1-paragraph:hover
+{
+    opacity: 100%;
+    transition: all 1s ease-in-out;
+}
+
+.react .csharp .tailwind .pinescript .python .node:hover {
+    
+    opacity: 100%;
 }
 
 @keyframes scroll-hero {
