@@ -12,8 +12,8 @@ anotxt(
     ("collection of reseacrh", "!"), 
     "that I do on", 
     ("algorithmic trading.", "!!"), 
-    "There are many apps to try on this site and",
-    ("research", "!"), 
+    "There is", 
+    ("alot", "!"), 
     "to explore so please....."
 )
 
