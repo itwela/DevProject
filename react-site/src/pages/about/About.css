@@ -18,6 +18,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-color: #c1b49a;
+
+    display: none;
 }
 
 @media (max-width: 1020px) {
@@ -36,7 +38,7 @@
     .about-section
 {
     background-color: #4b3d2d;
-    height: 65em;
+    height: 75em;
 }
 
 .pic

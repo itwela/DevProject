@@ -46,7 +46,7 @@ export default function StickyFooter() {
             py: 2,
             px: 1,
             mt: 'auto',
-            zIndex: '1',
+            zIndex: '120',
             position: 'fixed',
             bottom: '0',
             width: '100vw',

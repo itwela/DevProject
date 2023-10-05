@@ -90,7 +90,9 @@ text-[0.9em]
 font-main
 place-content-center
 place-items-center
-                            '>
+                            '
+                            href='https://mealmaster.streamlit.app/'
+                            target="_blank">
                             more
                             </a>
                         </div>

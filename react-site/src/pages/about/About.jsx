@@ -106,12 +106,11 @@ lg:place-content-left
                             </p>
                         </motion.div>
                         <div className="pic
-                        h-[10vh]
                         place-self-end
-                        w-[30vw]
+                        w-[32vw]
                         flex
                         absolute
-                        h-[29vw]
+                        h-[35.5vw]
                         top-[21%]
                             ">
                         </div>
@@ -124,11 +123,13 @@ lg:place-content-left
         sm: w-[80vw]   
                 ">
                                     <p className="about-1-paragraph font-main text-lightbrown text-left text-[1.2em]">
-                                    Caveman Creative is a way for me to summarize 
+                                    Caveman Creative is a way for me to summarize all of my technolgical
+                                    endeavors in one place. These span from <em className='font-black'>algorithmic trading </em>to
+                                    <em className='font-black'> web development </em>
+                                    to even <em className='font-black'>data analysis.</em>
                                     <br></br>
                                     <br></br>
-                                    Currently, I'm attending <a href="">WGU</a> pursuing a Bachelors Degree in Software
-                                    Engineering.
+                                    Thank you for stopping by and please dont hesitate to reach out!
                                 </p>
                         </div>
                     </div>

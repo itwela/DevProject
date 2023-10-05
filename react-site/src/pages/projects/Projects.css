@@ -77,6 +77,13 @@
     border-radius: 2em; 
 }
 
+.see-more:hover
+{
+    transform: scale(1.2);
+    transition: 1s ease all;
+}
+
+
 @keyframes scroll {
     
     0% {
