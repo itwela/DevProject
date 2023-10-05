@@ -1,6 +1,4 @@
 import streamlit as st
-import os
-from decouple import config
 from PIL import Image
 from streamlit_extras.keyboard_url import keyboard_to_url
 from annotated_text import annotated_text as anotxt
