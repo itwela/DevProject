@@ -1,16 +1,10 @@
 import streamlit as st
-import os
 import openai
-import pandas as pd
 import time
-from PIL import Image 
-from streamlit_extras.stoggle import stoggle
 from streamlit_extras.streaming_write import write
-from dotenv import load_dotenv
 
 # OpenAI API key setup start----
 
-load_dotenv()
 
 addapi = st.text_input("Add your API Key below:", key="api")
 
