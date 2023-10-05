@@ -11,7 +11,7 @@ st.write("Here you will discover with me how Im learning many things, from c++ w
 
 
 data = pd.read_csv('textdetection/StrategyTester.csv')
-longdata = pd.read_csv('long.csv')
+longdata = pd.read_csv('textdetection/long.csv')
 bdfbal = pd.DataFrame(data,columns=['#', 'Profit', 'Balance'])
 # ------------------------------------
 col1, col2 = st.columns(2)
