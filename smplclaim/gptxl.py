@@ -1,34 +1,21 @@
-import openai
 import pandas as pd
 
-# Set up your OpenAI API key
-# openai.api_key = "YOUR_API_KEY"
+# Provide the full path to the CSV file
+file_dir = r'C:\Users\Judy Sanders\Desktop\code\DevProject\smplclaim'
+file_path = 'baba-test.csv'
+filepath = f'{file_dir}/{file_path}'  # Replace this with the actual path to your file
 
-# Load your Excel file
-df = pd.read_csv('smplclaim/baba-2.csv', encoding='ISO-8859-1')
-sheet = df
+# Read the CSV file
+df = pd.read_csv(filepath)
 
-# function to add data to sheet
-def add_data_to_df(df, data_dict):
-    new_data = pd.DataFrame(data_dict)
-    updated_df = pd.concat([df, new_data])
-    return updated_df
+# Replace NaN values with an empty string
+df = df.fillna('')
 
-# Define a function to interact with GPT-3
-def update_excel(prompt):
-    response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=prompt,
-        max_tokens=50,  # Adjust based on your needs
-    )
-    return response.choices[0].text.strip()
+# Convert the DataFrame to a dictionary
+data_dict = df.to_dict()
 
-# Example prompt to update a specific cell
-prompt = "Update the value in cell A1 to 42."
-updated_value = add_data_to_df(prompt, df)
+# Filter out the empty cells
+filtered_data_dict = {key: {k: v for k, v in data_dict[key].items() if v != ''} for key in data_dict}
 
-# Update the Excel sheet with the generated value
-sheet["A1"] = updated_value
-
-# Save the updated Excel file
-df.to_csv('smplclaim/baba-2.csv', index=False)
+# Print the filtered dictionary
+print(filtered_data_dict)
