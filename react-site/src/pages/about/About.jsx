@@ -80,8 +80,8 @@ lg:place-content-left
                             className="column-2-about 
             flex
             basis-32
-            lg:w-[50vw]
-            lg: place-self-start
+            lg:w-[80vw]
+            lg: place-self-center
             sm: w-[80vw]
                             ">
                             <p>
@@ -117,9 +117,9 @@ lg:place-content-left
                         <div className="column-3-about 
         flex
         basis-32
-        lg:w-[50vw]
+        lg:w-[80vw]
         place-content-center
-        lg: place-self-start
+        lg: place-self-center
         sm: w-[80vw]   
                 ">
                                     <p className="about-1-paragraph font-main text-lightbrown text-left text-[1.2em]">

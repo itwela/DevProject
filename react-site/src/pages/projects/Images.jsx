@@ -8,16 +8,16 @@ import useDimension from './useDimension.jsx';
 
 const images = [
     'img1.gif',
-    'img2.jpg',
+    'img2.png',
     'img3.jpg',
-    'img4.jpg',
-    'img5.GIF',
     'img6.jpg',
-    'img7.gif',
+    'img5.GIF',
     'img8.jpg',
+    'img11.GIF',
     'img9.jpg',
     'img10.jpg',
-    'img11.jpg',
+    'img4.png',
+    'img7.gif',
     'img12.jpg'
 
 ]
