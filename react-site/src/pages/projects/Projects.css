@@ -71,7 +71,7 @@
 
 .instructions:hover{
     color: white;
-    transition: all 1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .see-more
@@ -83,7 +83,7 @@
 .see-more:hover
 {
     transform: scale(1.2);
-    transition: 1s ease all;
+    transition: 0.2s ease all;
 }
 
 

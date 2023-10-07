@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button } from "@mui/material"
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom'
 import img from "../../assets/nav.png"
 import './Items.css'
 import resume from '../../assets/ItwelaSoftwareResume.pdf'
@@ -32,17 +33,17 @@ export default function Items() {
             variants={variants}
             >
                 <li className="nav-list font-main p-2"
-                onClick={() => window.location.replace("/#projects")}
+                onClick={() => window.location.replace("/#wmh")}
                 id="navlinks">
-                Portfolio
+                Home
                 </li>
-                <li className="nav-list font-main p-2"
-                onClick={() => window.location.replace("/#about")}
+                <Link className="nav-list font-main p-2"
+                to={'/blog'}
                 id="navlinks">
-                About
-                </li>
+                Blog
+                </Link>
                 <li className="nav-list font-main p-2" id="navlinks">
-                <a href="" download={resume}>
+                <a href="https://westerngovernorsuniversity-my.sharepoint.com/:w:/g/personal/iibomu_wgu_edu/EYX2OmB3931Kn0XV7XFG8JABNw_ma7cr1XoU3QeroHhpXw?rtime=rhDG2cnG20g">
                     Resume</a>
                 </li>
 

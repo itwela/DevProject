@@ -70,26 +70,32 @@ flex
                     justify-between 
                     flex-wrap
                     '>
-                        <button className='button-1-contact
+                        <a href='mailto:deanandnostrand@gmail.com'
+                        className='button-1-contact
                         text-sm
                         outline
                         rounded-[2em]
                         h-[60%]
                         pr-8
                         pl-8
-                        place-self-center'>
+                        flex
+                        place-items-center'>
                             CONTACT ME
-                            </button>
-                        <button className='button-1-contact
+                            </a>
+                        <a 
+                        href='https://www.linkedin.com/in/itwela/'
+                        className='button-1-contact
                         text-sm
                         outline
                         rounded-[2em]
                         h-[60%]
                         pr-8
                         pl-8
-                        place-self-center'>
+                        flex
+                        align-items-center
+                        place-items-center'>
                             HIRE ME
-                            </button>
+                            </a>
                     </div>
                 </motion.div>
                 <img src={firevideo} alt="twezo" className='firegif                               

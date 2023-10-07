@@ -1,6 +1,6 @@
 Item #,Room,Brand or Manufacturer,Model#,Item Description,Original Vendor,Quantity Lost,Item Age (Years),Item Age (Months),Condition,Cost to Replace Pre-Tax (each),Total Cost
-1.0,basement,gucci,,MEN'S GUCCI ACE SNEAKER WITH WEB,gucci,2.0,,,New,500.0,1000.0
-2.0,bedroom,ikea,,orange wooden rocking chair,ikea,3.0,,,New,500.0,1000.0
+1.0,,,,,,,,,,,
+2.0,,,,,,,,,,,
 3.0,,,,,,,,,,,
 4.0,,,,,,,,,,,
 5.0,,,,,,,,,,,
@@ -219,4 +219,5 @@ Item #,Room,Brand or Manufacturer,Model#,Item Description,Original Vendor,Quanti
 ,,,,,,,,,,100.0,100.0
 ,,,,,,,,,,150.0,450.0
 ,,,,,,,,,,150.0,450.0
-,,,,,,,,,,50,150
+,,,,,,,,,,50.0,150.0
+,,,,,,,,,,50.0,50.0
