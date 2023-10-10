@@ -7,7 +7,7 @@ export default function ProjectSlider() {
                 <div className="scroller 
 top-[20%] 
                     ">
-                    <p className="instructions
+                    {/* <p className="instructions
 text-lightbrown 
 top-[1%] 
 absolute 
@@ -33,7 +33,7 @@ w-[100vw]
 place-content-end
                     ">
                     Once paused, you can tap me to play again!
-                </p>
+                </p> */}
                     <div className="scroller__inner">
                         <div className='project-1 relative' id='box'>
                             <p className='project-header font-main text-lightbrown font-black text-2xl'>Non-Profit<br></br>Landing Page</p>
@@ -46,6 +46,7 @@ place-content-end
                                 Deployed on Vercel.
                             </p>
                             <a href='https://clearheart.vercel.app/'
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -75,6 +76,7 @@ place-items-center
                                 Deployed through Streamlit.
                             </p>
                             <a href='https://mealmaster.streamlit.app/' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -105,7 +107,8 @@ place-items-center
                                 <br />
                                 Used Python and Gpt-4.
                             </p>
-                            <a href='https://www.notion.so/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926?pvs=4' 
+                            <a href='https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -136,6 +139,7 @@ place-items-center
                                 Used <a href=''>Pinescript</a>, <br/> Python
                             </p>
                             <a href='https://topaz-mink-ddd.notion.site/I-I-Technologies-and-The-SFX-Algo-d9b0d3433b654df4954a8e427423bb1e?pvs=4' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -166,6 +170,7 @@ place-items-center
                                 much more.
                             </p>
                             <a href='https://itwela.vercel.app/' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -192,7 +197,9 @@ place-items-center
                                 <br />
                                 Used Pandas, Streamlit, OpenAi.
                             </p>
-                            <a className='see-more 
+                            <a 
+                            target="_blank"
+                            className='see-more 
 absolute
 h-[10%]
 w-[20%]
@@ -227,6 +234,7 @@ place-items-center
                                 Deployed on Vercel.
                             </p>
                             <a href='https://clearheart.vercel.app/'
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -256,6 +264,7 @@ place-items-center
                                 Deployed through Streamlit.
                             </p>
                             <a href='https://mealmaster.streamlit.app/' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -286,7 +295,8 @@ place-items-center
                                 <br />
                                 Used Python and Gpt-4.
                             </p>
-                            <a href='https://www.notion.so/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926?pvs=4' 
+                            <a href='https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926'
+                            target="_blank" 
                             className='see-more 
 absolute
 h-[10%]
@@ -317,6 +327,7 @@ place-items-center
                                 Used <a href=''>Pinescript</a>, <br/> Python
                             </p>
                             <a href='https://topaz-mink-ddd.notion.site/I-I-Technologies-and-The-SFX-Algo-d9b0d3433b654df4954a8e427423bb1e?pvs=4' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -347,6 +358,7 @@ place-items-center
                                 much more.
                             </p>
                             <a href='https://itwela.vercel.app/' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -373,7 +385,9 @@ place-items-center
                                 <br />
                                 Used Pandas, Streamlit, OpenAi.
                             </p>
-                            <a className='see-more 
+                            <a 
+                            target="_blank"
+                            className='see-more 
 absolute
 h-[10%]
 w-[20%]

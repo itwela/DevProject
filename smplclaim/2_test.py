@@ -106,7 +106,7 @@ st.write("",
     """,)
 
 st.write(":red[Important ❗]") 
-st.subheader('''When you are done, please press the "Finished ✅" button and then the Download Updated File button.''')     
+st.subheader('''When you are done, please press the "Finished ✅" button and then the "Download Updated File" button.''')     
 st.write(    '''
         This is so that just in case you dont finish, you can upload your sheet back to google drive and 
         just continue from where you left off.

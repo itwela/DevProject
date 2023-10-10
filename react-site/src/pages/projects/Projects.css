@@ -24,16 +24,18 @@
     border-style: solid;
     border-width: 0 0 2px 0;
     border-color: #c1b49a;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 110vw;
     /* pointer-events: none; */
-    height: 70vh;
+    height: 73vh;
     display: flex;
     align-items: center;
     place-self: center;
     z-index: 11;
+    overflow-y: hidden;
+
 }
 
 #box{
@@ -46,6 +48,7 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    position: relative;
     display: flex;
     position: absolute;
         z-index: 1000;

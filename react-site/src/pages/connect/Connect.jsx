@@ -84,6 +84,7 @@ flex
                             </a>
                         <a 
                         href='https://www.linkedin.com/in/itwela/'
+                        target="_blank"
                         className='button-1-contact
                         text-sm
                         outline
@@ -92,6 +93,7 @@ flex
                         pr-8
                         pl-8
                         flex
+                        z-10
                         align-items-center
                         place-items-center'>
                             HIRE ME
