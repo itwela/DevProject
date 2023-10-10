@@ -192,7 +192,7 @@ place-items-center
                         <div className='project-6 relative' id='box'>
                             <p className='project-header font-main text-lightbrown font-black text-2xl'> SmplClaim </p>
                             <p className="p-description font-main text-lightbrown mt-[1em]">
-                            an Excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
+                            An excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
                                 <br />
                                 <br />
                                 Used Pandas, Streamlit, OpenAi.
@@ -380,7 +380,7 @@ place-items-center
                         <div className='project-6 relative' id='box'>
                             <p className='project-header font-main text-lightbrown font-black text-2xl'> SmplClaim </p>
                             <p className="p-description font-main text-lightbrown mt-[1em]">
-                            an Excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
+                            An excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
                                 <br />
                                 <br />
                                 Used Pandas, Streamlit, OpenAi.

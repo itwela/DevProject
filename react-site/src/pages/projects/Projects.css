@@ -16,6 +16,8 @@
     margin-left: 0px;
     margin-right: 0px;
     overflow: hidden;
+    padding-block: 2em;
+
 
 
 }
@@ -35,6 +37,7 @@
     place-self: center;
     z-index: 11;
     overflow-y: hidden;
+    
 
 }
 
@@ -43,7 +46,6 @@
     min-width: 350px;
 }
 .scroller__inner {
-    padding-block: 2em;
     animation: scroll 25.1s linear infinite;
     width: -webkit-fit-content;
     width: -moz-fit-content;

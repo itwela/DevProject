@@ -1,8 +1,11 @@
 .about-section
 {
     background-color: #4b3d2d;
-    height: 65em;
-    overflow: hidden;
+    height:110vh;
+}
+
+.about-container
+{
 }
 
 .pic
@@ -23,6 +26,7 @@
 }
 
 @media (max-width: 1020px) {
+
     
     .pic
     {
@@ -31,14 +35,22 @@
         height: 10vh;
         right: 10%;
     }
+
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
 
     .about-section
 {
     background-color: #4b3d2d;
-    height: 75em;
+}
+
+.about-1-paragraph {
+    font-size: 1em;
+}
+
+.about-1-ABOUT{
+    font-size: 4em;
 }
 
 .pic
@@ -79,4 +91,22 @@
     text-align: center; /* This will center the text */
     width: 100%; /* This will make the text take up the full width of its container */
     word-wrap: break-word; /* This will prevent the text from overflowing its container */
+}
+
+@media (max-width: 600px) {
+
+    .about-section
+{
+    background-color: #4b3d2d;
+    height: 100vh;
+}
+
+.about-1-paragraph {
+    font-size: 0.75em;
+}
+
+.about-1-ABOUT{
+    font-size: 2em;
+}
+
 }
