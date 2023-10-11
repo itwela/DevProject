@@ -16,7 +16,6 @@
     margin-left: 0px;
     margin-right: 0px;
     overflow: hidden;
-    padding-block: 2em;
 
 
 
@@ -58,6 +57,8 @@
     transition: opacity .1s;
     gap:1em;
     height: 60vh;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .scroller__inner:hover

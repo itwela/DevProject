@@ -105,7 +105,7 @@ place-items-center
                                 of government representatives.
                                 <br />
                                 <br />
-                                Used Python and Gpt-4.
+                                Used Python and Gpt-3.5.
                             </p>
                             <a href='https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926' 
                             target="_blank"
@@ -163,13 +163,13 @@ place-items-center
                             <p className="p-description font-main text-lightbrown mt-[1em]">
                                 Built fully responsive portfolio websites
                                 with clear themes, 3d graphics, animations, etc.
-                                This website is an example. 
+                                This website (Caveman Creative) is an example. 
                                 <br />
                                 <br />
                                 Used Html, Css, Javascript, React and
                                 much more.
                             </p>
-                            <a href='https://itwela.vercel.app/' 
+                            <a href='https://itwelaportfolio.vercel.app/' 
                             target="_blank"
                             className='see-more 
 absolute
@@ -195,9 +195,9 @@ place-items-center
                             An excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
                                 <br />
                                 <br />
-                                Used Pandas, Streamlit, OpenAi.
+                                Used Pandas, Streamlit, Gpt-3.5.
                             </p>
-                            <a 
+                            <span 
                             target="_blank"
                             className='see-more 
 absolute
@@ -214,12 +214,42 @@ font-main
 place-content-center
 place-items-center
                             '>
-                            more
-                            </a>
+                            soon
+                            </span>
                         </div>
 
                         {/* ------------ LOOP */}
 
+                        <div className='project-1 relative' id='box'>
+                            <p className='project-header font-main text-lightbrown font-black text-2xl'>Autogen<br></br>Ui Extension</p>
+                            <p className="p-description font-main text-lightbrown mt-[1em]">
+                                Built a Ui on top of Microsoft's Autogen to make it easier
+                                for the average user to use.
+                                Also added an ability for it to talk to the user.
+                                <br />
+                                <br />
+                                Used Python and Gpt-3.5.
+                            </p>
+                            <span href=''
+                            // target="_blank"
+                            className='see-more 
+absolute
+h-[10%]
+w-[20%]
+right-[5%]
+bottom-[5%]
+mt-2
+flex
+place-self-center
+text-lightbrown
+text-[0.9em]
+font-main
+place-content-center
+place-items-center
+                            '>
+                            soon
+                            </span>
+                        </div>
                         <div className='project-1 relative' id='box'>
                             <p className='project-header font-main text-lightbrown font-black text-2xl'>Non-Profit<br></br>Landing Page</p>
                             <p className="p-description font-main text-lightbrown mt-[1em]">
@@ -227,10 +257,7 @@ place-items-center
                                 non-profit organization called Clearheart.
                                 <br />
                                 <br />
-                                Used <b className='font-black italic'>Html </b>
-                                <b className='font-black italic'>Css </b>
-                                and
-                                <b className='font-black italic'> JavaScript.</b>.
+                                Used Html, Css and JavaScript.
                                 Deployed on Vercel.
                             </p>
                             <a href='https://clearheart.vercel.app/'
@@ -293,10 +320,10 @@ place-items-center
                                 of government representatives.
                                 <br />
                                 <br />
-                                Used Python and Gpt-4.
+                                Used Python and Gpt-3.5.
                             </p>
-                            <a href='https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926'
-                            target="_blank" 
+                            <a href='https://topaz-mink-ddd.notion.site/Web-Scraper-Documentation-Itwela-b9f1da17104d4a228da9e38d587f5926' 
+                            target="_blank"
                             className='see-more 
 absolute
 h-[10%]
@@ -351,41 +378,13 @@ place-items-center
                             <p className="p-description font-main text-lightbrown mt-[1em]">
                                 Built fully responsive portfolio websites
                                 with clear themes, 3d graphics, animations, etc.
-                                This website is an example. 
+                                This website (Caveman Creative) is an example. 
                                 <br />
                                 <br />
                                 Used Html, Css, Javascript, React and
                                 much more.
                             </p>
-                            <a href='https://itwela.vercel.app/' 
-                            target="_blank"
-                            className='see-more 
-absolute
-h-[10%]
-w-[20%]
-right-[5%]
-bottom-[5%]
-mt-2
-flex
-place-self-center
-text-lightbrown
-text-[0.9em]
-font-main
-place-content-center
-place-items-center
-                            '>
-                            more
-                            </a>
-                        </div>
-                        <div className='project-6 relative' id='box'>
-                            <p className='project-header font-main text-lightbrown font-black text-2xl'> SmplClaim </p>
-                            <p className="p-description font-main text-lightbrown mt-[1em]">
-                            An excel sheet manipulation and cost estimation tool. It showcases my expertise in natural language processing, data manipulation, and user interface development.
-                                <br />
-                                <br />
-                                Used Pandas, Streamlit, OpenAi.
-                            </p>
-                            <a 
+                            <a href='https://itwelaportfolio.vercel.app/' 
                             target="_blank"
                             className='see-more 
 absolute

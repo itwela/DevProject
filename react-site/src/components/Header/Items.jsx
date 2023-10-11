@@ -33,7 +33,7 @@ export default function Items() {
             variants={variants}
             >
                 <li className="nav-list font-main p-2"
-                onClick={() => window.location.replace("/#wmh")}
+                onClick={() => window.location.replace("/#top")}
                 id="navlinks">
                 Home
                 </li>
@@ -43,14 +43,17 @@ export default function Items() {
                 Blog
                 </Link>
                 <li className="nav-list font-main p-2" id="navlinks">
-                <a href="https://westerngovernorsuniversity-my.sharepoint.com/:w:/g/personal/iibomu_wgu_edu/EYX2OmB3931Kn0XV7XFG8JABNw_ma7cr1XoU3QeroHhpXw?rtime=rhDG2cnG20g">
+                <a href="h"
+                download={resume}>
                     Resume</a>
                 </li>
 
             </motion.ul>
                 <div className="nav-list flex relative" id="navlinks"
                 onClick={() => setIsOpen(isOpen => !isOpen)}>
-                <p className="itwela 
+                <p 
+                id="itwela"
+                className="itwela 
 font-main 
 font-black 
 text-lightbrown 

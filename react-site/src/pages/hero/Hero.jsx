@@ -48,6 +48,9 @@ function Hero() {
 
     return (
         <>
+        <div id="top">
+
+        </div>
         {/* <div className='overlay-cont fixed h-[100vh] w-[100vw] z-20 top-[0]'></div> */}        
         <motion.section 
             className='hero-section
@@ -57,7 +60,9 @@ place-content-center
             <div className='hero-container 
 m-0
             '>
-                <p className="caveman
+                <p 
+                id='caveman'
+                className="caveman
 text-lightbrown
 pb-3
 text-left
