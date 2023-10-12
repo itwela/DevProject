@@ -34,7 +34,7 @@ export default function R3fasset() {
   <div id='dacanvas'>
     <Canvas
     camera= 
-    {{ position: [0, 1, 3.4] , fov: 35}}>
+    {{ position: [0, 1.3, 3.4] , fov: 35}}>
       <ApWorlds/>
     </Canvas>
     </div>
