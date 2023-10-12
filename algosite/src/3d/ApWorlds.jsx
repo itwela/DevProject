@@ -1,4 +1,4 @@
-import { PresentationControls, Environment, Clone, useGLTF, useAnimations, useTexture, MeshPortalMaterial, RoundedBox, CameraControls, Bounds, Capsule } from '@react-three/drei'
+import { PresentationControls, Environment, Clone, useGLTF, useAnimations, useTexture, MeshPortalMaterial, RoundedBox, CameraControls, Bounds, Capsule, SpotLight } from '@react-three/drei'
 import { useLoader, useFrame } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { Suspense, useState } from 'react'
@@ -18,7 +18,14 @@ export default function ApWorlds() {
          preset='forest'
         />      
 
-
+<SpotLight
+            distance={5}
+            position-y={2.1}
+            radiusTop={0.01}
+            radiusBottom={2.6}
+            opacity={0.156}
+            color={'#5F90F0'}
+        />
 
         <Suspense>
              <ApModel/>

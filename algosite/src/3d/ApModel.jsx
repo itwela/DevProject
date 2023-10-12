@@ -6,15 +6,21 @@ import {
     Html,
     PresentationControls
 } from '@react-three/drei'
+import * as THREE from 'three'
 import { AmbientLight } from 'three'
-import { useEffect } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useControls } from 'leva'
+import { useFrame } from '@react-three/fiber'
 
 
 export default function Model() {
     const computer = useGLTF("./src/3d/computer/scene.gltf")
     const animations = useAnimations(computer.animations, computer.scene)
     console.log(computer)
+   
+    const [hover, setHover] = useState(false)
+    const hoverstateRef = useRef()
+    const vec = new THREE.Vector3()
 
     // const { animationName } = useControls({
     //     animationName: { options: animations.names }
@@ -31,26 +37,34 @@ export default function Model() {
             action.fadeOut(0.5)
         }
     }, [])
+    
+
+    useFrame(state => {
+        if (hover) {
+            state.camera.lookAt(0,0.2,0)
+            state.camera.position.lerp(vec.set(0, 1.45, 1.4), .0099)
+            console.log('yo')
+        } else {
+            state.camera.position.lerp(vec.set(0, 1.3, 3.4), .09)
+            state.camera.lookAt(0, 0.2, 0); // Set the camera's lookAt target
+             // Set the camera position to its original position
+         } // Set the camera's lookAt target to the center of the scene
+        return null;
+    })
 
     return <>
 
-        <SpotLight
-            distance={5}
-            position-y={2.1}
-            radiusTop={0.5}
-            radiusBottom={2.6}
-            opacity={0.2}
-            color={'#5F90F0'}
-        />
+
         <PresentationControls
-            global
             polar={[-0.4, -0.4]}
-            azimuth={[-0.4, 0.4]}
+            azimuth={[-0.8, 0.8]}
         >
             <primitive
                 object={computer.scene}
                 scale={0.5}
                 position-y={-0.45}
+                ref={hoverstateRef}
+
             >
                 <Html 
                     wrapperClass='laptop' 
@@ -60,13 +74,17 @@ export default function Model() {
                     distanceFactor={2.6}
                     rotation-x={0, 50.2}
                 >
-                    <iframe src="https://itwela.vercel.app/"></iframe>
+                    <iframe 
+                    src="https://itwela.vercel.app/"
+                    onMouseEnter={() => setHover(!hover)}
+                    onMouseLeave={() => setHover(false)}
+                    ></iframe>
                 </Html>
             </primitive>
-            <mesh receiveShadow position-y={ -0.53 } rotation-x={ - Math.PI * 0.5 } scale={ 6}>
+            {/* <mesh receiveShadow position-y={ -0.53 } rotation-x={ - Math.PI * 0.5 } scale={ 6}>
             <planeGeometry />
-            <meshStandardMaterial color="black" />
-        </mesh> 
+            <meshStandardMaterial color="#3a3a3a" />
+        </mesh>  */}
         </PresentationControls>
         {/* </Float> */}
     </>
