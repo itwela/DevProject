@@ -5,14 +5,8 @@ import os
 import openai
 import pandas as pd
 import time
-import base64
-from io import StringIO, BytesIO
-from PIL import Image 
-from streamlit_extras.stoggle import stoggle
 from streamlit_extras.streaming_write import write
-from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.grid import grid
-from streamlit_extras.stateful_button import button
 from dotenv import load_dotenv
 #  -------------------------------------------------------
 # session state ---------------------

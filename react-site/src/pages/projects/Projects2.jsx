@@ -197,7 +197,8 @@ place-items-center
                                 <br />
                                 Used Pandas, Streamlit, Gpt-3.5.
                             </p>
-                            <span 
+                            <a 
+                            href='https://simplclaim.streamlit.app/'
                             target="_blank"
                             className='see-more 
 absolute
@@ -214,8 +215,8 @@ font-main
 place-content-center
 place-items-center
                             '>
-                            soon
-                            </span>
+                            more
+                            </a>
                         </div>
 
                         {/* ------------ LOOP */}
