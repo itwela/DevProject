@@ -22,7 +22,10 @@ pl-[5em]
 text-white
         
         ">
-            I & I Technologies
+            {/* I & I Technologies */}
+            Meet the
+            <br />
+            SFX ALGO
         </h1>
         </div>
     </section>
@@ -33,20 +36,20 @@ relative
 w-[100vw]
 h-[100vh]
 flex
-place-content-end
+place-content-start
     ">
         <div className="container-hero
 absolute
 top-[40%]
-pr-[8em]
+pl-[8em]
         ">
         <h1 className="content-h
 text-white
         
         ">
-            Meet the
+            {/* Meet the
             <br />
-            SFX ALGO
+            SFX ALGO */}
         </h1>
         </div>
     </section>

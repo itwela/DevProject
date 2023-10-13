@@ -159,7 +159,11 @@ with col2:
     ('1','2','3','4','5','6','7','8','9','10','11','12')) 
 
 grid5 = grid(3, vertical_align='bottom', gap='small')
-room = grid5.text_input("Location in the House:")
+room = grid5.selectbox("Location in the House:",
+    ('Master Bedroom','Master Bathroom','Downstairs Bathroom',
+     'Laundry Room','Living Room', 'Kitchen', 'Den', 'Dining Room',
+     'Foyer','Upstairs bathroom','Upstairs bedroom 1',
+     'Upstairs bedroom 2','Upstairs bedroom 3','Basement'))
 brand = grid5.text_input("Brand/Manufacturer:") 
 condition = grid5.selectbox(
 'Condition:',

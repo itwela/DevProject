@@ -75,7 +75,8 @@ export default function Model() {
                     rotation-x={0, 50.2}
                 >
                     <iframe 
-                    src="https://itwela.vercel.app/"
+                    // src="https://itwela.vercel.app/"
+                    src="https://192.168.86.163:3000/?room=powerful_elephant_614&editorid=688"
                     onMouseEnter={() => setHover(!hover)}
                     onMouseLeave={() => setHover(false)}
                     ></iframe>
