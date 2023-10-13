@@ -6,6 +6,7 @@ import openai
 import pandas as pd
 import time
 from streamlit_extras.streaming_write import write
+from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.grid import grid
 from dotenv import load_dotenv
 #  -------------------------------------------------------
@@ -289,7 +290,10 @@ st.divider()
 
 
 st.title("Your sheet:")
+
+
 st.write(df)
+
 df.to_csv('https://docs.google.com/spreadsheets/d/' +'1uYXY5J0etuFEzghV-dvhxsVS003z6oG-t7HGMSB6AKw/' +'export?format=csv&gid=' +'783998185')
 
 # df.to_csv(uploaded_file, index=False)
