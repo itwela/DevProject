@@ -47,6 +47,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@font-face {
+  font-family: main;
+  src: url('./fonts/HemingVariable/HemingVariable.ttf');
+} 
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -88,6 +93,8 @@ canvas
 #dacanvas
 {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 
@@ -108,4 +115,14 @@ canvas
   overflow: hidden;
   padding: 0;
   margin: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  /* pointer-events: none; */
+}
+
+#root
+{
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }

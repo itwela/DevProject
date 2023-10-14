@@ -35,6 +35,7 @@ export default function R3fasset() {
     <Canvas
     camera= 
     {{ position: [0, 1.3, 3.4] , fov: 35}}
+    opacity={[0.2]}
     >
       <ApWorlds/>
     </Canvas>

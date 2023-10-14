@@ -17,6 +17,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
+    "react-tradingview-embed": "^3.0.6",
+    "react-unity-webgl": "^9.4.3",
     "three": "^0.157.0",
     "tween.js": "^16.6.0"
   },
