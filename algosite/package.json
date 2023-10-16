@@ -12,15 +12,22 @@
   "dependencies": {
     "@react-three/drei": "^9.88.0",
     "@react-three/fiber": "^8.14.5",
+    "body-parser": "^1.20.2",
+    "discord.js": "^14.13.0",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "leva": "^0.9.35",
+    "node-fetch": "^3.3.2",
     "r3f-perf": "^7.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
     "react-tradingview-embed": "^3.0.6",
     "react-unity-webgl": "^9.4.3",
+    "socket.io": "^4.7.2",
     "three": "^0.157.0",
-    "tween.js": "^16.6.0"
+    "tween.js": "^16.6.0",
+    "ws": "^8.14.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

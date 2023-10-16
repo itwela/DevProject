@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import Blog from './pages/Blogpage/Blog-page.jsx'
+// import Trades from './pages/trades/Trade..js'
 import App from './App.jsx'
 import ApWorlds from './3d/ApWorlds.jsx'
 import './index.css'
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
     element: <App />
   },
   // {
-  //   path: 'blog',
-  //   element: <Blog/>
+  //   path: 'trades',
+  //   element: <Trades/>
   // },
   // {
   //   path: 'trading',

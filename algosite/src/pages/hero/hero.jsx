@@ -1,47 +1,64 @@
 import './hero.css'
-
+import menu from '../../../public/hamburger.png'
 
 export default function Hero() {
 
     return (
     <>
+    <div className="color
+    ">
     <section  className="hero
 m-0
 p-0
 h-[100vh]
 relative
+z-[2]
 flex
-place-content-start
     ">
+
+
         <div className="container-hero
-absolute
-text-center
-md:top-[5%]
-md:text-[6.5px]
-
-left-[5%]
-top-[3%]
-text-[4px]
-        ">
+flex
+items-center
+justify-between
+h-[10vh]
+w-[100vw]
+pr-[5%]
+pl-[50px]
+md:pl-[6%]
+       ">
         <h1 className="content-h
-md:text-white
+text-[#e3ddd1]
+font-main
+md:text-[16.5px]
+text-[12px]
 
-
-
-
-text-white
-font-main 
-        ">
-            {/* I & I Technologies */}
+        ">           
             <span className='
             '>
-           I & I Technologies
+           I & I
             </span>
-        </h1>
-        <div className="hamburger">
-            <img src=''></img>
-        </div>
-        </div>
+            </h1>
+        <div className="hamburger
+scale-[0.5]
+md:hidden
+">
+                <img 
+                src={ menu }
+                className=''>
+                </img>
+            </div>
+            <span className="line
+        absolute
+        w-[80vw]
+        m-[0.4em]
+        bottom-[-10%]  
+        hidden
+        lg:w-[95vw]      
+
+">
+                    </span>
+            </div>
     </section>
     <section className="hero
 m-0
@@ -111,6 +128,7 @@ text-2xl
         </h1>
         </div>
     </section>
+    </div>
     </>
     )
   }

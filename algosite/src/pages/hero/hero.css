@@ -2,6 +2,10 @@
 {
 
     pointer-events: none;
-
 }
 
+.line
+{
+    outline: 0.5px solid white;
+    opacity: 0.3;
+}
