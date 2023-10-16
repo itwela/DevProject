@@ -20,6 +20,7 @@
 
 .on{
     animation: blink 3s infinite;
+    opacity: 100%;
 }
 
 @keyframes blink {

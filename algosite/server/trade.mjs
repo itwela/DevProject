@@ -62,6 +62,5 @@ bot.on('messageCreate', (message) => {
 });
 
 // Log in to the Discord server using your bot's token
-bot.login('MTE1NDEwMTcwNDMwOTA4NDI3Mg.GmqSgu.DwpF-YIC1PLqUloEkyRX-iAR4nU-rZmZCs6ueI');
 
 //  https://discord.com/api/oauth2/authorize?client_id=1154101704309084272&permissions=8&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Foauth2%2Fauthorize%3F%26client_id%3D1154101704309084272%26scope%3Dbot&response_type=code&scope=identify%20connections%20email%20guilds%20guilds.join%20guilds.members.read%20gdm.join%20rpc%20rpc.notifications.read%20rpc.screenshare.read%20bot%20webhook.incoming%20messages.read%20activities.read%20dm_channels.read

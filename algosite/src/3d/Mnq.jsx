@@ -5,16 +5,35 @@ function Mnq() {
   const [messages, setMessages] = useState([]);
   const socket = new WebSocket('ws://localhost:3000/bot-messages'); // Use your WebSocket server address.
 
+    // Function to fetch the latest messages from the server
+    const fetchLatestMessages = () => {
+      fetch('http://localhost:3000/bot-messages')
+        .then((response) => response.json())
+        .then((data) => setMessages(data))
+        .catch((error) => console.error(error));
+    };
+
   useEffect(() => {
+    // Fetch the latest messages when the component mounts
+    fetchLatestMessages();
+    console.log('Fetching latest messages...');
+
+    // Add WebSocket event listener to update messages
     socket.addEventListener('message', (event) => {
       const newMessage = JSON.parse(event.data);
 
-      // Check if the new message already exists in the current messages
-      if (!messages.some((message) => message.timestamp === newMessage.timestamp)) {
-        setMessages((prevMessages) => [...prevMessages, newMessage]);
-      }
+      // Update messages with the new message
+      setMessages((prevMessages) => [...prevMessages, newMessage]);
     });
-  }, [messages]); // Include messages in the dependency array to trigger updates
+  }, []); 
+
+  useEffect(() => {
+  window.addEventListener('beforeunload', fetchLatestMessages);
+
+  return () => {
+    window.removeEventListener('beforeunload', fetchLatestMessages);
+  };
+}, []);
 
   return (
     <>
@@ -32,7 +51,8 @@ function Mnq() {
     bg-[#131313]
     flex
     flex-col
-    w-[20em]
+    w-[18em]
+    md:w-[20em]
     lg:w-[35em]
     h-[10em]
     absolute
@@ -64,7 +84,8 @@ function Mnq() {
     <div className='
     z-[100]
     mt-[2.4em]
-    ml-[2vw]
+    ml-[1em]
+    md:ml-[2em]
     flex
     place-self-center
     text-left

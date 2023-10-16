@@ -1,11 +1,18 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import fetch from 'node-fetch';
-import WebSocket, { WebSocketServer } from 'ws'; // Import the WebSocket library
+import { WebSocket, WebSocketServer } from 'ws'; // Import the WebSocket library
+import cors from 'cors'; // Import the cors package
 
 const app = express();
 
 app.use(bodyParser.json());
+
+// Enable CORS for all routes
+app.use(cors({
+  origin: ['http://localhost:5173', 
+  'https://sfx-kappa.vercel.app']
+}));
 
 const messages = [];
 
@@ -31,7 +38,7 @@ app.post('/bot-messages', (req, res) => {
   messages.push(newMessage);
 
   // Log the received message
-  console.log(`Received message from ${author}: ${content}`);
+  console.log(`${timestamp}: \nReceived message from ${author}: ${content}`);
 
   // Send the new message to all connected WebSocket clients
   wss.clients.forEach((client) => {
@@ -46,3 +53,6 @@ app.post('/bot-messages', (req, res) => {
 app.get('/bot-messages', (req, res) => {
   res.json(messages);
 });
+
+// npm 
+// npm install express body-parser node-fetch ws cors discord.js
