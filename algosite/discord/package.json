@@ -7,8 +7,11 @@
     "node-fetch": "^3.3.2",
     "ws": "^8.14.2"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "start": "nodemon trade.mjs"
+    "start": "node trade.mjs"
   },
   "devDependencies": {
     "concurrently": "^8.2.1"

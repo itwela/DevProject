@@ -1,9 +1,13 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "servertrade.mjs", "use": "@vercel/node" }
-],
-  "routes": [
-    { "src": "/(.*)", "dest": "/" } 
-  ]
-}
+    "functions": {
+      "/server1": {
+        "src": "sever1.js",
+        "package.json": "server2/package.json"
+      },
+      "/server2": {
+        "src": "sever2.js",
+        "package.json": "server2/package.json"
+      }
+    }
+  }
+  
