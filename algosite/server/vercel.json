@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "servertrade.mjs", "use": "@vercel/node" }
+],
+  "routes": [
+    { "src": "/(.*)", "dest": "/" } 
+  ]
+}

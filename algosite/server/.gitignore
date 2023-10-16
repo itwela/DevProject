@@ -25,6 +25,4 @@ dist-ssr
 
 .vercel
 
-vercel.json
-
 trade.mjs
