@@ -37,7 +37,7 @@ text-[12px]
         ">           
             <span className='
             '>
-           I & I Technoligies
+           I & I
             </span>
             </h1>
         <div className="hamburger

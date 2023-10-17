@@ -15,6 +15,22 @@ function Mnq() {
         .catch((error) => console.error(error));
     };
 
+      // Function to ping the server to keep it active
+  const pingServer = () => {
+    fetch('https://sfx-backend.onrender.com/bot-messages')
+      .then((response) => {
+        if (response.ok) {
+          console.log('Ping successful');
+        } else {
+          console.error('Ping failed');
+        }
+      })
+      .catch((error) => {
+        console.error('Ping failed with an error:', error);
+      });
+  };
+  
+
   useEffect(() => {
     // Fetch the latest messages when the component mounts
     fetchLatestMessages();
@@ -27,6 +43,13 @@ function Mnq() {
       // Update messages with the new message
       setMessages((prevMessages) => [...prevMessages, newMessage]);
     });
+
+    // Set up the ping interval
+    const pingInterval = 14 * 60 * 1000; // 14 minutes in milliseconds
+    // Call the ping function immediately to start the interval
+    pingServer();
+    // Set up the ping interval using setInterval
+    const pingIntervalId = setInterval(pingServer, pingInterval);
   }, []); 
 
   useEffect(() => {
@@ -34,6 +57,7 @@ function Mnq() {
 
   return () => {
     window.removeEventListener('beforeunload', fetchLatestMessages);
+    clearInterval(pingIntervalId); // Clear the ping interval when the component unmounts
   };
 }, []);
 
