@@ -105,7 +105,8 @@ place-content-end
 ">
         <div className="container-hero
 absolute
-top-[75%]
+top-[25%]
+md:top-[75%]
 pr-[5em]
         ">
         <h1 className="content-h
