@@ -44,8 +44,8 @@ absolute
 w-[100vw]
 md:w-[50vw]
 z-[200]
-h-[10%]
-top-[30%]
+md:h-[10%]
+md:top-[30%]
 left-0
 lg:left-[1%]
 flex
@@ -55,9 +55,7 @@ place-content-center
 z-[100]
 flex
 flex-col
-w-[70vw]
 rounded-[1em]
-md:w-[22em]
 lg:w-[30em]
 md:h-[15em]
 absolute
@@ -69,8 +67,11 @@ p-4
 pl-7
 ">
         <div className="ht1-cont
-        w-[80%]
+        lg:w-[80%]
         h-[10%]
+        flex
+        justify-center
+        md:justify-start
         ">
           <p className="smalll
           md:text-[1em]
@@ -79,23 +80,32 @@ pl-7
           </p>
         </div>
         <div className="ht1-cont
-        w-[100%]
         h-[65%]
-        mt-[1em]
+        mt-[0.5em]
+        flex
+        justify-center
+        md:text-left
+        text-center
         ">
           <p className="smalll
         font-black
-        text-[3.5em]  
+        text-[2.5em]  
+        md:text-[3em]  
         lg:text-[5em]
         leading-[1]
           ">
-          THE SFX ALGORITHM          
+          THE SFX 
+          <br />
+          ALGORITHM          
           </p>
         </div>
         <div className="ht1-cont
-        w-[80%]
+        lg:w-[80%]
         h-[50%]
-        lg:mt-[1em]
+        lg:mt-[0.4em]
+        flex
+        justify-center
+        md:justify-start
         ">
         <p className="smalll
         md:mt-[0.6em]
@@ -112,7 +122,8 @@ w-[100vw]
 md:w-[50vw]
 z-[200]
 h-[10vh]
-top-[30%]
+md:top-[30%]
+top-[40%]
 right-0
 lg:right-[1%]
 flex
