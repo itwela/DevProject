@@ -71,14 +71,22 @@ flex
         <div className="container-hero
 absolute
 top-[40%]
-pl-[5em]
+md:pl-[5em]
+w-[100vw]
+flex
+justify-center
+md:justify-start
+md:w-[0]
+text-center
+md:text-left
         ">
         <h1 className="content-h
 
 
 text-white
 font-main 
-
+text-[2.7em]
+md:text-[3.5em]
         
         ">
             {/* Meet the
@@ -107,15 +115,16 @@ place-content-end
 absolute
 top-[25%]
 md:top-[75%]
-pr-[5em]
+md:pr-[5em]
+w-[100vw]
         ">
         <h1 className="content-h
 
 
 text-white
 font-main 
-text-right
-
+md:text-right
+text-center
         
         ">
             {/* Meet the

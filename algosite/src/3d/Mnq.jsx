@@ -64,7 +64,7 @@ md:top-[30%]
 text-[#e3ddd1]
 font-main
 p-4
-pl-7
+md:pl-7
 ">
         <div className="ht1-cont
         lg:w-[80%]
