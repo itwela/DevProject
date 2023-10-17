@@ -3,11 +3,11 @@ import './status.css'
 
 function Mnq() {
   const [messages, setMessages] = useState([]);
-  const socket = new WebSocket('ws://localhost:3000/bot-messages'); // Use your WebSocket server address.
+  const socket = new WebSocket('ws://sfx-backend.onrender.com/bot-messages'); // Use your WebSocket server address.
 
     // Function to fetch the latest messages from the server
     const fetchLatestMessages = () => {
-      fetch('http://localhost:3000/bot-messages')
+      fetch('https://sfx-backend.onrender.com/bot-messages')
         .then((response) => response.json())
         .then((data) => setMessages(data))
         .catch((error) => console.error(error));
