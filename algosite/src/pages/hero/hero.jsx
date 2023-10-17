@@ -26,6 +26,7 @@ w-[100vw]
 pr-[5%]
 pl-[50px]
 md:pl-[6%]
+fixed
        ">
         <h1 className="content-h
 text-[#e3ddd1]
@@ -104,7 +105,7 @@ place-content-end
 ">
         <div className="container-hero
 absolute
-top-[40%]
+top-[75%]
 pr-[5em]
         ">
         <h1 className="content-h
