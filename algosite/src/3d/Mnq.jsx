@@ -129,6 +129,19 @@ lg:right-[1%]
 flex
 place-content-center
     ">
+      <div className="disclosure-wrapper
+      fixed
+      top-[29%]
+      ">
+        <p className="disclosure
+          text-[#e3ddd1]
+          font-main
+          text-[0.7em]
+      ">
+        *Disclaimer - Nothing you see here is financial advice
+        <br />
+      </p>
+      </div>
     <div className="status
     z-[100]
     bg-[#131313]
