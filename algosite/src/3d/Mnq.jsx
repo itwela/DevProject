@@ -3,7 +3,9 @@ import './status.css'
 
 function Mnq() {
   const [messages, setMessages] = useState([]);
-  const socket = new WebSocket('ws://sfx-backend.onrender.com/bot-messages'); // Use your WebSocket server address.
+  const socket = new WebSocket('wss://sfx-backend.onrender.com/bot-messages'); // Use your WebSocket server address.
+//ws for localhost
+// wss for regular https site 
 
     // Function to fetch the latest messages from the server
     const fetchLatestMessages = () => {
