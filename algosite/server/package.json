@@ -8,7 +8,8 @@
     "ws": "^8.14.2"
   },
   "scripts": {
-    "start": "nodemon servertrade.mjs"
+    "start": "nodemon servertrade.mjs",
+    "build": "npm i"
   },
   "devDependencies": {
     "concurrently": "^8.2.1"
