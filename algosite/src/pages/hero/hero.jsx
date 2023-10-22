@@ -1,65 +1,105 @@
 import './hero.css'
-import menu from '../../../public/hamburger.png'
+import Header from '../../components/Header/Header'
 
 export default function Hero() {
 
     return (
     <>
-    <div className="color
+    <Header/>
+    <div className="hero-text-wrapper
+absolute
+w-[100vw]
+md:w-[50vw]
+z-[200]
+md:h-[10%]
+md:top-[30%]
+left-0
+lg:left-[1%]
+flex
+place-content-center
     ">
+      <div className="hero-text-cont
+z-[100]
+flex
+flex-col
+rounded-[1em]
+lg:w-[30em]
+md:h-[15em]
+absolute
+top-[8em]
+md:top-[30%]
+text-[#e3ddd1]
+font-main
+p-4
+md:pl-7
+">
+        <div className="ht1-cont
+lg:w-[80%]
+h-[10%]
+flex
+justify-center
+md:justify-start
+        ">
+          <p className="smalll
+md:text-[1em]
+          ">
+          I & I TECHNOLOGIES PRESENTS
+          </p>
+        </div>
+        <div className="ht1-cont
+h-[65%]
+mt-[0.5em]
+flex
+justify-center
+md:text-left
+text-center
+        ">
+          <p className="smalll
+font-black
+text-[2.5em]  
+md:text-[3em]  
+lg:text-[5em]
+leading-[1]
+          ">
+          THE SFX 
+          <br />
+          ALGORITHM          
+          </p>
+        </div>
+        
+        <div className="ht1-cont
+lg:w-[80%]
+h-[50%]
+lg:mt-[0.4em]
+flex
+justify-center
+md:justify-start
+        ">
+        <p className="smalll
+md:mt-[0.6em]
+lg:text-[1.4em]
+          ">
+          "Trade Smarter, Not Harder"         
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="color
+w-[100vw]
+fixed
+h-[100vh]
+bg-cover
+bg-no-repeat
+    ">
+        </div>
     <section  className="hero
 m-0
 p-0
 h-[100vh]
 relative
-z-[2]
+z-[200]
 flex
     ">
-
-
-        <div className="container-hero
-flex
-items-center
-justify-between
-h-[10vh]
-w-[100vw]
-pr-[5%]
-pl-[50px]
-md:pl-[6%]
-fixed
-       ">
-        <h1 className="content-h
-text-[#e3ddd1]
-font-main
-md:text-[16.5px]
-text-[12px]
-
-        ">           
-            <span className='
-            '>
-           I & I
-            </span>
-            </h1>
-        <div className="hamburger
-scale-[0.5]
-md:hidden
-">
-                <img 
-                src={ menu }
-                className=''>
-                </img>
-            </div>
-            <span className="line
-        absolute
-        w-[80vw]
-        m-[0.4em]
-        bottom-[-10%]  
-        hidden
-        lg:w-[95vw]      
-
-">
-                    </span>
-            </div>
     </section>
     <section className="hero
 m-0
@@ -139,7 +179,6 @@ text-2xl
         </h1>
         </div>
     </section>
-    </div>
     </>
     )
   }

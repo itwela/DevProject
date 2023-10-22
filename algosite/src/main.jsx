@@ -1,25 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import Trades from './pages/trades/Trade..js'
 import App from './App.jsx'
 import ApWorlds from './3d/ApWorlds.jsx'
 import './index.css'
 import { Canvas } from '@react-three/fiber'
 import { createBrowserRouter,RouterProvider,Route } from 'react-router-dom'
+import Strategies from './pages/trades/Strategies.jsx'
+import Insights from './pages/insights/Insights.jsx'
+import About from './pages/About/About.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />
   },
-  // {
-  //   path: 'trades',
-  //   element: <Trades/>
-  // },
-  // {
-  //   path: 'trading',
-  //   element: <Trading/>
-  // },
+  {
+    path: 'Insights',
+    element: <Insights/>
+  },
+  {
+    path: 'Strategies',
+    element: <Strategies/>
+  },
+  {
+    path: 'About',
+    element: <About/>
+  },
 ]);
 
 const root =ReactDOM.createRoot(document.getElementById('root'))

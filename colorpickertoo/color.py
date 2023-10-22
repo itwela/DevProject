@@ -5,7 +5,7 @@ from tkinter import PhotoImage
 import customtkinter
 import time
 import keyboard
-
+ 
 customtkinter.set_appearance_mode('Dark')
 
 app = customtkinter.CTk()
