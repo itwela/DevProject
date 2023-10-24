@@ -13,6 +13,10 @@
   src: url("./fonts/fonttwo/Glancyr-variable-vf.ttf")
 } 
 
+::-webkit-scrollbar
+{
+  width: 0vw;
+}
 
 
 body {
