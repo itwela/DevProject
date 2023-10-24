@@ -10,6 +10,7 @@ module.exports = {
       },
       colors: {
         'lightbrown': '#c1b49a',
+        'darkbrown': '#4b3d2d',
       },
     },
   },
