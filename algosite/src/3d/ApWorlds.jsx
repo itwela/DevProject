@@ -18,15 +18,18 @@ export default function ApWorlds() {
          preset='forest'
         />      
 
-<SpotLight
-            distance={5}
+{/* <SpotLight
+            distance={7}
             position-y={2.1}
+            position-x={-2.1}
             radiusTop={0.01}
             radiusBottom={2.6}
-            opacity={0.156}
+            opacity={0.356}
             color={'#5F90F0'}
+        /> */}
+        <directionalLight
+        
         />
-
         <Suspense>
              <ApModel/>
              

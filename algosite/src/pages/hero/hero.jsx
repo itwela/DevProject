@@ -19,6 +19,7 @@ flex
 place-content-center
     ">
       <div className="hero-text-cont
+scale-[1.25]
 z-[100]
 flex
 flex-col

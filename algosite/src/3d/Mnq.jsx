@@ -103,6 +103,7 @@ top-[8em]
 md:top-[30%]
 text-[#e3ddd1]
 font-main
+floating
     ">
       <div className="status-inner
 w-[100%]

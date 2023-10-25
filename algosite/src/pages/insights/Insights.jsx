@@ -12,15 +12,15 @@ h-[100%]
         ">
             <div className="trades-cont
 w-[100vw]
-h-[90vh]
+h-[100vh]
 bottom-0
-mt-[10vh]
 flex
 justify-center
 bg-[#000000]
             ">
                <h1 className="
 text-[#fff]
+mt-[10vh]
                ">
                 Insights
                 </h1>

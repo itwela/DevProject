@@ -4,7 +4,9 @@ import {
     useAnimations,
     Environment,
     Html,
-    PresentationControls
+    PresentationControls,
+    Float,
+    useTexture
 } from '@react-three/drei'
 import * as THREE from 'three'
 import { AmbientLight } from 'three'
@@ -12,33 +14,41 @@ import { useEffect, useState, useRef } from 'react'
 import { useControls } from 'leva'
 import { Unity, useUnityContext } from "react-unity-webgl";
 import { useFrame } from '@react-three/fiber'
+import sand1 from '../assets/brown10.png'
+import sand2 from '../assets/brown2.jpg'
+import sand3 from '../assets/brown4.jpg'
 
 
 export default function Model() {
-    const computer = useGLTF('compu.glb')
+    const computer = useGLTF('sphere4.glb')
+    const computerRef = useRef();
     const animations = useAnimations(computer.animations, computer.scene)
-    console.log(computer)
    
     const [hover, setHover] = useState(false)
     const hoverstateRef = useRef()
     const vec = new THREE.Vector3()
 
+    const sandTex1 = useTexture(sand1)
+    // const sandTex2 = useTexture(sand2)
+    // const sandTex3 = useTexture(sand3)
+
+    // const allTex = [sandTex3, sandTex2, sandTex1]
     // const { animationName } = useControls({
     //     animationName: { options: animations.names }
     // })
     
 
-    useEffect(() => {
-        const action = animations.actions.Animation
-        action
-            .reset()
-            .fadeIn(0.5)
-            .play()
+    // useEffect(() => {
+    //     const action = animations.actions.Animation
+    //     action
+    //         .reset()
+    //         .fadeIn(0.5)
+    //         .play()
 
-        return () => {
-            action.fadeOut(0.5)
-        }
-    }, [])
+    //     return () => {
+    //         action.fadeOut(0.5)
+    //     }
+    // }, [])
     
 
     useFrame(state => {
@@ -54,47 +64,37 @@ export default function Model() {
         return null;
     })
 
+    if (computerRef.current) {
+        computerRef.current.traverse((child) => {
+          if (child.isMesh) {
+            child.material.transparent = true;
+            child.material.opacity = 0.4; // Set the opacity you want
+          }
+        });
+      }
+
     return <>
 
-    
+        <Float>
         <PresentationControls
             polar={[-0.4, -0.4]}
             azimuth={[-0.8, 0.8]}
         >
             <primitive
                 object={computer.scene}
-                scale={0.5}
-                position-y={-0.45}
-                ref={hoverstateRef}
-
-            >
-                <Html 
-                    className='lapcont'
-                    position={[0.03, 1.43, 0.37]}
-                    transform
-                    distanceFactor={2.6}
-                    rotation-x={0, 50.2}
-                >
-                     {/* <span className='pl-[15px]'>Hey,</span>
-                     <br /> 
-                     <p className='pl-[10px]'>
-                        I trade for I&I Technologies.</p> */}
-                    <iframe 
-                    // src="https://itwela.vercel.app/"
-                    src="https://www.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=en#%7B%22symbol%22%3A%22CME_MINI%3AMNQ1!%22%2C%22frameElementId%22%3A%22tradingview_a85e5%22%2C%22interval%22%3A%22D%22%2C%22hidelegend%22%3A%221%22%2C%22hidesidetoolbar%22%3A%221%22%2C%22symboledit%22%3A%221%22%2C%22saveimage%22%3A%220%22%2C%22studies%22%3A%22%5B%5D%22%2C%22theme%22%3A%22dark%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22www.tradingview.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22CME_MINI%3AMNQ1!%22%2C%22page-uri%22%3A%22www.tradingview.com%2Fwidget%2Fadvanced-chart%2F%22%7D"
-                    onMouseEnter={() => setHover(!hover)}
-                    onMouseLeave={() => setHover(false)}
-                    >
-                    </iframe>
-                </Html>
-            </primitive>
-            {/* <mesh receiveShadow position-y={ -0.53 } rotation-x={ - Math.PI * 0.5 } scale={ 6}>
-            <planeGeometry />
-            <meshStandardMaterial color="#3a3a3a" />
-        </mesh>  */}
+                ref={computerRef}
+                scale={2}
+                position-x={-7}    
+                // position-y={0.1}    
+            />
+            <mesh receiveShadow position-y={ -0.53 } position-x={ -1.6 } rotation-x={ - Math.PI * 0.5 } scale={ 1.7}>
+            {/* <sphereGeometry />
+            {/* <meshStandardMaterial map={sand1}/> */}
+            {/* <meshBasicMaterial map={sandTex1} map-flipY={ false } /> */} 
+        </mesh> 
         </PresentationControls>
-        {/* </Float> */}
+        </Float>
     </>
 }
 
-useGLTF.preload('compu.glb')
+useGLTF.preload('sphere4.glb')

@@ -15,7 +15,6 @@ w-[100vw]
 pr-[5%]
 pl-[50px]
 md:pl-[6%]
-bg-[#000000]
 text-[#e3ddd1]
 text-[10.6px]
 fixed
