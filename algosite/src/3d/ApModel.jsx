@@ -68,7 +68,7 @@ export default function Model() {
         computerRef.current.traverse((child) => {
           if (child.isMesh) {
             child.material.transparent = true;
-            child.material.opacity = 0.4; // Set the opacity you want
+            child.material.opacity = 0.3; // Set the opacity you want
           }
         });
       }
@@ -84,7 +84,7 @@ export default function Model() {
                 object={computer.scene}
                 ref={computerRef}
                 scale={2}
-                position-x={-7}    
+                position-x={-7.2}    
                 // position-y={0.1}    
             />
             <mesh receiveShadow position-y={ -0.53 } position-x={ -1.6 } rotation-x={ - Math.PI * 0.5 } scale={ 1.7}>
