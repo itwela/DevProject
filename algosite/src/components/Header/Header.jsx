@@ -8,7 +8,7 @@ function Header() {
 flex
 items-center
 justify-between
-md:justify-start
+md:justify-end
 md:gap-9
 h-[10vh]
 w-[100vw]

@@ -68,7 +68,7 @@ export default function Model() {
         computerRef.current.traverse((child) => {
           if (child.isMesh) {
             child.material.transparent = true;
-            child.material.opacity = 0.3; // Set the opacity you want
+            child.material.opacity = 0.25; // Set the opacity you want
           }
         });
       }

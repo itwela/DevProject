@@ -124,7 +124,16 @@ ml-6
 top-[9%]
 p-0
         '>
-          Live Trades
+          Live Trades - MNQ
+        </p>
+        <p className='
+absolute
+ml-6
+top-[9%]
+right-[5%]
+p-0
+        '>
+          PnL: <span className='text-[#26d912]'>0%</span>
         </p>
         </div>
     <div className='

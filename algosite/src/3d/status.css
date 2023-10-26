@@ -4,6 +4,11 @@
     border-radius: 1em;
     padding: 10px;
     width: fit-content;
+    background-color: #ffffff;
+    box-shadow:
+    0 0 6px 3px #ffffff11,  /* inner white */
+    0 0 10px 6px rgba(185, 185, 185, 0.009), /* middle magenta */
+    0 0 14px 9px rgba(159, 170, 242, 0.048); /* outer cyan */
 
 }
 
