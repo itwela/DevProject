@@ -43,8 +43,8 @@ export default function Items() {
                 Blog
                 </Link>
                 <li className="nav-list font-main p-2" id="navlinks">
-                <a href="h"
-                download={resume}>
+                <a href={resume}
+                download>
                     Resume</a>
                 </li>
 
