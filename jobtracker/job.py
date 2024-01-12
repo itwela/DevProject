@@ -18,6 +18,7 @@ with st.sidebar:
         st.title("Job Resources:")
         st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
         st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
+        st.write('Simplify - https://simplify.jobs/dashboard')
 
         with st.expander(":green[Other Important Stuuff:]"): 
     
