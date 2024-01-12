@@ -99,16 +99,16 @@ grid4 = grid(2, vertical_align="bottom", gap='small')
 upd_data = add_data_to_df()
 both_datas = pd.concat([data, upd_data], ignore_index=True)
 
+
 if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
          conn.update(worksheet='Sheet1',data=both_datas)
          st.success("Job Status Updated! ✅")
 
 if grid4.button(label="Clear Sheet ❌", use_container_width=True):
-        conn.update(worksheet='Sheet1', data=data.iloc[:0])
+        conn.update(worksheet='Sheet1', data=data.iloc[:0]), 
         st.success("Worksheet Cleared! 💨")
 
-
-# Display our Spreadsheet as st.dataframe
+# Display our Spreadsheet as str.dataframe
 st.dataframe(data.head(10))
 
 
@@ -127,13 +127,7 @@ grid6 = grid(1, vertical_align="bottom", gap='large')
 
 grid6.write("Download Your Jobs Here:")
 if grid6.button("Finished? ✅", key="button1"):
-    st.download_button(
-    "Download Updated Sheet",
-    csv,
-    "test.csv",
-    "text/csv",
-    key='download-csv'
-    )
+    st.download_button("Download Updated Sheet", csv, "test.csv", "text/csv",key='download-csv')
 
 
 # 
