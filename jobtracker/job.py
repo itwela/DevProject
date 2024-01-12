@@ -9,7 +9,7 @@ import pandasql as psql
 from streamlit_extras.streaming_write import write
 from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.grid import grid
-from st_gsheets_connection import GSheetsConnection
+from streamlit_gsheets import GSheetsConnection
 import gspread
 
 #  -------------------------------------------------------

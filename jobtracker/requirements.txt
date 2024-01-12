@@ -4,5 +4,5 @@ pandasql==0.7.3
 gspread==5.12.4
 Pillow==9.4.0
 python-dotenv==1.0.0
-st_gsheets_connection==0.0.3
+st-gsheets-connection==0.0.3
 streamlit_extras==0.3.2
