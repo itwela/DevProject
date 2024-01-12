@@ -4,6 +4,7 @@ import os
 import openai
 import pandas as pd
 import time
+import streamlit as st
 import pandasql as psql
 from streamlit_extras.streaming_write import write
 from streamlit_extras.dataframe_explorer import dataframe_explorer
