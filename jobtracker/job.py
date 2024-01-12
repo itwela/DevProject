@@ -4,6 +4,7 @@ import os
 import openai
 import pandas as pd
 import time
+from datetime import datetime
 import streamlit as st
 import pandasql as psql
 from streamlit_extras.stateful_button import button 
@@ -13,10 +14,13 @@ from streamlit_extras.grid import grid
 from streamlit_gsheets import GSheetsConnection
 import gspread
 
+today_date = datetime.now().strftime("%m/%d/%y")
+
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
 with st.sidebar:
-        st.title("Job Resources:")
+        grid10 = grid(2, 2, vertical_align="bottom", gap='large')    
+        grid10.subheader("Job Resources:")
         st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
         st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
         st.write('Simplify - https://simplify.jobs/dashboard')
@@ -26,7 +30,19 @@ with st.sidebar:
             '''
                 Forage (Jp Morgan Experience) - https://www.theforage.com
             ''' 
-      
+        with st.expander("Application Details"):
+
+             '''
+                Linkedin - https://www.linkedin.com/in/itwela/
+             '''
+             '''
+                Personal Website - https://itwela.vercel.app/
+             '''
+             '''
+                Github - https://github.com/itwela
+             '''
+        grid10.subheader(today_date)
+
                 # st.write(df)
 
 
@@ -104,10 +120,12 @@ both_datas = pd.concat([data, upd_data], ignore_index=True)
 
 
 if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
-        conn.update(worksheet='Sheet1',data=both_datas), st.success("Job Status Updated! ✅")
+        conn.update(worksheet='Sheet1',data=both_datas)
+        st.success("Job Status Updated! ✅")
 
 if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
-        conn.update(worksheet='Sheet1', data=data.iloc[:0]), st.success("Worksheet Cleared! 💨")
+        conn.update(worksheet='Sheet1', data=data.iloc[:0])
+        st.success("Worksheet Cleared! 💨")
 # Display our Spreadsheet as str.dataframe
 st.dataframe(data.head(10))
 
