@@ -6,6 +6,7 @@ import pandas as pd
 import time
 import streamlit as st
 import pandasql as psql
+from streamlit_extras.stateful_button import button 
 from streamlit_extras.streaming_write import write
 from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.grid import grid
@@ -96,18 +97,18 @@ referral_contact = grid3.text_input('Referral Contact:')
 
 grid4 = grid(2, vertical_align="bottom", gap='small')
 
+update = None
+clear = None
+
 upd_data = add_data_to_df()
 both_datas = pd.concat([data, upd_data], ignore_index=True)
 
 
 if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
-         conn.update(worksheet='Sheet1',data=both_datas)
-         st.success("Job Status Updated! ✅")
+        update = conn.update(worksheet='Sheet1',data=both_datas), st.success("Job Status Updated! ✅")
 
-if grid4.button(label="Clear Sheet ❌", use_container_width=True):
-        conn.update(worksheet='Sheet1', data=data.iloc[:0]), 
-        st.success("Worksheet Cleared! 💨")
-
+if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
+        clear = conn.update(worksheet='Sheet1', data=data.iloc[:0]), st.success("Worksheet Cleared! 💨")
 # Display our Spreadsheet as str.dataframe
 st.dataframe(data.head(10))
 
