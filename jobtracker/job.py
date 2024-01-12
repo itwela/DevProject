@@ -15,19 +15,9 @@ import gspread
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
 with st.sidebar:
-        st.title("Tips for success:")
-        st.write("",
-            """ 
-            - Be as descriptive as you can in the
-            Description section so that the Ai can
-            get a clear picture on what the item is.
-        """,)
-        st.write("",
-            """
-            - Double click Add to Sheet and you will see: 
-             ( 'Your entries are being added now......' )
-            and a progress bar.
-        """,)
+        st.title("Job Resources:")
+        st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
+        st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
 
         with st.expander(":green[Reminder:]"): 
     
@@ -124,6 +114,8 @@ st.dataframe(data.head(10))
 
 
 st.divider()
+
+
 # DOWNLOAD FINISHED FILE ---------
 
 @st.cache_data
