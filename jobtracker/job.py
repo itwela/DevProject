@@ -97,18 +97,17 @@ referral_contact = grid3.text_input('Referral Contact:')
 
 grid4 = grid(2, vertical_align="bottom", gap='small')
 
-update = None
-clear = None
+
 
 upd_data = add_data_to_df()
 both_datas = pd.concat([data, upd_data], ignore_index=True)
 
 
 if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
-        update = conn.update(worksheet='Sheet1',data=both_datas), st.success("Job Status Updated! ✅")
+        conn.update(worksheet='Sheet1',data=both_datas), st.success("Job Status Updated! ✅")
 
 if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
-        clear = conn.update(worksheet='Sheet1', data=data.iloc[:0]), st.success("Worksheet Cleared! 💨")
+        conn.update(worksheet='Sheet1', data=data.iloc[:0]), st.success("Worksheet Cleared! 💨")
 # Display our Spreadsheet as str.dataframe
 st.dataframe(data.head(10))
 
