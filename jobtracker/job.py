@@ -19,13 +19,11 @@ with st.sidebar:
         st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
         st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
 
-        with st.expander(":green[Reminder:]"): 
+        with st.expander(":green[Other Important Stuuff:]"): 
     
             '''
-                When you are done, please press the "Finished ✅" button and download your new file.
-                This is so that just in case you dont finish, you can upload your sheet back to google drive and 
-                just continue from where you left off.
-                    ''' 
+                Forage (Jp Morgan Experience) - https://www.theforage.com
+            ''' 
       
                 # st.write(df)
 
@@ -126,7 +124,7 @@ csv = convert_df(both_datas)
 
 grid6 = grid(1, vertical_align="bottom", gap='large')
 
-grid6.write("Download Your Sheet Here:")
+grid6.write("Download Your Jobs Here:")
 if grid6.button("Finished? ✅", key="button1"):
     st.download_button(
     "Download Updated Sheet",
