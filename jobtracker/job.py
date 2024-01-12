@@ -31,7 +31,7 @@ with st.sidebar:
 
     # 
 
-mtitle = ('''## Itwela's JobPlanner''')
+mtitle = ('''## Itwela's JobPlanner.''')
 def jPlan():
     for word in mtitle.split():
         yield word + " "
