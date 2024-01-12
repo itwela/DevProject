@@ -1,0 +1,7 @@
+openai==0.28.0
+streamlit==1.26.0
+pandasql==0.7.3
+gspread==5.12.4
+Pillow==9.4.0
+python-dotenv==1.0.0
+streamlit_extras==0.3.2
