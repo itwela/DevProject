@@ -63,7 +63,7 @@ st.write("",
 
 
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-data = conn.read(worksheet='Sheet1', usecols=list(range(9)), ttl=4)
+data = conn.read(worksheet='Sheet1', usecols=list(range(8)), ttl=4)
 data = data.dropna(how='all')
 
 # # ---------------------------------------
