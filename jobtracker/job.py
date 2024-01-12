@@ -2,7 +2,6 @@
 import streamlit as st
 import re
 import os
-import openai
 import pandas as pd
 import time
 import pandasql as psql
