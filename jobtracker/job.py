@@ -122,14 +122,7 @@ both_datas = pd.concat([data, upd_data], ignore_index=True)
 if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
         conn.update(worksheet='Sheet1',data=both_datas)
         st.success("Job Status Updated! ✅")
-        job_title = None
-        company = None
-        date_applied = None
-        status = None
-        link = None
-        referral = None
-        referral_name = None
-        referral_contact = None
+
 
 if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
         conn.update(worksheet='Sheet1', data=data.iloc[:0])
