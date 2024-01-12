@@ -70,7 +70,6 @@ def add_data_to_df():
          'Date Applied': date_applied, 
          'Status': status, 
          'Link': link, 
-         'Job Description': job_description, 
          'Referral': referral, 
          'Referral Name': referral_name, 
          'Referral Contact': referral_contact,
@@ -84,7 +83,6 @@ company = None
 date_applied = None
 status = None
 link = None
-job_description = None
 referral = None
 referral_name = None
 referral_contact = None
@@ -102,8 +100,7 @@ with col2:
     status = grid2.selectbox("Status:",
     ('Applied','1st Interview','Multiple Interviews','Ghosted','Rejected')) 
     link = grid2.text_input("Link") 
-grid3 = grid(4, vertical_align='bottom', gap='small')
-job_description = grid3.text_input("Job description:")
+grid3 = grid(3, vertical_align='bottom', gap='small')
 referral = grid3.selectbox("Referral:",("Yes", "No")) 
 referral_name = grid3.text_input('Referral Name:')
 referral_contact = grid3.text_input('Referral Contact:')
