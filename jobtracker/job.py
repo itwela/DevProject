@@ -63,7 +63,7 @@ st.write("",
 
 
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-data = conn.read(worksheet='Sheet1', usecols=list(range(8)), ttl=4)
+data = conn.read(worksheet='Sheet1', usecols=list(range(9)), ttl=4)
 data = data.dropna(how='all')
 
 # # ---------------------------------------
@@ -79,6 +79,7 @@ def add_data_to_df():
          'Referral': referral, 
          'Referral Name': referral_name, 
          'Referral Contact': referral_contact,
+         'Resume Used': resume_used
         },
     index=[0]  
     )
@@ -92,6 +93,7 @@ link = None
 referral = None
 referral_name = None
 referral_contact = None
+resume_used = None
 
 
 col1, col2 = st.columns((2,2))
@@ -111,7 +113,7 @@ referral = grid3.selectbox("Referral:",("Yes", "No"))
 referral_name = grid3.text_input('Referral Name:')
 referral_contact = grid3.text_input('Referral Contact:')
 
-grid4 = grid(2, vertical_align="bottom", gap='small')
+grid4 = grid(1, vertical_align="bottom", gap='small')
 
 
 
@@ -124,9 +126,9 @@ if grid4.button(label="Add to Sheet ➕", use_container_width=True):
         st.success("Job Status Updated! ✅")
 
 
-if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
-        conn.update(worksheet='Sheet1', data=data.iloc[:0])
-        st.success("Worksheet Cleared! 💨")
+# if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
+#         conn.update(worksheet='Sheet1', data=data.iloc[:0])
+#         st.success("Worksheet Cleared! 💨")
 # Display our Spreadsheet as str.dataframe
 st.dataframe(data.head(10))
 
