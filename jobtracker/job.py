@@ -79,7 +79,8 @@ def add_data_to_df():
          'Referral': referral, 
          'Referral Name': referral_name, 
          'Referral Contact': referral_contact,
-         'Resume Used': resume_used
+         'Resume Used': resume_used,
+         "Response Date": response_date,
         },
     index=[0]  
     )
@@ -94,6 +95,7 @@ referral = None
 referral_name = None
 referral_contact = None
 resume_used = None
+response_date = None
 
 
 col1, col2 = st.columns((2,2))
@@ -108,12 +110,12 @@ with col2:
     status = grid2.selectbox("Status:",
     ('Applied','1st Interview','Multiple Interviews','Ghosted','Rejected')) 
     link = grid2.text_input("Link") 
-grid3 = grid(4, vertical_align='bottom', gap='small')
+grid3 = grid(5, vertical_align='bottom', gap='small')
 referral = grid3.selectbox("Referral:",["Yes", "No"]) 
 referral_name = grid3.text_input('Referral Name:')
 referral_contact = grid3.text_input('Referral Contact:')
 resume_used = grid3.selectbox('Resume Used:',['''ITWELA_IBOMU_RESUME.PDF'''])
-
+response_date = grid3.text_input("Response Date:")
 grid4 = grid(1, vertical_align="bottom", gap='small')
 
 
