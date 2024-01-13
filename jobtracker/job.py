@@ -112,7 +112,7 @@ grid3 = grid(4, vertical_align='bottom', gap='small')
 referral = grid3.selectbox("Referral:",("Yes", "No")) 
 referral_name = grid3.text_input('Referral Name:')
 referral_contact = grid3.text_input('Referral Contact:')
-resume_used = grid3.selectbox('Resume Used:',("ITWELA_IBOMU_RESUME.PDF"))
+resume_used = grid3.selectbox('Resume Used:',['''ITWELA_IBOMU_RESUME.PDF'''])
 
 grid4 = grid(1, vertical_align="bottom", gap='small')
 
