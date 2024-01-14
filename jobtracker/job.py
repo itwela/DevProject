@@ -21,11 +21,12 @@ today_date = datetime.now().strftime("%m/%d/%y")
 with st.sidebar:
         grid10 = grid(2, 2, vertical_align="bottom", gap='large')    
         grid10.subheader("Job Resources:")
-        st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
-        st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
-        st.write('Simplify - https://simplify.jobs/dashboard')
-        st.write('100+ Remote Job Boards - https://cinneah.notion.site/cinneah/100-TOP-JOB-BOARDS-FOR-HIGH-PAYING-JOBS-IN-2024-a9f85017fdf145ecb723ec1af499970d')
-
+        
+        with st.expander('Job Boards:'):
+            st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
+            st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
+            st.write('Simplify - https://simplify.jobs/dashboard')
+            st.write('100+ Remote Job Boards - https://cinneah.notion.site/cinneah/100-TOP-JOB-BOARDS-FOR-HIGH-PAYING-JOBS-IN-2024-a9f85017fdf145ecb723ec1af499970d')
         with st.expander(":green[Other Important Stuuff:]"): 
     
             '''
@@ -42,10 +43,6 @@ with st.sidebar:
              '''
                 Github - https://github.com/itwela
              '''
-        with st.expander('Job Boards:'):
-             '''
-             '''
-
         with st.expander('Open Source Resources:'):
              
              '''
