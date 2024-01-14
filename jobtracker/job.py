@@ -41,6 +41,16 @@ with st.sidebar:
              '''
                 Github - https://github.com/itwela
              '''
+        with st.expander('Job Boards:'):
+             '''
+                100+ Remote Job Boards - https://click.convertkit-mail2.com/92uwgo85kkaduo8wv5b9h0x3p633/n2hohqu3vnvo54u0/aHR0cHM6Ly9jaW5uZWFoLm5vdGlvbi5zaXRlL2Npbm5lYWgvMTAwLVRPUC1KT0ItQk9BUkRTLUZPUi1ISUdILVBBWUlORy1KT0JTLUlOLTIwMjQtYTlmODUwMTdmZGYxNDVlY2I3MjNlYzFhZjQ5OTk3MGQ=
+             '''
+
+        with st.expander('Open Source Resources:'):
+             
+             '''
+                10+ Open Source Projects - https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/
+             '''
         grid10.subheader(today_date)
 
                 # st.write(df)
