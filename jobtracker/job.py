@@ -27,11 +27,6 @@ with st.sidebar:
             st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
             st.write('Simplify - https://simplify.jobs/dashboard')
             st.write('100+ Remote Job Boards - https://cinneah.notion.site/cinneah/100-TOP-JOB-BOARDS-FOR-HIGH-PAYING-JOBS-IN-2024-a9f85017fdf145ecb723ec1af499970d')
-        with st.expander(":green[Other Important Stuuff:]"): 
-    
-            '''
-                Forage (Jp Morgan Experience) - https://www.theforage.com
-            ''' 
         with st.expander("Application Details"):
 
              '''
@@ -48,6 +43,10 @@ with st.sidebar:
              '''
                 10+ Open Source Projects - https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/
              '''
+        with st.expander(":green[Other Important Stuuff:]"): 
+            '''
+                Forage (Jp Morgan Experience) - https://www.theforage.com
+            ''' 
         grid10.subheader(today_date)
 
                 # st.write(df)
