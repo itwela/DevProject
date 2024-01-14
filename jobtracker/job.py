@@ -24,6 +24,7 @@ with st.sidebar:
         st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
         st.write('Github 2024 SWE List - https://github.com/etkhdaniel/Summer2024-Internships')
         st.write('Simplify - https://simplify.jobs/dashboard')
+        st.write('100+ Remote Job Boards - https://click.convertkit-mail2.com/92uwgo85kkaduo8wv5b9h0x3p633/n2hohqu3vnvo54u0/aHR0cHM6Ly9jaW5uZWFoLm5vdGlvbi5zaXRlL2Npbm5lYWgvMTAwLVRPUC1KT0ItQk9BUkRTLUZPUi1ISUdILVBBWUlORy1KT0JTLUlOLTIwMjQtYTlmODUwMTdmZGYxNDVlY2I3MjNlYzFhZjQ5OTk3MGQ=')
 
         with st.expander(":green[Other Important Stuuff:]"): 
     
@@ -43,7 +44,6 @@ with st.sidebar:
              '''
         with st.expander('Job Boards:'):
              '''
-                100+ Remote Job Boards - https://click.convertkit-mail2.com/92uwgo85kkaduo8wv5b9h0x3p633/n2hohqu3vnvo54u0/aHR0cHM6Ly9jaW5uZWFoLm5vdGlvbi5zaXRlL2Npbm5lYWgvMTAwLVRPUC1KT0ItQk9BUkRTLUZPUi1ISUdILVBBWUlORy1KT0JTLUlOLTIwMjQtYTlmODUwMTdmZGYxNDVlY2I3MjNlYzFhZjQ5OTk3MGQ=
              '''
 
         with st.expander('Open Source Resources:'):
