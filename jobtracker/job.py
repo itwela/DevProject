@@ -12,9 +12,15 @@ from streamlit_extras.streaming_write import write
 from streamlit_extras.dataframe_explorer import dataframe_explorer
 from streamlit_extras.grid import grid
 from streamlit_gsheets import GSheetsConnection
+import pytz 
 import gspread
 
-today_date = datetime.now().strftime("%m/%d/%y")
+# Set the timezone to Eastern Standard Time (EST)
+est_timezone = pytz.timezone('US/Eastern')
+# Get the current date and time in EST
+current_datetime_est = datetime.now(est_timezone)
+# Format the date as "%m/%d/%y"
+today_date = current_datetime_est.strftime("%m/%d/%y")
 
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
@@ -160,11 +166,6 @@ if grid6.button("Finished? ✅", key="button1"):
     st.download_button("Download Updated Sheet", csv, "test.csv", "text/csv",key='download-csv')
 
 
-# 
-   
-#
-
-# 
     
 
 
