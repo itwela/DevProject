@@ -1,0 +1,36 @@
+#logos
+{
+    scale: 0.5;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+
+    .logo-container{
+        height: 10vh
+    }
+    .brands-container{
+        height: 10vh
+    }
+    #logos
+    {
+    scale: 2;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+
+    .logo-container{
+        height: 10vh
+    }
+    .brands-container{
+        height: 10vh
+    }
+    #logos
+    {
+    scale: 3.5;
+    }
+
+}
+

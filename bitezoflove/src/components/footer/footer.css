@@ -1,0 +1,9 @@
+.follow-us
+{
+  font-size: clamp(60px,3vw,346px);
+}
+
+.icon-ig
+{
+    cursor: pointer;
+}

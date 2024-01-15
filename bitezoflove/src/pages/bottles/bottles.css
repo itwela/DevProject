@@ -1,0 +1,196 @@
+.left-container, .right-container, .right-container-2, .right-container-3, .left-title
+{
+
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.circle-mask-white
+{
+    /* -webkit-clip-path: circle(80.7% at 50% 106%);
+    clip-path: circle(80.7% at 50% 106%); */
+    background-color: white;
+}
+
+.split-img-container-left
+{
+    background-image: url('../../assets/reviewo.png');
+    background-size: cover;
+    background-position: 40%;
+}
+
+.split-img-container-middle
+{
+    background-image: url('../../assets/reviewtwo.png');
+    background-size: cover;
+    background-position: 40%;
+}
+
+.split-img-container-right
+{
+    background-image: url('../../assets/reviewthree.png');
+    background-size: cover;
+    background-position: 40%;
+
+}
+
+.flavors-individual-letter
+{
+   font-size: clamp(45px,10vw,356px);
+   pointer-events: none;
+}
+
+.second-text-wrap
+{
+    padding-inline: 4.7vw!important;
+}
+.sub-flavor
+{
+    /* width: var(--cg3); */
+    /* min-width: 276px; */
+    font: clamp(10px,1.1vw,20px);
+}
+
+.favorites-wrapper
+{
+    overflow: scroll;
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.fav-img-1
+{
+background-image: url('../../assets/rec-4.jpg');
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center;
+}
+.fav-img-2
+{
+    background-image: url('../../assets/blackseed.jpg');
+    background-size: 42%;
+    background-repeat: no-repeat;
+    background-position: center;}
+.fav-img-3
+{
+    background-image: url('../../assets/rec-3.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.fav-img-4
+{
+    background-image: url('../../assets/rec-1.jpg');
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Add this style to hide the button by default */
+.discover-btn-1 {
+    opacity: 0;
+    transition: all ease 1s;
+    transform: translateY(50%);
+  }
+
+.title-d-1, .title-d-2, .title-d-3, .title-d-4 {
+    opacity: 0;
+    transition: all ease 1s;
+    transform: translateY(-50%);
+  }
+  
+  /* Add this style to make the button visible when hovering over fav-img-1 */
+  .fav-img-1:hover .discover-btn-1 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+
+  .fav-img-1:hover .title-d-1 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+  
+/* Add this style to hide the button by default */
+.discover-btn-2 {
+    opacity: 0;
+    transition: all ease 1s;
+    transform: translateY(50%);
+  }
+
+  /* Add this style to make the button visible when hovering over fav-img-1 */
+  .fav-img-2:hover .discover-btn-2 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+
+  .fav-img-2:hover .title-d-2 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+/* Add this style to hide the button by default */
+.discover-btn-3 {
+    opacity: 0;
+    transition: all ease 1s;
+    transform: translateY(50%);
+  }
+  
+  /* Add this style to make the button visible when hovering over fav-img-1 */
+  .fav-img-3:hover .discover-btn-3 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+
+  
+  .fav-img-3:hover .title-d-3 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+/* Add this style to hide the button by default */
+.discover-btn-4 {
+    opacity: 0;
+    transition: all ease 1s;
+    transform: translateY(50%);
+  }
+  
+  /* Add this style to make the button visible when hovering over fav-img-1 */
+  .fav-img-4:hover .discover-btn-4 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+
+  .fav-img-4:hover .title-d-4 {
+    opacity: 1;    
+    transition: all ease 1s;
+    transform: translateY(0%);
+  }
+  
+.discover{
+    font: clamp(1px,0.1vw,2px);
+}
+
+.review-h
+{
+  font-size: clamp(30px,1vw,60px);
+  pointer-events: none;
+}
+
+.review-p
+{
+  font-size: clamp(12px,1.2vw,28px);
+  padding: 0.5em;
+  pointer-events: none;
+}
+
+.review
+{
+  padding: 0.6em;
+}

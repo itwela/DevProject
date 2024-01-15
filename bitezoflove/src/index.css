@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar
+{
+  width: 0vw;
+}
+
+
+
+html
+{
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+}
+
+@font-face {
+  font-family: main;
+  src: url("./fonts/ManuscribeFree-Regular.otf")
+} 
+
+@font-face {
+  font-family: second;
+  src: url("./fonts/Gavency-Free-Regular.otf")
+} 
+
+@font-face {
+  font-family: third;
+  src: url("./fonts/ABCWhyte/ABCWhyteInktrap/ABCWhyteInktrap-Black-Trial.woff")
+} 
+
+li{
+  font-weight: 500;
+  text-decoration: none;
+  list-style-type: none;
+}
+a:hover {
+  color: #565656;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  height: 100dvh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+.left-btn, .right-btn
+{
+  cursor: pointer;
+}
+
+.favorite-scroller, .favorite-wrapper
+{
+  overflow-y: hidden;
+}

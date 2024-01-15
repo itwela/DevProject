@@ -1,0 +1,44 @@
+/* .header-wrapper
+{
+
+    background: rgba(255, 255, 255, 0.109);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+} */
+
+#a-tag
+{
+    padding: 1em;
+    background: rgb(255, 255, 255);
+    outline: 1px solid;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.header-box
+{
+    background: rgb(255, 255, 255);
+    border-radius: 8em;
+    outline: 1px solid;
+}
+
+/* @media screen and (max-width: 600px) {
+    
+    .header-wrapper-big
+    {
+        display: none;
+    }
+
+} */
+
+.close-button {
+    /* Add your specific styling for the close button here */
+    /* For example, you can change the size */
+    width: 20px !important; 
+    height: 20px !important;
+    position: fixed;
+    right: 5% !important;
+  }
