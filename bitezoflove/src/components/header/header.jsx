@@ -46,7 +46,7 @@ function Header() {
         </motion.div>
         <div
             className={`hamburger bg-[#fffbec] p-5 fixed z-[10000] right-0 top-0 md:scale-[1.5] flex flex-col place-items-center gap-3  w-[50%] h-[60%]  md:hidden ${
-                menuOpen ? '' : 'rounded-[13em] w-[60px] h-[51px] flex place-content-center right-8 top-7 fixed '
+                menuOpen ? '' : 'rounded-[13em] w-[60px] h-[10px] flex place-content-center right-8 top-7 fixed '
             }`}
         >
           <img
@@ -57,7 +57,7 @@ function Header() {
           />
           {/* Menu content */}
           {menuOpen && (
-            <div className="menu-content font-second font-[300] mt-[20%] text-[3em] flex flex-col gap-5">
+            <div className="menu-content font-second font-[300] mt-[20%] text-[1.5em] flex flex-col gap-5">
               {/* Your menu items go here */}
               <div onClick={toggleMenu}><a href="https://www.bitezoflove.com/">HOME</a></div>
               <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/collections/all">SHOP</a></div>
