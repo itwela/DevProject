@@ -45,9 +45,9 @@ function Header() {
           />
         </motion.div>
         <div
-            className={`hamburger bg-[#fffbec] p-5 fixed z-[10000] right-0 top-0 md:scale-[1.5] flex flex-col place-items-center gap-3  w-[50%] h-[60%]  md:hidden ${
-                menuOpen ? '' : 'rounded-[13em] w-[60px] h-[10px] flex place-content-center right-8 top-7 fixed '
-            }`}
+          className={`hamburger bg-[#fffbec] p-5 fixed z-[10000] right-0 top-0 md:scale-[1.5] flex flex-col place-items-center gap-3 ${
+            menuOpen ? '' : 'rounded-[13em]'
+          } ${menuOpen ? 'w-[50%] h-[60%]' : 'w-[60px] h-[10px] flex place-content-center fixed right-8 top-7'}`}
         >
           <img
             src={menuOpen ? closeButton : menu}
@@ -73,30 +73,18 @@ function Header() {
         <div
           className="header-wrapper-big md:w-[30em] fixed z-[900] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-5 hidden"
         >
-            <a id="a-tag" className="" href="https://www.bitezoflove.com/">
+          <a id="a-tag" className="" href="https://www.bitezoflove.com/">
             HOME
-            </a>
-            <a
-            id="a-tag"
-            className=""
-            href="https://bitez-of-love.myshopify.com/collections/all"
-            >
+          </a>
+          <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/collections/all">
             SHOP
-            </a>
-            <a
-            id="a-tag"
-            className=""
-            href="https://bitez-of-love.myshopify.com/pages/contact"
-            >
+          </a>
+          <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/pages/contact">
             CONTACT
-            </a>
-            <a
-            id="a-tag"
-            className=""
-            href="https://bitez-of-love.myshopify.com/pages/faqs"
-            >
+          </a>
+          <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/pages/faqs">
             FAQ'S
-            </a>
+          </a>
         </div>
       </div>
     </>
