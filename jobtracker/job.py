@@ -145,7 +145,7 @@ if grid4.button(label="Add to Sheet ➕", use_container_width=True):
 #         conn.update(worksheet='Sheet1', data=data.iloc[:0])
 #         st.success("Worksheet Cleared! 💨")
 # Display our Spreadsheet as str.dataframe
-st.dataframe(data.head(10))
+st.dataframe()
 
 
 st.divider()

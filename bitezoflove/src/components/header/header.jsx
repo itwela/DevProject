@@ -47,7 +47,7 @@ function Header() {
         <div
           className={`hamburger bg-[#fffbec] p-5 fixed z-[10000] right-0 top-0 md:scale-[1.5] flex flex-col place-items-center gap-3 ${
             menuOpen ? '' : 'rounded-[13em]'
-          } ${menuOpen ? 'w-[50%] h-[60%]' : 'w-[60px] h-[10px] flex place-content-center fixed right-8 top-7'}`}
+          } ${menuOpen ? 'w-[50%] h-[22.5em]' : 'w-[60px] h-[10px] flex place-content-center fixed right-8 top-7'}`}
         >
           <img
             src={menuOpen ? closeButton : menu}
