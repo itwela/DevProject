@@ -75,7 +75,7 @@ st.write("",
 
 
 conn = st.experimental_connection("gsheets", type=GSheetsConnection)
-data = conn.read(worksheet='Sheet1', usecols=list(range(9)), ttl=4)
+data = conn.read(worksheet='Sheet1', usecols=list(range(10)), ttl=4)
 data = data.dropna(how='all')
 
 # # ---------------------------------------
@@ -93,6 +93,7 @@ def add_data_to_df():
          'Referral Contact': referral_contact,
          'Resume Used': resume_used,
          "Response Date": response_date,
+         "Keywords": keywords,
         },
     index=[0]  
     )
@@ -108,6 +109,7 @@ referral_name = None
 referral_contact = None
 resume_used = None
 response_date = None
+keywords = None
 
 
 col1, col2 = st.columns((2,2))
@@ -129,6 +131,7 @@ referral_contact = grid3.text_input('Referral Contact:')
 resume_used = grid3.text_input('Resume Used:')
 response_date = grid3.text_input("Response Date:")
 grid4 = grid(1, vertical_align="bottom", gap='small')
+keywords = st.text_input("Keywords:")
 
 
 
