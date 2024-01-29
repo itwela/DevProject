@@ -131,7 +131,7 @@ referral_contact = grid3.text_input('Referral Contact:')
 resume_used = grid3.text_input('Resume Used:')
 response_date = grid3.text_input("Response Date:")
 grid4 = grid(1, vertical_align="bottom", gap='small')
-keywords = st.text_input("Keywords:")
+keywords = grid4.text_input("Keywords:")
 
 
 
@@ -139,7 +139,7 @@ upd_data = add_data_to_df()
 both_datas = pd.concat([data, upd_data], ignore_index=True)
 
 
-if grid4.button(label="Add to Sheet ➕", use_container_width=True):        
+if st.button(label="Add to Sheet ➕", use_container_width=True):        
         conn.update(worksheet='Sheet1',data=both_datas)
         st.success("Job Status Updated! ✅")
 
