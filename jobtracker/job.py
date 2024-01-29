@@ -185,7 +185,7 @@ if st.button(label="Add to Sheet ➕", use_container_width=True):
         conn.update(worksheet='Sheet1',data=both_datas)
         response = chat_with_gpt3_5(prompt)
         st.write(response)
-        st.success("Job Status Updated! Your Introduction is below! ✅")
+        st.success("Job Status Updated! Your Introduction is above! ✅")
 
 
 # if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
