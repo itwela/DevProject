@@ -14,6 +14,47 @@ from streamlit_extras.grid import grid
 from streamlit_gsheets import GSheetsConnection
 import pytz 
 import gspread
+from dotenv import load_dotenv
+
+# 
+load_dotenv()
+api_key = os.getenv("2OPENAI_API_KEY")
+if api_key is None:
+    raise Exception("API key not found in .env file")
+openai.api_key = api_key
+
+def chat_with_gpt3_5(prompt):
+    openai.api_key = api_key
+
+    gpt3response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        temperature=0,
+        messages=[
+            {
+        "role": "system",
+        "content": '''You are my personal assistant for writing the perfect introduction message to recruiters and hiring managers. You are an expert at
+         taking simple keywords and information about a job and return a short to the point introduction message. Im
+         trying to use these answers you provide in a small introductory linkedin message or email, so while I want you to think very hard
+          I would appreciate it if you kept the thought process to yourself and 
+           provided the answer in the format he needs. Also, the Im is using a function to grab the integers and keywords
+            in your answer to pass that along.
+            so please make the numbers you provide in a format that will fit this.
+            Every answer you give is in the following format, no exceptions:  
+            Hi, I'm Itwela and I recently applied to your job posting for the role at _____ . With my years of experience in ________ and _______ and ____ , I think that I would be a great fit for this role, Could you kindly review my resume or consider a referral? Thanks!
+        .'''
+            },
+            {
+        "role": "user",
+        "content": prompt
+            }
+            ],  
+        max_tokens=1000  # Adjust the max_tokens as needed
+    )
+            
+
+    return gpt3response['choices'][0]['message']['content']
+
+# 
 
 # Set the timezone to Eastern Standard Time (EST)
 est_timezone = pytz.timezone('US/Eastern')
@@ -21,12 +62,25 @@ est_timezone = pytz.timezone('US/Eastern')
 current_datetime_est = datetime.now(est_timezone)
 # Format the date as "%m/%d/%y"
 today_date = current_datetime_est.strftime("%m/%d/%y")
+# Define variables to hold the values from the first column
+job_title = None
+company = None
+date_applied = None
+status = None
+link = None
+referral = None
+referral_name = None
+referral_contact = None
+resume_used = None
+response_date = None
+keywords = None
 
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
 with st.sidebar:
         grid10 = grid(2, 2, vertical_align="bottom", gap='large')    
         grid10.subheader("Job Resources:")
+        grid10.subheader(today_date)
         
         with st.expander('Job Boards:'):
             st.write('Ripplematch - https://app.ripplematch.com/v2/student/recommendations/role/c7d28bdf')
@@ -53,9 +107,13 @@ with st.sidebar:
             '''
                 Forage (Jp Morgan Experience) - https://www.theforage.com
             ''' 
-        grid10.subheader(today_date)
-
-                # st.write(df)
+        prompt = f'''I need to write an introduction to job recruiters and hiring managers. I want to have the keywords in the introduction and of course the name of the position and recruiter. Im gong to give you all of this information and an example.
+        Hi {referral_name}, I'm Itwela and I recently applied for your job posting for the {job_title} role at {company} . With my years of experience in {keywords}, I think that I would be a great fit for this role, Could you kindly review my resume or consider a referral? Thanks!
+        please always write in this format.
+        '''
+        if st.button(label="Generate Introduction?", use_container_width=True):
+            response = chat_with_gpt3_5(prompt)
+            st.write(response)
 
 
     # 
@@ -98,19 +156,6 @@ def add_data_to_df():
     index=[0]  
     )
 
-# Define variables to hold the values from the first column
-job_title = None
-company = None
-date_applied = None
-status = None
-link = None
-referral = None
-referral_name = None
-referral_contact = None
-resume_used = None
-response_date = None
-keywords = None
-
 
 col1, col2 = st.columns((2,2))
 
@@ -150,8 +195,9 @@ if st.button(label="Add to Sheet ➕", use_container_width=True):
 # Display our Spreadsheet as str.dataframe
 st.dataframe(data)
 
-
 st.divider()
+
+
 
 
 # DOWNLOAD FINISHED FILE ---------
