@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 # 
 load_dotenv()
 api_key = os.getenv("2OPENAI_API_KEY")
+# api_key = "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"
 if api_key is None:
     raise Exception("API key not found in .env file")
 openai.api_key = api_key
@@ -74,7 +75,7 @@ referral_contact = None
 resume_used = None
 response_date = None
 keywords = None
-introduction = None
+response = None
 
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
