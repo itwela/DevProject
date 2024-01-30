@@ -74,6 +74,7 @@ referral_contact = None
 resume_used = None
 response_date = None
 keywords = None
+introduction = None
 
 #  -------------------------------------------------------
 # SIDEBAR -----------------------------------#  -------------------------------------------------------
@@ -145,6 +146,7 @@ def add_data_to_df():
          'Resume Used': resume_used,
          "Response Date": response_date,
          "Keywords": keywords,
+         "Introduction:": response,
         },
     index=[0]  
     )
@@ -182,10 +184,10 @@ please always write in this format.
 '''
 
 if st.button(label="Add to Sheet ➕", use_container_width=True):        
-        conn.update(worksheet='Sheet1',data=both_datas)
-        st.success("Job Status Updated! Your Introduction is above! ✅")
         response = chat_with_gpt3_5(prompt)
         st.write(response)
+        conn.update(worksheet='Sheet1',data=both_datas)
+        st.success("Job Status Updated! Your Introduction is above! ✅")
 
 
 # if grid4.button(label="Clear Sheet ❌", use_container_width=True, key='button3'):
