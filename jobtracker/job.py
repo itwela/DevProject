@@ -174,10 +174,6 @@ grid4 = grid(1, vertical_align="bottom", gap='small')
 keywords = grid4.text_input("Keywords:")
 
 
-
-upd_data = add_data_to_df()
-both_datas = pd.concat([data, upd_data], ignore_index=True)
-
 prompt = f'''I need to write an introduction to job recruiters and hiring managers. I want to have the keywords in the introduction and of course the name of the position and recruiter. Im gong to give you all of this information and an example.
 Hi {referral_name}, I'm Itwela and I recently applied for your job posting for the {job_title} role at {company} . With my years of experience in {keywords}, I think that I would be a great fit for this role, Could you kindly review my resume or consider a referral? Thanks!
 please always write in this format.
@@ -185,6 +181,8 @@ please always write in this format.
 
 if st.button(label="Add to Sheet ➕", use_container_width=True):        
         response = chat_with_gpt3_5(prompt)
+        upd_data = add_data_to_df()
+        both_datas = pd.concat([data, upd_data], ignore_index=True)
         st.write(response)
         conn.update(worksheet='Sheet1',data=both_datas)
         st.success("Job Status Updated! Your Introduction is above! ✅")
