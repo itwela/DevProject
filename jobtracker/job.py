@@ -94,7 +94,7 @@ with st.sidebar:
                 Linkedin - https://www.linkedin.com/in/itwela/
              '''
              '''
-                Personal Website - https://itwela.vercel.app/
+                Personal Website - https://itwela.dev/
              '''
              '''
                 Github - https://github.com/itwela
