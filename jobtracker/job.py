@@ -199,19 +199,19 @@ st.divider()
 
 
 
-# DOWNLOAD FINISHED FILE ---------
+# # DOWNLOAD FINISHED FILE ---------
 
-@st.cache_data
-def convert_df(both_datas):
-   return both_datas.to_csv(index=False).encode('ISO-8859-1')
+# @st.cache_data
+# def convert_df(both_datas):
+#    return both_datas.to_csv(index=False).encode('ISO-8859-1')
 
-csv = convert_df(both_datas)
+# csv = convert_df(both_datas)
 
-grid6 = grid(1, vertical_align="bottom", gap='large')
+# grid6 = grid(1, vertical_align="bottom", gap='large')
 
-grid6.write("Download Your Jobs Here:")
-if grid6.button("Finished? ✅", key="button1"):
-    st.download_button("Download Updated Sheet", csv, "test.csv", "text/csv",key='download-csv')
+# grid6.write("Download Your Jobs Here:")
+# if grid6.button("Finished? ✅", key="button1"):
+#     st.download_button("Download Updated Sheet", csv, "test.csv", "text/csv",key='download-csv')
 
 
     
