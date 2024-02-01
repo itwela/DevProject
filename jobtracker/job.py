@@ -104,9 +104,9 @@ with st.sidebar:
              '''
                 10+ Open Source Projects - https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/
              '''
-        with st.expander(":green[Other Important Stuuff:]"): 
+        with st.expander(":green[Other Experience To add:]"): 
             '''
-                Forage (Jp Morgan Experience) - https://www.theforage.com
+                Forage (Jp Morgan Experience) - https://www.theforage.com ✅
             ''' 
 
 
