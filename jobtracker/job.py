@@ -99,8 +99,11 @@ with st.sidebar:
              '''
                 Github - https://github.com/itwela
              '''
-        with st.expander('Open Source Resources:'):
+        with st.expander('More Resources:'):
              
+             '''
+                Resume Guide & Tips - https://www.reddit.com/r/EngineeringResumes/s/QAk6Vck2ws
+             '''
              '''
                 10+ Open Source Projects - https://www.geeksforgeeks.org/best-open-source-programs-for-students-to-participate/
              '''
