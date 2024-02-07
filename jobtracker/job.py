@@ -102,6 +102,10 @@ with st.sidebar:
         with st.expander('More Resources:'):
              
              '''
+                Free Cover Letter Writer - https://earnbetter.com
+             '''
+             
+             '''
                 Resume Guide & Tips - https://www.reddit.com/r/EngineeringResumes/s/QAk6Vck2ws
              '''
              '''
