@@ -115,6 +115,10 @@ with st.sidebar:
             '''
                 Forage (Jp Morgan Experience) - https://www.theforage.com ✅
             ''' 
+        with st.expander("Academic Resources:"): 
+            '''
+                Visualizing DSA: https://visualgo.net/en
+            ''' 
 
 
     # 
