@@ -117,7 +117,7 @@ with st.sidebar:
             ''' 
         with st.expander("Academic Resources:"): 
             '''
-                Visualizing DSA: https://visualgo.net/en
+                Visualizing Data Structures and Algorithims: https://visualgo.net/en
             ''' 
 
 
