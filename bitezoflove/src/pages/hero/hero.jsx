@@ -384,76 +384,10 @@ font-second
 
 
 function Hero() {
-    
-    // ---- GSAP ----------
-    // gsap.registerPlugin(ScrollTrigger);
 
-    // useEffect(() => {
-    //     ScrollTrigger.create({
-    //         start: 1,
-    //         end: 'max',
-    //         onLeaveBack: self => self.scroll(ScrollTrigger.maxScroll(window) - 2),
-    //         onLeave: self => self.scroll(2)
-    //     }).scroll(2)
-    // }, [])
-
-    // -----------------------------------
-
-//     // ---- GSAP ----------
-// // 
-// // Add a ref for the left button
-        const leftButtonRef = useRef(null);
-
-//         // Function to simulate left button click
-//         const simulateLeftButtonClick = () => {
-//         // Check if the left button ref is available
-//         if (leftButtonRef.current) {
-//             // Trigger the left button click
-//             leftButtonRef.current.click();
-//         }
-//         };
-
-
-//         // Use setInterval to trigger the left button click every 5 seconds
-//         useEffect(() => {
-//         const intervalId = setInterval(simulateLeftButtonClick, 6500);
-
-//         // Cleanup function to clear the interval when the component unmounts
-//         return () => clearInterval(intervalId);
-//         }, []);
-
-// // 
+    const leftButtonRef = useRef(null);
 
     const firstBg = useRef(null);
-//     const [bgPlayAnimation, setPlayAnimation] = useState(false);
-
-//     useEffect(() => {
-//         if (bgPlayAnimation) {
-//           const tl = gsap.timeline({
-//             onComplete: () => {
-//               // Reset playAnimation to false after the animation is complete
-//               setPlayAnimation(false);
-//             },
-//           });
-      
-//         //   tl.to(imageRef.current, { y: '-200%', duration: 0.5, ease: 'power2.inOut' })
-//         //     .to(imageRef.current, { y: '0%', duration: 0.5, ease: 'power2.inOut' });
-//         tl.to(firstBg.current, { autoAlpha: 0, duration: 1.3, ease: 'expo.out' })
-//         .to(firstBg.current, { autoAlpha: 1, duration: 1.3, ease: 'expo.out' });
-  
-//           return () => tl.kill();
-//         }
-//       }, [bgPlayAnimation]);
-    
-
-
-
-    // -------- GSAP ----------
-
-    // ~
-
-
-    // ---- DYNAMIC COLORS --------------
 
     const imageRef = useRef(null);
     const [currentOptionIndex, setCurrentOptionIndex] = useState(0);
@@ -485,198 +419,202 @@ function Hero() {
     return (  
         <>
 
-        <div 
-        id='content'
-        className="image-hero
-relative
-flex
-flex-col
-md:flex-row
-justify-center
-place-items-center
-">
-    <div className="tired-of-cont
+        <div id='content' className="image-hero relative flex flex-col md:flex-row justify-center place-items-center">
+            <div className="tired-of-cont
 
-place-content-center
-flex
-flex-col
-font-second
-text-[#fff]
-hidden
+        place-content-center
+        flex
+        flex-col
+        font-second
+        text-[#fff]
+        hidden
+            ">
+                <p className='tired-of-text'>
+                    NO MORE
+                </p>
+                <h1 className='dy-tired-text'>
+                {currentEffect}
+                </h1>
+            </div>
+
+            <div className="bottle-container
+    w-[100vw]
     ">
-        <p className='tired-of-text'>
-            NO MORE
-        </p>
-        <h1 className='dy-tired-text'>
-        {currentEffect}
-        </h1>
-    </div>
-    <div className="bottle-container
-w-[100vw]
-">
-        <div className="strawberry-bottle
-flex
-justify-center
-place-content-center
-place-items-center
-items-center
-h-[100dvh]
-        ">
-        <motion.img 
-        initial="hidden"
-        whileInView="visible"
-        //   viewport={{ once: true }}
-        transition={{ duration: 1.8 }}
-        variants={combinedVariantsYtop}
-        src={currentImage} ref={imageRef} id='the-bottle' className='
-w-[12em]
-h-[28em]
-absolute
-z-[1]
-            ' />
-        </div>
-        </div>
-        <motion.div 
-        initial="hidden"
-        whileInView="visible"
-          viewport={{ once: true }}
-        transition={{ duration: 1.2 }}
-        variants={combinedVariantsYbottom}
-        className="bottle-change-box
-absolute
-bottom-0
-h-[20%]
-flex
-justify-center
-place-content-center
-place-items-center
-items-center
-z-[2]
-        ">
-        <div className="bottle-picker
-flex
-gap-
-w-[100vw]
-justify-around
-place-content-center
-place-items-center
-items-center    
+
+            <div className="strawberry-bottle
+    flex
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    h-[100dvh]
+            ">
+
+{/* bottle img? */}
+            <motion.img 
+            initial="hidden"
+            whileInView="visible"
+            //   viewport={{ once: true }}
+            transition={{ duration: 1.8 }}
+            variants={combinedVariantsYtop}
+            src={currentImage} 
+            ref={imageRef} id='the-bottle' className='
+    w-[12em]
+    h-[28em]
+    absolute
+    z-[1]
+                ' />
+
+            </div>
+
+            </div>
+            
+            <motion.div 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 1.2 }}
+            variants={combinedVariantsYbottom}
+            className="bottle-change-box
+    absolute
+    bottom-0
+    h-[20%]
+    flex
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    z-[2]
+            ">
+            <div className="bottle-picker
+    flex
+    gap-
+    w-[100vw]
+    justify-around
+    place-content-center
+    place-items-center
+    items-center    
+                        ">
+            <div
+            ref={leftButtonRef} 
+            onClick={handleLeftButtonClick}
+            className="left-btn
+    bg-[#ffffff]
+    w-[3em]
+    h-[3em]
+    rounded-[2em]
+    flex
+    justify-center
+    outline
+    outline-[1px]
                     ">
-        <div
-        ref={leftButtonRef} 
-        onClick={handleLeftButtonClick}
-        className="left-btn
-bg-[#ffffff]
-w-[3em]
-h-[3em]
-rounded-[2em]
-flex
-justify-center
-outline
-outline-[1px]
-                ">
-        <img src={leftArrow} alt="" className='
-w-[2em]
-        ' />
-        </div>
-        <a 
-        href={currentLinks}
-                style={{ backgroundColor: currentButtonColor }}
-                className="current-bottle-box
-rounded-[4em]
-p-5
-"
+            <img src={leftArrow} alt="" className='
+    w-[2em]
+            ' />
+            </div>
+            <a 
+            href={currentLinks}
+                    style={{ backgroundColor: currentButtonColor }}
+                    className="current-bottle-box
+    rounded-[4em]
+    p-5
+    "
 
-                >
-        <h1 className="current-bottle
-text-[1.3em]
-text-white
-font-main
-font-black
+                    >
+            <h1 className="current-bottle
+    text-[1.3em]
+    text-white
+    font-main
+    font-black
 
+            ">
+                {currentBottle}
+            </h1>
+            </a>
+            <div 
+                    onClick={handleRightButtonClick}
+                    className="right-btn
+    bg-[#ffffff]
+    w-[3em]
+    h-[3em]
+    rounded-[2em]
+    flex
+    justify-center
+    outline
+    outline-[1px]
+            ">
+            <img src={rightArrow} alt="" className='
+    w-[2em]
+            ' />
+            </div>
+            </div>
+            </motion.div>
+            
+            <div 
+            // style={{ backgroundColor: currentButtonColor }}
+            className="circle-bottom
+    h-[100dvh]
+    w-[100vw]
+    absolute
+    z-[-1]
+            ">
+            </div>
+            
+            <div 
+            ref={firstBg} 
+            className="bg-cont
+    flex
+    h-full
+    w-[100vw]
+    absolute
+    justify-center
+    place-items-center
+    overflow-hidden
+            ">
+            <img src={currentBackground} alt="" className="back-img
+    absolute
+    scale-[1.6]
+            "/>
+            </div>
+            
+            <div className="heart-cont
+    w-[100vw]
+    h-[100dvh]
+    absolute
+    flex
+    justify-center 
         ">
-            {currentBottle}
-        </h1>
-        </a>
-        <div 
-                onClick={handleRightButtonClick}
-                className="right-btn
-bg-[#ffffff]
-w-[3em]
-h-[3em]
-rounded-[2em]
-flex
-justify-center
-outline
-outline-[1px]
-        ">
-        <img src={rightArrow} alt="" className='
-w-[2em]
-        ' />
-        </div>
-        </div>
-        </motion.div>
-        <div 
-        // style={{ backgroundColor: currentButtonColor }}
-        className="circle-bottom
-h-[100dvh]
-w-[100vw]
-absolute
-z-[-1]
-        ">
-        </div>
-        <div 
-        ref={firstBg} 
-        className="bg-cont
-flex
-h-[100dvh]
-w-[100vw]
-absolute
-justify-center
-place-items-center
-overflow-hidden
-        ">
-        <img src={currentBackground} alt="" className="back-img
-absolute
-scale-[1.4]
-        "/>
-        </div>
-        <div className="heart-cont
-w-[100vw]
-h-[100dvh]
-absolute
-flex
-justify-center 
-       ">
 
-        <img src={pinkheart} alt="" className="heart-1
-absolute
-bottom-[30%]
-left-[4em]
-md:left-[15em]
-lg:left-[30em]
-" />
-        <img src={pinkheart} alt="" className="heart-2
-absolute
-bottom-[30%]
-right-[4em]
-md:right-[15em]
-lg:right-[30em]
-" />
-        </div>
-        <div 
-        style={{backgroundColor: currentButtonColor}}
-        className="test
-absolute
-z-[-1]
-w-[100vw]
-h-[100dvh]
-bg-[#fffbec]
-overflow-hidden
-        ">
-        {/* <video src={beachvid} muted autoPlay loop className='video-bg
-        '></video> */}
-        </div>
+            <img src={pinkheart} alt="" className="heart-1
+    absolute
+    bottom-[30%]
+    left-[4em]
+    md:left-[15em]
+    lg:left-[30em]
+    " />
+            <img src={pinkheart} alt="" className="heart-2
+    absolute
+    bottom-[30%]
+    right-[4em]
+    md:right-[15em]
+    lg:right-[30em]
+    " />
+            </div>
+            
+            <div 
+            style={{backgroundColor: currentButtonColor}}
+            className="test
+    absolute
+    z-[-1]
+    w-[100vw]
+    h-full
+    bg-[#fffbec]
+    overflow-hidden
+            ">
+            {/* <video src={beachvid} muted autoPlay loop className='video-bg
+            '></video> */}
+            </div>
+
         </div>
 
     {/* ========================== */}

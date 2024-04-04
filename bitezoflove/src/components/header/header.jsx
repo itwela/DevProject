@@ -4,6 +4,8 @@ import closeButton from '../../assets/close.png'
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
 import './header.css';  // Remove the duplicate import statement here
+import { IoMdMenu } from "react-icons/io";
+import { NavLink } from 'react-router-dom';
 
 const fadeIn = {
   hidden: { opacity: 0 },
@@ -30,50 +32,46 @@ function Header() {
 
   return (
     <>
-      <div className="mobile">
+      <div className="mobile flex md:hidden">
         <motion.div
           initial="hidden"
           whileInView="visible"
           transition={{ duration: 1.6 }}
           variants={combinedVariantsYtop}
-          className="header-box md:w-[9em] w-[7em] md:h-[9em] h-[7em] fixed flex place-content-center place-items-center z-[900] md:ml-[2em] ml-[0.4em] md:mt-[1.8em] mt-[0.4em] font-second tracking-[0.15em] font-[900]"
+          className="header-box z-[10000] fixed w-full h-max flex justify-between p-5 place-items-center place-content-center bg-transparent outline-none" 
         >
-          <img
-            src={logo}
-            className="logo-img w-[90px] h-[70px] left-0 md:scale-[1.5]"
-            alt=""
-          />
-        </motion.div>
-        <div
-          className={`hamburger bg-[#fffbec] p-5 fixed z-[10000] right-0 top-0 md:scale-[1.5] flex flex-col place-items-center gap-3 ${
-            menuOpen ? '' : 'rounded-[13em]'
-          } ${menuOpen ? 'w-[50%] h-[22.5em]' : 'w-[60px] h-[10px] flex place-content-center fixed right-8 top-7'}`}
-        >
-          <img
-            src={menuOpen ? closeButton : menu}
-            className={`w-[30px] h-[20px] ${menuOpen ? 'close-button' : ''}`}
-            alt=""
-            onClick={toggleMenu}
-          />
-          {/* Menu content */}
-          {menuOpen && (
-            <div className="menu-content font-second font-[300] mt-[20%] text-[1.5em] flex flex-col gap-5">
-              {/* Your menu items go here */}
-              <div onClick={toggleMenu}><a href="https://www.bitezoflove.com/">HOME</a></div>
-              <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/collections/all">SHOP</a></div>
-              <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/pages/contact">CONTACT</a></div>
-              <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/pages/faqs">FAQ</a></div>
-              {/* Add more menu items as needed */}
-            </div>
-          )}
+        <img src={logo} className="bg-[#fffbec] p-2 rounded-full logo-img w-[90px] h-[90px] left-0 md:scale-[1.5]" alt=""/>
+        
+        <div onClick={toggleMenu} className={`hamburger rounded-full bg-[#fffbec] p-5  z-[10000]   `}>    
+          <IoMdMenu/>
         </div>
+        </motion.div>
+
+
+        {/* Menu content */}
+        {menuOpen && (
+          <div className="w-[50vw] right-0 h-[100vh] bg-[#fffbec] fixed z-[1000] menu-content font-second font-[300] text-[1.5em] flex flex-col gap-5 place-items-end pt-[20%] pr-[5%]">
+            {/* Your menu items go here */}
+            <div onClick={toggleMenu}><a href="#">HOME</a></div>
+            <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/collections/all">SHOP</a></div>
+            <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/pages/contact">CONTACT</a></div>
+            <a href="#findus"><div onClick={toggleMenu}>FIND US</div></a>
+            <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/pages/faqs">FAQ</a></div>
+            {/* Add more menu items as needed */}
+          </div>
+        )}
+
       </div>
+
+{/* MOBILE HEADER END ----------------------------- */}
+      
+      
       {/* NOT mobile header - regular header. */}
-      <div className="computer">
+      <div className="hidden md:flex computer">
         <div
-          className="header-wrapper-big md:w-[30em] fixed z-[900] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-5 hidden"
+          className="header-wrapper-big w-max fixed z-[900] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-5 hidden"
         >
-          <a id="a-tag" className="" href="https://www.bitezoflove.com/">
+          <a id="a-tag" className="" href="#">
             HOME
           </a>
           <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/collections/all">
@@ -81,6 +79,9 @@ function Header() {
           </a>
           <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/pages/contact">
             CONTACT
+          </a>
+          <a id="a-tag" className="flex gap-1" href="#findus">
+            FIND <span>US</span>
           </a>
           <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/pages/faqs">
             FAQ'S
