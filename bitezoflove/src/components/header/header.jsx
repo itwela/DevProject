@@ -53,11 +53,11 @@ function Header() {
         whileInView="visible"
         transition={{ duration: 1.6 }}
         variants={combinedVariantsYtop}
-        className="header-box z-[10000] fixed w-full h-max flex justify-between p-5 place-items-center place-content-center bg-transparent top-2 outline-none" 
+        className="header-box z-[10000] fixed md:w-max w-full h-max flex justify-between p-5 place-items-center place-content-center bg-transparent top-2 outline-none" 
       >
       <img src={logo} className=" bg-[#fffbec] p-2 outline outline-[1px] outline-black rounded-full logo-img w-[90px] h-[90px] left-5 " alt=""/>
       
-      <div onClick={toggleMenu} className={`md:hidden hamburger outline outline-[1px] outline-black rounded-full bg-[#fffbec] p-5  z-[10000]   `}>    
+      <div onClick={toggleMenu} className={`md:hidden cursor-pointer hamburger outline outline-[1px] outline-black rounded-full bg-[#fffbec] p-5  z-[10000]   `}>    
         <IoMdMenu/>
       </div>
       </motion.div>
@@ -84,9 +84,9 @@ function Header() {
       {/* NOT mobile header - regular header. */}
       <div className="hidden md:flex computer">
         <div
-          className="header-wrapper-big w-max fixed z-[900] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-8 hidden"
+          className="header-wrapper-big w-max fixed z-[2] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-8"
         >
-          <a id="a-tag" className="" href="#">
+          <a id="a-tag" className="cursor-pointer" href="#">
             HOME
           </a>
           <a id="a-tag" className="" href="https://bitez-of-love.myshopify.com/collections/all">
