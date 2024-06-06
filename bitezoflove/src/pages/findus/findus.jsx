@@ -36,9 +36,9 @@ export default function FindUs() {
                     </div>
 
                     <div id="loc5" className=" flex flex-col gap-3">
-                        <p className="font-bold">Herb Shop of Vinings:</p>
-                        <a target="_blank" href="https://www.google.com/maps/place/2250+Marietta+Blvd+NW+%23214,+Atlanta,+GA+30318/@33.8164616,-84.4472341,16z/data=!3m1!4b1!4m6!3m5!1s0x88f51ad023d95555:0x5eb520082798b33b!8m2!3d33.8164616!4d-84.4472341!16s%2Fg%2F11ptrfl_d1?entry=ttu">
-                            <p>2250 Marietta Blvd NW #214, Atlanta, GA 30318 </p>
+                        <p className="font-bold">Unique Candle Designs:</p>
+                        <a target="_blank" href="https://www.bing.com/search?q=unique+candle+designs+Augusta%2C+GA&qs=n&form=QBRE&sp=-1&lq=0&pq=unique+candle+designs+augusta%2C+ga+&sc=10-34&sk=&cvid=A9B8145CBEC743C1AE14BD305F4C2C8B&ghsh=0&ghacc=0&ghpl=">
+                            <p>3084 Deansbridge Road Augusta, GA 30906 </p>
                         </a>
                     </div>
 
