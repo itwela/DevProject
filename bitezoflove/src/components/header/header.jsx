@@ -39,10 +39,10 @@ function Header() {
     <div className="fixed top-0 left-0  w-full h-[43px] z-[1] bg-pink-300">
       <Marquee className="h-full flex place-items-center ">
         <p className='w-[100vw] flex gap-1 text-white font-bold'>
-          <span className='text-pink-500'>Bitez of Love Special:</span> Buy 4 Drinks, Get 1 8oz Gel for <span className='underline'>Free</span>
+          <span className='text-pink-500'>Bitez of Love Special:</span> Buy 3 Seamoss Lemonade's, Get 1 for <span className='underline'>Free!</span>
         </p>
         <p className='w-[100vw] flex gap-1 text-white font-bold'>
-          <span className='text-pink-500'>Bitez of Love Special:</span> Buy 2 Gels Get 1 16oz Drink for <span className='underline'>Free</span>
+          <span className='text-pink-500'>Bitez of Love Special:</span> Buy 2 Seamoss Gels, Get 1 Seamoss Lemonade for <span className='underline'>Free!</span>
         </p>
       </Marquee>
     </div>
