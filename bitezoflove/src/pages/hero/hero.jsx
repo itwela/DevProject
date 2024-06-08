@@ -4,24 +4,34 @@ import { motion, useAnimation  } from 'framer-motion';
 import gsap from 'gsap';
 import ProductShots from '../bottles/bottles';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import sbackg from '../../assets/s-bg.png'
-import ebackg from '../../assets/ed-bg.png'
-import mbackg from '../../assets/m-bg.png'
-import gingerbackg from '../../assets/ginger-bg.png'
-import sourbackg from '../../assets/soursop-bg.png'
-import spirbackg from '../../assets/spir.png'
 import energyIcon from '../../assets/energy.gif'
 import mindIcon from '../../assets/mind.gif'
 import vitalityIcon from '../../assets/vitality.gif'
 import pinkheart from '../../assets/pink.gif' 
 import leftArrow from '../../assets/left-1.png'
 import rightArrow from '../../assets/right-1.png'
+
+// bottles
 import strawberrybottle from '../../assets/strawberry-1.png'
 import elderberrybottle from '../../assets/elderberry-1.png'
 import gingerbottle from '../../assets/ginger-1.png'
 import mangobottle from '../../assets/mango-1.png'
 import soursopbottle from '../../assets/soursop-1.png'
 import spirulinabottle from '../../assets/spirulina-1.png'
+// bottle backgrounds
+import sbackg from '../../assets/s-bg.png'
+import ebackg from '../../assets/ed-bg.png'
+import mbackg from '../../assets/m-bg.png'
+import gingerbackg from '../../assets/ginger-bg.png'
+import sourbackg from '../../assets/soursop-bg.png'
+import spirbackg from '../../assets/spir.png'
+
+
+// gels
+import cherrygel from "../../assets/cherry-gel-transparent.png"
+// gels backgrounds
+import cherrygelbg from "../../assets/cherry-gel-banner-gimp.png"
+
 
 
     // --------- ANIMATIONS {
@@ -76,15 +86,26 @@ import spirulinabottle from '../../assets/spirulina-1.png'
     //   ------------ }
 
 
-const options = ['Strawberry', 'Elderberry', 'Spirulina', 'Ginger', 'Soursop', 'Mango'];
+const options = [
+    'Strawberry', 
+    'Elderberry', 
+    'Spirulina', 
+    'Ginger', 
+    'Soursop', 
+    'Mango',
+    "Cherry"
+];
+
 const images = {
     Strawberry: strawberrybottle,
     Elderberry: elderberrybottle,
+    Spirulina: spirulinabottle,
     Ginger: gingerbottle,
-    Mango: mangobottle,
     Soursop: soursopbottle,
-    Spirulina: spirulinabottle
+    Mango: mangobottle,
+    Cherry: cherrygel,
   };
+
 const buttoncolors = {
     Strawberry: '#F24236',
     Elderberry: '#C84153',
@@ -92,8 +113,19 @@ const buttoncolors = {
     Ginger: '#F1D302',
     Soursop: '#8AC926',
     Mango: '#FFCA3A',
+    Cherry: '#794853',
 }
-const effects = ['Toxins', 'Dehydration', 'Cavities', 'Jitters', 'Hypertension', 'Hair-Loss', 'Insomnia', 'Inflammation' ]
+
+const effects = [
+    'Toxins', 
+    'Dehydration', 
+    'Cavities', 
+    'Jitters', 
+    'Hypertension', 
+    'Hair-Loss', 
+    'Insomnia', 
+    'Inflammation' 
+]
 
 const backgrounds = {
     Strawberry: sbackg,
@@ -101,8 +133,10 @@ const backgrounds = {
     Ginger: gingerbackg,
     Mango: mbackg,
     Soursop: sourbackg,
-    Spirulina: spirbackg
+    Spirulina: spirbackg,
+    Cherry: cherrygelbg,
 }
+
 const links = {
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
@@ -110,6 +144,7 @@ const links = {
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
     Mango: 'https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade',
+    CherryGelBg: "https://bitez-of-love.myshopify.com/products/bitez-wildcrafted-seamoss-gel-w-orchard-peach-copy",
 }
 
 function InfiniteCards({ currentButtonColor, currentBottle }) {
@@ -420,15 +455,7 @@ function Hero() {
         <>
 
         <div id='content' className="image-hero relative flex flex-col md:flex-row justify-center place-items-center">
-            <div className="tired-of-cont
-
-        place-content-center
-        flex
-        flex-col
-        font-second
-        text-[#fff]
-        hidden
-            ">
+            <div className="place-content-center flex flex-col font-second text-[#fff] hidden">
                 <p className='tired-of-text'>
                     NO MORE
                 </p>
@@ -437,182 +464,60 @@ function Hero() {
                 </h1>
             </div>
 
-            <div className="bottle-container
-    w-[100vw]
-    ">
+            <div className="bottle-container w-[100vw]">
+                <div className="strawberry-bottle flex justify-center place-content-center place-items-center items-center h-[100dvh]">
 
-            <div className="strawberry-bottle
-    flex
-    justify-center
-    place-content-center
-    place-items-center
-    items-center
-    h-[100dvh]
-            ">
+                <motion.img 
+                className='w-[13em] h-[28em] absolute z-[1]' 
+                initial="hidden"
+                whileInView="visible"
+                //   viewport={{ once: true }}
+                transition={{ duration: 1.8 }}
+                variants={combinedVariantsYtop}
+                src={currentImage} 
+                ref={imageRef} id='the-bottle' 
+                />
 
-{/* bottle img? */}
-            <motion.img 
-            initial="hidden"
-            whileInView="visible"
-            //   viewport={{ once: true }}
-            transition={{ duration: 1.8 }}
-            variants={combinedVariantsYtop}
-            src={currentImage} 
-            ref={imageRef} id='the-bottle' className='
-    w-[12em]
-    h-[28em]
-    absolute
-    z-[1]
-                ' />
-
-            </div>
+                </div>
 
             </div>
             
             <motion.div 
+            className="bottle-change-box absolute bottom-0 h-[20%] flex justify-center place-content-center place-items-center items-center z-[2]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             transition={{ duration: 1.2 }}
             variants={combinedVariantsYbottom}
-            className="bottle-change-box
-    absolute
-    bottom-0
-    h-[20%]
-    flex
-    justify-center
-    place-content-center
-    place-items-center
-    items-center
-    z-[2]
-            ">
-            <div className="bottle-picker
-    flex
-    gap-
-    w-[100vw]
-    justify-around
-    place-content-center
-    place-items-center
-    items-center    
-                        ">
-            <div
-            ref={leftButtonRef} 
-            onClick={handleLeftButtonClick}
-            className="left-btn
-    bg-[#ffffff]
-    w-[3em]
-    h-[3em]
-    rounded-[2em]
-    flex
-    justify-center
-    outline
-    outline-[1px]
-                    ">
-            <img src={leftArrow} alt="" className='
-    w-[2em]
-            ' />
-            </div>
-            <a 
-            href={currentLinks}
-                    style={{ backgroundColor: currentButtonColor }}
-                    className="current-bottle-box
-    rounded-[4em]
-    p-5
-    "
-
-                    >
-            <h1 className="current-bottle
-    text-[1.3em]
-    text-white
-    font-main
-    font-black
-
-            ">
-                {currentBottle}
-            </h1>
-            </a>
-            <div 
-                    onClick={handleRightButtonClick}
-                    className="right-btn
-    bg-[#ffffff]
-    w-[3em]
-    h-[3em]
-    rounded-[2em]
-    flex
-    justify-center
-    outline
-    outline-[1px]
-            ">
-            <img src={rightArrow} alt="" className='
-    w-[2em]
-            ' />
-            </div>
-            </div>
+            >
+                <div className="bottle-picker flex gap- w-[100vw] justify-around place-content-center place-items-center items-center">
+                    <div className="left-btn bg-[#ffffff] w-[3em] h-[3em] rounded-[2em] flex justify-center outline outline-[1px]" ref={leftButtonRef} onClick={handleLeftButtonClick}>
+                            <img src={leftArrow} alt="" className='w-[2em]'/>
+                    </div>
+                    <a className="current-bottle-box rounded-[4em] p-5" href={currentLinks} style={{ backgroundColor: currentButtonColor }}>
+                        <h1 className="current-bottle text-[1.3em] text-white font-main font-black">
+                            {currentBottle}
+                        </h1>
+                    </a>
+                    <div className="right-btn bg-[#ffffff] w-[3em] h-[3em] rounded-[2em] flex justify-center outline outline-[1px]" onClick={handleRightButtonClick}>
+                        <img src={rightArrow} alt="" className='w-[2em]' />
+                    </div>
+                </div>
             </motion.div>
             
-            <div 
-            // style={{ backgroundColor: currentButtonColor }}
-            className="circle-bottom
-    h-[100dvh]
-    w-[100vw]
-    absolute
-    z-[-1]
-            ">
+            <div className="circle-bottom h-[100dvh] w-[100vw] absolute z-[-1]">
             </div>
-            
-            <div 
-            ref={firstBg} 
-            className="bg-cont
-    flex
-    h-full
-    w-[100vw]
-    absolute
-    justify-center
-    place-items-center
-    overflow-hidden
-            ">
-            <img src={currentBackground} alt="" className="back-img
-    absolute
-    scale-[1.6]
-            "/>
+                {/* // style={{ backgroundColor: currentButtonColor }} */}
+            <div className="bg-cont flex h-full w-[100vw] absolute justify-center place-items-center overflow-hidden" ref={firstBg} >
+                <img src={currentBackground} alt="" className="back-img absolute scale-[1.6]"/>
             </div>
-            
-            <div className="heart-cont
-    w-[100vw]
-    h-[100dvh]
-    absolute
-    flex
-    justify-center 
-        ">
 
-            <img src={pinkheart} alt="" className="heart-1
-    absolute
-    bottom-[30%]
-    left-[4em]
-    md:left-[15em]
-    lg:left-[30em]
-    " />
-            <img src={pinkheart} alt="" className="heart-2
-    absolute
-    bottom-[30%]
-    right-[4em]
-    md:right-[15em]
-    lg:right-[30em]
-    " />
+            <div className="heart-cont w-[100vw] h-[100dvh] absolute flex justify-center ">
+                <img src={pinkheart} alt="" className="heart-1 absolute bottom-[30%] left-[4em] md:left-[15em] lg:left-[30em]" />
+                <img src={pinkheart} alt="" className="heart-2 absolute bottom-[30%] right-[4em] md:right-[15em] lg:right-[30em]" />
             </div>
             
-            <div 
-            style={{backgroundColor: currentButtonColor}}
-            className="test
-    absolute
-    z-[-1]
-    w-[100vw]
-    h-full
-    bg-[#fffbec]
-    overflow-hidden
-            ">
-            {/* <video src={beachvid} muted autoPlay loop className='video-bg
-            '></video> */}
+            <div className="test absolute z-[-1] w-[100vw] h-full bg-[#fffbec] overflow-hidden" style={{backgroundColor: currentButtonColor}}>
             </div>
 
         </div>
