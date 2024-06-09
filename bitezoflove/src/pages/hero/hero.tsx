@@ -1,6 +1,8 @@
 import './hero.css'
+import '../../index.css'
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useAnimation  } from 'framer-motion';
+import { WiStars } from "react-icons/wi";
 import gsap from 'gsap';
 import ProductShots from '../bottles/bottles';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -14,6 +16,7 @@ import rightArrow from '../../assets/right-1.png'
 // bottles
 import peachbottle from '../../assets/georgia-peach.png'
 import clorobottle from '../../assets/cloro-transparent.png'
+import cherrybottle from '../../assets/cherry-transparent.png'
 import strawberrybottle from '../../assets/strawberry-1.png'
 import elderberrybottle from '../../assets/elderberry-1.png'
 import gingerbottle from '../../assets/ginger-1.png'
@@ -23,6 +26,7 @@ import spirulinabottle from '../../assets/spirulina-1.png'
 // bottle backgrounds
 import clorobg from '../../assets/cloro-bg.png'
 import peachbg from '../../assets/peach-bg.png'
+import cherrybg from '../../assets/cherry-gel-banner-gimp.png'
 import sbackg from '../../assets/s-bg.png'
 import ebackg from '../../assets/ed-bg.png'
 import mbackg from '../../assets/m-bg.png'
@@ -36,7 +40,7 @@ import cherrygel from "../../assets/cherry-gel-transparent.png"
 // gels backgrounds
 import cherrygelbg from "../../assets/cherry-gel-banner-gimp.png"
 
-
+import seamossimg from '../../assets/seamoss.png'
 
     // --------- ANIMATIONS {
 
@@ -98,6 +102,7 @@ const options = [
     'Ginger', 
     'Soursop', 
     'Mango',
+    'Cherry',
     'Chlorophyll',
 ];
 
@@ -109,6 +114,7 @@ const images: { [key: string]: any } = {
     Ginger: gingerbottle,
     Soursop: soursopbottle,
     Mango: mangobottle,
+    Cherry: cherrybottle,
     Chlorophyll: clorobottle,
   };
 
@@ -120,6 +126,7 @@ const buttoncolors: { [key: string]: string } = {
     Ginger: '#F1D302',
     Soursop: '#8AC926',
     Mango: '#FFCA3A',
+    Cherry: '#d4002f',
     Chlorophyll: '#3cb113',
 }
 
@@ -138,22 +145,24 @@ const backgrounds: { [key: string]: string } = {
     Peach: peachbg,
     Strawberry: sbackg,
     Elderberry: ebackg,
-    Ginger: gingerbackg,
-    Mango: mbackg,
-    Soursop: sourbackg,
     Spirulina: spirbackg,
+    Ginger: gingerbackg,
+    Soursop: sourbackg,
+    Mango: mbackg,
+    Cherry: cherrybg,
     Chlorophyll: clorobg,
 }
 
 const links: { [key: string]: string } = {
     Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
-    Chlorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
     Mango: 'https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade',
+    Cherry: 'https://bitez-of-love.myshopify.com/products/cherry-wildcrafted-seamoss-lemonade',
+    Chlorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
 }
 
 function InfiniteCards({ currentButtonColor, currentBottle }: any) {
@@ -161,265 +170,241 @@ function InfiniteCards({ currentButtonColor, currentBottle }: any) {
 
     return ( 
         <>
-        <div className="favorites-wrapper
-w-[100vw]
-bg-[#fffbec]
-flex
-justify-start
-p-1
-    ">
-        <div className="favorites-scroller
-h-[95vh]
-flex
-pt-[3em]
-z-[21]
-        ">
-<div className='infinite-scroll-1
-z-[10]
-md:scale-[1]
-scale-[0.65]
-w-[100vw]
-            '>
+        <div className="favorites-wrapper w-[100vw] bg-[#fffbec] flex justify-start p-1">
+            <div className="favorites-scroller h-[95vh] flex pt-[3em] z-[21]">
+                <div className='infinite-scroll-1 z-[10] md:scale-[1] scale-[0.65] w-[100vw]'>
                 <motion.div 
+                    className='infinite-scroll-fixed flex flex-col justify-center place-content-center place-items-center items-center'
                     initial="hidden"
                     whileInView="visible"
                       viewport={{ once: true }}
                     transition={{ duration: 1.6 }}
                     variants={combinedVariantsYtop}
-                    className='infinite-scroll-fixed
-                    flex
-                    flex-col
-                    justify-center
-                    place-content-center
-                    place-items-center
-                    items-center
-                    '>
-                    <span className=''>WELLNESS FROM THE BITEZ OF LOVE FAMILY </span>
-                    <h1
-                    className='wild
-                    font-second
-                    font-[900]
-                    '
-                    style={{color: currentButtonColor}}
                     >
-                        
-                        WILDCRAFTED <br /> SEAMOSS LEMONADE
+                    <span style={{fontFamily: "third"}} className='scale-[200%] w-1/2 text-emerald-400'>WELLNESS FROM THE BITEZ OF LOVE FAMILY! </span>
+                        {/* <img src={seamossimg} alt="" />    */}
+                    <div className='st-lucia mt-[1em] flex w-max place-items-center place-content-center'>
+                        <WiStars size={60} className='animate-pulse' />
+                        <h1 className='font-[900] w-[70%] smw-1/2 scale-[50%] sm:scale-[75%]'>
+                            ST. Lucian <br /> Wildcrafted Atlantic Gold Sea Moss                    
+                        </h1>
+                        <WiStars size={60} className='animate-pulse' />
+                    </div>
+                    <h1 className='wild font-[900] sm:scale-[75%] translate-y-[-15%]' style={{color: currentButtonColor}}>
+                        WILDCRAFTED <br /> SEA MOSS LEMONADE
                     </h1>
                     <div className='sub-info flex flex-col gap-2'>
-                        <p className='md:text-[1.3em] text-[1.5em] font-[400]'>All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!</p>
+                        <p className='md:text-[1.3em] text-[1.5em] font-[400]'>
+                            All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!
+                        </p>
                         {/* <p className='md:text-[1.3em] text-[1.5em] font-[400]'>Don't Just Eat Here, Eat Well!</p> */}
-                        <span className='
-                        lowercase
-                        italic
-                        '>
+                        <span className='lowercase italic'>
                             <strong> SCROLL LEFT FOR HEALTH BENEFITS </strong>
                         </span>
                     </div>
                 </motion.div>
-            </div>
-{/* ---------------------------------------- */}
-            <div className='infinite-scroll-fixed
-z-[10]
-md:scale-[1]
-scale-[0.65]
-h-[60dvh]
-w-[100vw]
-flex
-place-items-center
-justify-center  
-          '>
-            <div className="card-1
-w-[23em]
-h-[17em]
-bg-[#ffffff]
-rounded-[2em]
-            ">
-            <div className="card-top-1
-w-[23em]
-h-[4em]
-rounded-t-[2em]
-flex
-justify-center
-place-content-center
-place-items-center
-items-center
-text-[#fff]
-font-second
-            "
-            style={{ backgroundColor: currentButtonColor }}
-            >
-             <span className='
-text-[1.4em]
-             '>
-             ENERGY BOOSTER      
-            </span>  
-            </div>
-            <div className="card-bottom-1
-w-[23em]
-h-[11em]
-flex
-flex-col
-gap-4
-justify-center
-place-content-center
-place-items-center
-items-center
-p-6
-font-second
-            ">
-            <p className="benefit-1
-            ">
-            A natural energy boost 
-            packed with essential vitamins 
-            and minerals.
-            </p>
-            <img src={energyIcon} alt="" className='w-14' />
-            </div>
-            </div>
-            </div>
-{/* ---------------------------------------- */}
-            <div className='infinite-scroll-fixed
-z-[10]
-md:scale-[1]
-scale-[0.65]
-h-[60dvh]
-w-[100vw]
-flex
-place-items-center
-justify-center
+                </div>
+    {/* ---------------------------------------- */}
+                <div className='infinite-scroll-fixed
+    z-[10]
+    md:scale-[1]
+    scale-[0.65]
+    h-[60dvh]
+    w-[100vw]
+    flex
+    place-items-center
+    justify-center  
             '>
-            <div className="card-2
-w-[23em]
-h-[17em]
-bg-[#ffffff]
-rounded-[2em]
-font-second
-            ">
-            <div 
-            style={{ backgroundColor: currentButtonColor }}
-            className="card-top-2
-w-[23em]
-h-[4em]
-rounded-t-[2em]
-flex
-justify-center
-place-content-center
-place-items-center
-items-center
-text-[#fff]
-            ">
-            <span className='
-text-[1.2em]
-             '>
-            ENHANCED MENTAL CLARITY            
-            </span>   
-            </div>
-
-            <div className="card-bottom-2
-w-[23em]
-h-[11em]
-flex
-flex-col
-gap-5
-justify-center
-place-content-center
-place-items-center
-items-center
-p-6
-            ">
-                <p className="benefit-2">
-                Boost mental clarity, concentration and
-                experience sharper focus. 
+                <div className="card-1
+    w-[23em]
+    h-[17em]
+    bg-[#ffffff]
+    rounded-[2em]
+                ">
+                <div className="card-top-1
+    w-[23em]
+    h-[4em]
+    rounded-t-[2em]
+    flex
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    text-[#fff]
+    font-second
+                "
+                style={{ backgroundColor: currentButtonColor }}
+                >
+                <span className='
+    text-[1.4em]
+                '>
+                ENERGY BOOSTER      
+                </span>  
+                </div>
+                <div className="card-bottom-1
+    w-[23em]
+    h-[11em]
+    flex
+    flex-col
+    gap-4
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    p-6
+    font-second
+                ">
+                <p className="benefit-1
+                ">
+                A natural energy boost 
+                packed with essential vitamins 
+                and minerals.
                 </p>
-                <img src={mindIcon} alt="" className='w-12' />
-            </div>
+                <img src={energyIcon} alt="" className='w-14' />
+                </div>
+                </div>
+                </div>
+    {/* ---------------------------------------- */}
+                <div className='infinite-scroll-fixed
+    z-[10]
+    md:scale-[1]
+    scale-[0.65]
+    h-[60dvh]
+    w-[100vw]
+    flex
+    place-items-center
+    justify-center
+                '>
+                <div className="card-2
+    w-[23em]
+    h-[17em]
+    bg-[#ffffff]
+    rounded-[2em]
+    font-second
+                ">
+                <div 
+                style={{ backgroundColor: currentButtonColor }}
+                className="card-top-2
+    w-[23em]
+    h-[4em]
+    rounded-t-[2em]
+    flex
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    text-[#fff]
+                ">
+                <span className='
+    text-[1.2em]
+                '>
+                ENHANCED MENTAL CLARITY            
+                </span>   
+                </div>
 
-            </div>
-            </div>
-{/* ---------------------------------------- */}
-            <div className='infinite-scroll-fixed
-z-[10]
-md:scale-[1]
-scale-[0.65]
-h-[60dvh]
-w-[100vw]
-flex
-place-items-center
-justify-center
-            '>
-            <div className="card-3
-w-[23em]
-h-[17em]
-bg-[#ffffff]
-rounded-[2em]
-font-second
-            ">
-            <div 
-            style={{ backgroundColor: currentButtonColor }}
-            className="card-top-3
-w-[23em]
-h-[4em]
-rounded-t-[2em]
-flex
-justify-center
-place-content-center
-place-items-center
-items-center
-text-[#fff]
-            ">
-            <span className='
-text-[1.2em]
-uppercase
-             '>
-            Nutrient Dense            
-            </span>   
-            </div>
+                <div className="card-bottom-2
+    w-[23em]
+    h-[11em]
+    flex
+    flex-col
+    gap-5
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    p-6
+                ">
+                    <p className="benefit-2">
+                    Boost mental clarity, concentration and
+                    experience sharper focus. 
+                    </p>
+                    <img src={mindIcon} alt="" className='w-12' />
+                </div>
 
-            <div className="card-bottom-3
-flex
-flex-col
-gap-5
-justify-center
-place-content-center
-place-items-center
-items-center
-p-6
-            ">
-                <p className="benefit-3">
-                Loaded with essential nutrients like vitamins 
-                (A, C, E, K), minerals (iron, potassium, magnesium), 
-                & amino acids, promoting energy, immune function,
-                & cellular health.
-                </p>
-                <img src={vitalityIcon} alt="" className='w-12' />
-            </div>
+                </div>
+                </div>
+    {/* ---------------------------------------- */}
+                <div className='infinite-scroll-fixed
+    z-[10]
+    md:scale-[1]
+    scale-[0.65]
+    h-[60dvh]
+    w-[100vw]
+    flex
+    place-items-center
+    justify-center
+                '>
+                <div className="card-3
+    w-[23em]
+    h-[17em]
+    bg-[#ffffff]
+    rounded-[2em]
+    font-second
+                ">
+                <div 
+                style={{ backgroundColor: currentButtonColor }}
+                className="card-top-3
+    w-[23em]
+    h-[4em]
+    rounded-t-[2em]
+    flex
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    text-[#fff]
+                ">
+                <span className='
+    text-[1.2em]
+    uppercase
+                '>
+                Nutrient Dense            
+                </span>   
+                </div>
 
-            </div>
-            </div>
+                <div className="card-bottom-3
+    flex
+    flex-col
+    gap-5
+    justify-center
+    place-content-center
+    place-items-center
+    items-center
+    p-6
+                ">
+                    <p className="benefit-3">
+                    Loaded with essential nutrients like vitamins 
+                    (A, C, E, K), minerals (iron, potassium, magnesium), 
+                    & amino acids, promoting energy, immune function,
+                    & cellular health.
+                    </p>
+                    <img src={vitalityIcon} alt="" className='w-12' />
+                </div>
 
-{/* ---------------------------------------- */}
-            <div className='infinite-scroll-fixed
-z-[10]
-md:scale-[1]
-scale-[0.65]
-h-[60dvh]
-w-[100vw]
-flex
-place-items-center
-justify-center
-            '>
-            <div className="card-4
-rounded-[2em]
-font-second
-            ">
-        <h1 style={{color: currentButtonColor}}>
-            ALL PRODUCTS ARE MADE WITH ALKALINE WATER & NATURAL HERBS.
-        </h1>
+                </div>
+                </div>
+    {/* ---------------------------------------- */}
+                <div className='infinite-scroll-fixed
+    z-[10]
+    md:scale-[1]
+    scale-[0.65]
+    h-[60dvh]
+    w-[100vw]
+    flex
+    place-items-center
+    justify-center
+                '>
+                <div className="card-4
+    rounded-[2em]
+    font-second
+                ">
+            <h1 style={{color: currentButtonColor, fontFamily: 'second'}}>
+                ALL PRODUCTS ARE MADE WITH ALKALINE WATER & NATURAL HERBS.
+            </h1>
 
-            </div>
-            </div>
-
-        </div>      
+                </div>
+                </div>
+            </div>     
         </div>
 
         </>
@@ -441,14 +426,14 @@ function Hero() {
         setTimeout(() => {
             setCurrentOptionIndex((prevIndex) => (prevIndex - 1 + options.length) % options.length);
         }, 700);
-            setPlayAnimation(true);
+            // setPlayAnimation(true);
     };
   
     const handleRightButtonClick = () => {
         setTimeout(() => {
             setCurrentOptionIndex((prevIndex) => (prevIndex - 1 + options.length) % options.length);
         }, 700);      
-            setPlayAnimation(true);
+            // setPlayAnimation(true);
     };
   
     const currentBottle = options[currentOptionIndex];
@@ -544,46 +529,18 @@ function Hero() {
 
 
 
-
-
-
-        <div className="bottles-wrap
-w-[100vw]
-h-[100dvh]
-          ">
-          <div className="circle-mask-white
-w-[100vw]
-h-[100dvh]
-absolute
-z-[1]
-overflow-hidden
-bg-[#fffbec]
-              ">
-                <div className="img-container
-flex
-justify-center
-w-[100vw]
-h-[100dvh]
-relative
-overflow-hidden
-                ">
-                       <InfiniteCards currentButtonColor={currentButtonColor}/> 
+        <div className="bottles-wrap w-[100vw] h-[100dvh]">
+          <div className="circle-mask-white w-[100vw] h-[100dvh] absolute z-[1] overflow-hidden bg-[#fffbec]">
+            <div className="img-container flex justify-center w-[100vw] h-[100dvh] relative overflow-hidden">
+                <InfiniteCards currentButtonColor={currentButtonColor}/> 
                 <motion.img 
                 initial="hidden"
                 whileInView="visible"
                 //   viewport={{ once: true }}
                 transition={{ duration: 1.6 }}
                 variants={fadeIn}
-                src={currentImage} ref={imageRef} id='the-bottle' className='
-md:w-[12em]
-md:h-[28em]
-w-[8.5em]
-h-[20em]
-absolute
-z-[20]
-
-bottom-[3%]
-            ' /> 
+                src={currentImage} ref={imageRef} id='the-bottle' 
+                className='md:w-[12em] md:h-[28em] w-[8.5em] h-[20em] absolute z-[20] bottom-[3%]' /> 
             </div>
            </div>
         </div>

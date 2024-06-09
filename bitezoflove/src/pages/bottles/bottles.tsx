@@ -188,6 +188,7 @@ leading-[1.2em]
     bg-[#fffbec]
         ">
         <motion.div 
+        style={{fontFamily: "second"}}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -202,7 +203,9 @@ leading-[1.2em]
         {spans}
         </motion.div>
         </div>
-        <div className="second-text-wrap
+        <div 
+        style={{fontFamily: "second"}}
+        className="second-text-wrap
     w-[100vw]
     h-[20vh]
     bg-[#fffbec]
@@ -244,15 +247,15 @@ leading-[1.2em]
         </div>
     </div>
 
-    <div className="favorites-wrapper w-[100vw] bg-[#fffbec] flex justify-start z-[20] p-1">
-        <div className="favorites-scroller h-[60vh] flex bg-[#fffbec]">
-            <div className="fav-img-1 w-[15em] md:w-[25em] bg-[#ffeb00] outline flex relative justify-center place-items-start p-5">
+    <div style={{fontFamily: "second"}} className="favorites-wrapper w-[100vw] bg-[#fffbec] flex justify-start z-[20] p-1">
+        <div className="favorites-scroller h-[40vh] flex bg-[#fffbec]">
+            <div className="fav-img-1 w-[15em] md:w-[25em] bg-[#ffcb1d] outline flex relative justify-center place-items-start p-5">
                 <div className="discover">
                     <h1 className="title-d-1 font-second text-[2em]">
-                        MANGO
+                        Peach
                     </h1>
                     <p className="title-d-1 font-second">
-                        lemonade
+                        Lemonade
                     </p>
                     <a 
                     href='https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade'
@@ -279,7 +282,7 @@ leading-[1.2em]
             <div className="fav-img-2
             md:w-[25em]
             w-[15em]
-            bg-[#f8d7f9]
+            bg-[#feda6c]
             outline
             flex
             relative
@@ -289,11 +292,11 @@ leading-[1.2em]
             ">
                 <div className="discover">
                 <h1 className="title-d-2 font-second text-[2em]">
-                        BLACK
-                        <span className='block md:inline'>SEED</span>
+                        Ginger
+                        {/* <span className='block md:inline'>SEED</span> */}
                 </h1>
                     <p className="title-d-2 font-second">
-                        seamoss
+                        Lemonade
                     </p>
                     <a 
                     href='https://bitez-of-love.myshopify.com/products/bitez-wildcrafted-blackseed-burdock-root-bladderwrack'
@@ -320,7 +323,7 @@ leading-[1.2em]
             <div className="fav-img-3
             md:w-[25em]
             w-[15em]
-            bg-[#01fea9]
+            bg-[#f47126]
             outline
             flex
             relative
@@ -330,10 +333,10 @@ leading-[1.2em]
             ">
                 <div className="discover">
                 <h1 className="title-d-3 font-second text-[2em]">
-                        SPIRULINA
+                        Turmeric
                     </h1>
                     <p className="title-d-3 font-second">
-                        lemonade
+                    Sea Moss Gel
                     </p>
                     <a 
                     href='https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade'
@@ -356,10 +359,11 @@ leading-[1.2em]
                     </a>
                 </div>
             </div>
+
             <div className="fav-img-4
             md:w-[25em]
             w-[15em]
-            bg-[#ff0038]
+            bg-[#fd4d69]
             outline
             flex
             relative
@@ -370,11 +374,11 @@ leading-[1.2em]
 
                 <div className="discover">
                 <h1 className="title-d-4 font-second text-[2em]">
-                        CRAN
-                        <span className='block md:inline'>BERRY</span>
+                        Megamax
+                        {/* <span className='block md:inline'></span> */}
                     </h1>
                     <p className="title-d-4 font-second">
-                        seamoss
+                        Sea Moss Gel
                     </p>
                     <a 
                     href='https://bitez-of-love.myshopify.com/products/bitez-wildkrafted-seamoss-gel-w-strawberry'

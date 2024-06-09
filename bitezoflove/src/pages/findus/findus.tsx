@@ -3,7 +3,7 @@ export default function FindUs() {
         <>
         <div id="findus" className="bg-[#fffbec] w-screen h-max">
             <div className="flex flex-col p-5 w-full h-full">
-                <h1 className="font-second text-7xl flex place-self-center">FIND US</h1>
+                <h1 style={{fontFamily: "second"}} className="font-second text-7xl flex place-self-center">FIND US</h1>
 
                 <div className="text-left w-full flex-col py-4 h-max flex gap-3">
                     
@@ -29,7 +29,7 @@ export default function FindUs() {
                     </div>
 
                     <div id="loc4" className="flex flex-col gap-3">
-                        <p className="font-bold">2ray's Mart:</p>
+                        <p className="font-bold">2-Ray's Mart:</p>
                         <a target="_blank" href="https://www.google.com/maps/dir//3820+Stonewall+Tell+Rd,+College+Park,+GA+30349/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x88f4e06de7285c4d:0xa66061df6b3347c9?sa=X&ved=1t:707&ictx=111">
                             <p>3820 Stonewall Tell Rd, Atlanta, GA 30349 </p>
                         </a>

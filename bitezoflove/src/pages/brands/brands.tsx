@@ -110,11 +110,15 @@ function Brands() {
     return (
         <>
         <div className="brands-wrapper
+        h-[20vh]
+        flex
+        place-items-center
+        bg-[#fffbec]
         ">
             <div 
             className="brands-container
 w-[100vw]
-h-[25vh]
+h-max
 font-second
 flex
 justify-center
@@ -122,7 +126,7 @@ place-items-center
 relative
 z-[400]
 bg-[#fffbec]
-overflow-hidden
+overflow-x-hidden
             ">
                     <div
                     ref={firstLogo}
