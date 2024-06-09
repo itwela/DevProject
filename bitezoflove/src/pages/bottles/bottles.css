@@ -16,21 +16,24 @@
 
 .split-img-container-left
 {
-    background-image: url('../../assets/reviewo.png');
+    background-image: url('../../assets/review-vid-1.mp4');
+    /* background-image: url('../../assets/reviewo.png'); */
     background-size: cover;
     background-position: 40%;
 }
 
 .split-img-container-middle
 {
-    background-image: url('../../assets/reviewtwo.png');
+    background-image: url('../../assets/review-vid-3.mp4');
+    /* background-image: url('../../assets/reviewtwo.png'); */
     background-size: cover;
     background-position: 40%;
 }
 
 .split-img-container-right
 {
-    background-image: url('../../assets/reviewthree.png');
+    background-image: url('../../assets/review-vid-2.mp4');
+    /* background-image: url('../../assets/reviewthree.png'); */
     background-size: cover;
     background-position: 40%;
 
