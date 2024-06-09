@@ -258,7 +258,7 @@ leading-[1.2em]
                         Lemonade
                     </p>
                     <a 
-                    href='https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade'
+                    href='https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade?_pos=1&_sid=0107dd02a&_ss=r'
                     className="discover-btn-1
                     absolute
                     w-[50%]
@@ -299,7 +299,7 @@ leading-[1.2em]
                         Lemonade
                     </p>
                     <a 
-                    href='https://bitez-of-love.myshopify.com/products/bitez-wildcrafted-blackseed-burdock-root-bladderwrack'
+                    href='https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade?_pos=2&_sid=37f0a7a50&_ss=r'
                     className="discover-btn-2
                     absolute
                     w-[50%]
@@ -339,7 +339,7 @@ leading-[1.2em]
                     Sea Moss Gel
                     </p>
                     <a 
-                    href='https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade'
+                    href='https://bitez-of-love.myshopify.com/products/bitez-wildkrafted-seamoss-w-fruit?_pos=1&_sid=37f0a7a50&_ss=r'
                     className="discover-btn-3
                     absolute
                     w-[50%]
@@ -381,7 +381,7 @@ leading-[1.2em]
                         Sea Moss Gel
                     </p>
                     <a 
-                    href='https://bitez-of-love.myshopify.com/products/bitez-wildkrafted-seamoss-gel-w-strawberry'
+                    href='https://bitez-of-love.myshopify.com/products/bitez-wildkrafted-supermoss?_pos=1&_sid=a7aa5b4b0&_ss=r'
                     className="discover-btn-4
                     absolute
                     w-[50%]
