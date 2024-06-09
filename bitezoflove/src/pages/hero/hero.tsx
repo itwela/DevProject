@@ -98,7 +98,7 @@ const options = [
     'Ginger', 
     'Soursop', 
     'Mango',
-    'Clorophyll',
+    'Chlorophyll',
 ];
 
 const images: { [key: string]: any } = {
@@ -109,7 +109,7 @@ const images: { [key: string]: any } = {
     Ginger: gingerbottle,
     Soursop: soursopbottle,
     Mango: mangobottle,
-    Clorophyll: clorobottle,
+    Chlorophyll: clorobottle,
   };
 
 const buttoncolors: { [key: string]: string } = {
@@ -120,7 +120,7 @@ const buttoncolors: { [key: string]: string } = {
     Ginger: '#F1D302',
     Soursop: '#8AC926',
     Mango: '#FFCA3A',
-    Clorophyll: '#3cb113',
+    Chlorophyll: '#3cb113',
 }
 
 const effects: { [key: string]: any } = [
@@ -142,12 +142,12 @@ const backgrounds: { [key: string]: string } = {
     Mango: mbackg,
     Soursop: sourbackg,
     Spirulina: spirbackg,
-    Clorophyll: clorobg,
+    Chlorophyll: clorobg,
 }
 
 const links: { [key: string]: string } = {
     Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
-    Clorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
+    Chlorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
