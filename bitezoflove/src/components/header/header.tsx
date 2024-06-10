@@ -36,12 +36,12 @@ function Header() {
     <>
 
         {/* fast marquee */}
-    <div className="fixed top-0 left-0  w-full h-[43px] z-[1] bg-pink-300">
-      <Marquee className="h-full flex gap-5 place-items-center ">
-        <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold'>
+    <div className="fixed top-0 left-0  w-full h-[43px] z-[1000] bg-pink-300">
+      <Marquee className="h-full flex gap-9 place-items-center ">
+        <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
           <span className='text-pink-500'>Father's Day Special:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline'>Free!</span>
         </p>
-        <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold'>
+        <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
           <span className='text-pink-500'>Father's Day Special:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline'>Free!</span>
         </p>
       </Marquee>
@@ -65,7 +65,7 @@ function Header() {
 
       {/* Menu content */}
       {menuOpen && (
-        <div className="md:hidden mobile w-[50vw] right-0 h-[100vh] bg-[#fffbec] fixed z-[1000] menu-content font-second font-[300] text-[1.5em] flex flex-col gap-5 place-items-end pt-[20%] pr-[5%]">
+        <div className="md:hidden mobile w-[50vw] right-0 h-[100vh] bg-[#fffbec] fixed z-[2000] menu-content font-second font-[300] text-[1.5em] flex flex-col gap-5 place-items-end pt-[20%] pr-[5%]">
           {/* Your menu items go here */}
           <div onClick={toggleMenu}><a href="#">HOME</a></div>
           <div onClick={toggleMenu}><a href="https://bitez-of-love.myshopify.com/collections/all">SHOP</a></div>
@@ -84,7 +84,7 @@ function Header() {
       {/* NOT mobile header - regular header. */}
       <div className="hidden md:flex computer">
         <div
-          className="header-wrapper-big w-max fixed z-[2] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-8"
+          className="header-wrapper-big w-max fixed z-[2000] md:flex justify-around place-items-center p-5 text-[#000] text-[0.7em] gap-4 font-second font-[900] right-5 top-8"
         >
           <a id="a-tag" className="cursor-pointer" href="#">
             HOME

@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import sevenanda from '../../assets/sevenanda.png'
-import coffee from '../../assets/coffee.png'
+import candle from '../../assets/candle.png'
 import blue from '../../assets/blueguy.png'
 // import reco from '../../assets/reco.png'
 import nature from '../../assets/nature.png'
@@ -138,8 +138,8 @@ justify-around
 p-3
 ">
                     <img src={sevenanda} className='' id='logos'/>
-                    <img src={blue} className='scale-[0.7]' id='logos'/>
-                    <img src={coffee} className='' id='logos'/>
+                    <img src={blue} className='scale-[0.5]' id='logos'/>
+                    <img src={candle} className='scale-[0.7]' id='logos'/>
                     </div>
                     <div 
                     ref={secondLogo} 
@@ -153,7 +153,7 @@ p-3
                     ">
                     {/* <img src={reco} className='' id='logos'/> */}
                     <img src={nature} className='' id='logos'/>
-                    <img src={muni} className='' id='logos'/>
+                    <img src={muni} className='scale-[0.7]' id='logos'/>
 
                     </div>
                     <div 
@@ -168,8 +168,8 @@ p-3
 
                     ">
                     <img src={sevenanda} className='' id='logos'/>
-                    <img src={blue} className='scale-[0.7]' id='logos'/>
-                    <img src={coffee} className='' id='logos'/>                    </div>
+                    <img src={blue} className='scale-[0.5]' id='logos'/>
+                    <img src={candle} className='scale-[0.7]' id='logos'/>                    </div>
             </div>
         </div>
         </>

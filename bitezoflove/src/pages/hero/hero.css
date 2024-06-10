@@ -72,7 +72,7 @@
 
 .wild
 {
-   font-size: clamp(60px,7vw,446px);
+   /* font-size: clamp(60px,7vw,446px); */
    pointer-events: none;
 }
 
@@ -138,5 +138,4 @@ pointer-events: none;
 
 .st-lucia{
   /* font-family: second; */
-  color: #fd44b0 !important;
 }

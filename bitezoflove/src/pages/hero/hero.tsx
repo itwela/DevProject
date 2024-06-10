@@ -42,6 +42,15 @@ import cherrygelbg from "../../assets/cherry-gel-banner-gimp.png"
 
 import seamossimg from '../../assets/seamoss.png'
 
+import TextTransition, { presets } from 'react-text-transition';
+
+// import {
+//     Tooltip,
+//     TooltipContent,
+//     TooltipProvider,
+//     TooltipTrigger,
+//   } from '../../components/ui/tooltip';
+
     // --------- ANIMATIONS {
 
     const fadeIn = {
@@ -93,6 +102,8 @@ import seamossimg from '../../assets/seamoss.png'
 
     //   ------------ }
 
+
+//  --------------------------------------------------------------
 
 const options = [
     "Peach",
@@ -165,42 +176,63 @@ const links: { [key: string]: string } = {
     Chlorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
 }
 
+//  ------------------------------------------------------------
+
+//  -------------------------------------------------
+
+
+//  ------------------------------------------
+
+
 function InfiniteCards({ currentButtonColor, currentBottle }: any) {
+
+    const TEXTS = [
+        'St. Lucian Wildcrafted Atlantic Gold Sea Moss',
+        `All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!`, 
+        'Scroll left for health benefits', 
+    ];
+
+    const [index, setIndex] = React.useState(0);
+
+    React.useEffect(() => {
+    const intervalId = setInterval(
+        () => setIndex((index) => index + 1),
+        3000, // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+    }, []);
+
 
 
     return ( 
         <>
         <div className="favorites-wrapper w-[100vw] bg-[#fffbec] flex justify-start p-1">
-            <div className="favorites-scroller h-[95vh] flex pt-[3em] z-[21]">
-                <div className='infinite-scroll-1 z-[10] md:scale-[1] scale-[0.65] w-[100vw]'>
+            <div className="favorites-scroller h-[95vh] flex sm:pt-[3em] z-[21]">
+                <div className='infinite-scroll-1 z-[10] w-[100vw] overflow-y-hidden'>
                 <motion.div 
-                    className='infinite-scroll-fixed flex flex-col justify-center place-content-center place-items-center items-center'
+                    className='infinite-scroll-fixed flex flex-col justify-start relative  place-items-center h-[100vh]'
                     initial="hidden"
                     whileInView="visible"
                       viewport={{ once: true }}
                     transition={{ duration: 1.6 }}
                     variants={combinedVariantsYtop}
                     >
-                    <span style={{fontFamily: "third"}} className='scale-[200%] w-1/2 text-emerald-400'>WELLNESS FROM THE BITEZ OF LOVE FAMILY! </span>
-                        {/* <img src={seamossimg} alt="" />    */}
-                    <div className='st-lucia mt-[1em] flex w-max place-items-center place-content-center'>
-                        <WiStars size={60} className='animate-pulse' />
-                        <h1 className='font-[900] w-[70%] smw-1/2 scale-[50%] sm:scale-[75%]'>
-                            ST. Lucian <br /> Wildcrafted Atlantic Gold Sea Moss                    
-                        </h1>
-                        <WiStars size={60} className='animate-pulse' />
-                    </div>
-                    <h1 className='wild font-[900] sm:scale-[75%] translate-y-[-15%]' style={{color: currentButtonColor}}>
-                        WILDCRAFTED <br /> SEA MOSS LEMONADE
-                    </h1>
-                    <div className='sub-info flex flex-col gap-2'>
-                        <p className='md:text-[1.3em] text-[1.5em] font-[400]'>
-                            All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!
-                        </p>
-                        {/* <p className='md:text-[1.3em] text-[1.5em] font-[400]'>Don't Just Eat Here, Eat Well!</p> */}
-                        <span className='lowercase italic'>
-                            <strong> SCROLL LEFT FOR HEALTH BENEFITS </strong>
-                        </span>
+                    <span style={{fontFamily: "third"}} className='text-transparent'>WELLNESS FROM THE BITEZ OF LOVE FAMILY! </span>    
+                    <div className='w-full bg-[#fffbec] p-3 bg-opacity-[50%] flex h-max flex-col place-items-center'>
+                        <span style={{fontFamily: "third"}} className='text-[0.7em] sm:text-[2em]'>WELLNESS FROM THE BITEZ OF LOVE FAMILY! </span>
+                        
+                        <div className='relative mt-3 flex flex-col place-items-center w-full h-max'>
+                            <span style={{fontFamily: "third"}} className='absolute top-0 text-[0.7em] sm:text-[1.3em] w-full'>St. Lucian Wildcrafted Atlantic Gold Sea Moss</span>
+                            <span className='wild leading-[4rem] lg:leading-[7rem] pt-4 lg:pt-2 text-[3em] sm:text-[4em] lg:text-[6em] font-[900] scale-[80%]' style={{color: currentButtonColor}}>
+                                WILDCRAFTED <br /> SEA MOSS LEMONADE
+                            </span>
+                        </div>
+                        
+                        {/* <span style={{fontFamily: "third"}} className='py-3'>All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!</span> */}
+                        <span className='hidden sm:flex font-bold bottom-10 place-self-center'>All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!</span>
+                        <span className='italic'>Scroll left for health benefits</span>
+                        {/* <TextTransition inline className='p-5 font-[400]' style={{fontFamily: 'third'}} springConfig={presets.gentle}>{TEXTS[index % TEXTS.length]}</TextTransition> */}
+                        <span className='sm:hidden p-2 absolute bottom-10 place-self-center bg-[#fffbec]'>All Organic Non-GMO Super Foods for a Healthier Lifestyle. Don't Just Eat Here, Eat Well!</span>
                     </div>
                 </motion.div>
                 </div>
@@ -477,7 +509,7 @@ function Hero() {
             </div>
             
             <motion.div 
-            className="bottle-change-box absolute bottom-0 h-[20%] flex justify-center place-content-center place-items-center items-center z-[2]"
+            className="bottle-change-box absolute bottom-0 h-[20%] flex justify-center place-content-center place-items-center items-center z-[1]"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
