@@ -36,13 +36,13 @@ function Header() {
     <>
 
         {/* fast marquee */}
-    <div className="fixed top-0 left-0  w-full h-[43px] z-[1000] bg-pink-300">
+    <div className="fixed top-0 left-0  w-full h-[43px] z-[1000] bg-red-500">
       <Marquee className="h-full flex gap-9 place-items-center ">
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-pink-500'>Father's Day Special:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline'>Free!</span>
+          <span className='text-blue-500 font-bold'>4th of July Special:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline'>Free!</span>
         </p>
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-pink-500'>Father's Day Special:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline'>Free!</span>
+          <span className='text-blue-500'>4th of July Special:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline'>Free!</span>
         </p>
       </Marquee>
     </div>
