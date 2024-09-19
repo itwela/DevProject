@@ -42,7 +42,7 @@ function Header() {
           <span className='text-yellow-300 font-bold underline'>Fall Deal:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline text-yellow-300'>Free!</span>
         </p>
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-yellow-300 font-bold underline'>Fall Deal:</span> Buy 3 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline text-yellow-300'>Free!</span>
+          <span className='text-yellow-300 font-bold underline'>Fall Deal:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline text-yellow-300'>Free!</span>
         </p> 
       </Marquee>
     </div>
