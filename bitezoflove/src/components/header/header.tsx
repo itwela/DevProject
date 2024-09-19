@@ -22,7 +22,7 @@ const slideInYtop = {
 const combinedVariantsYtop = {
   hidden: { ...fadeIn.hidden, ...slideInYtop.enterYtop },
   visible: { ...fadeIn.visible, ...slideInYtop.enterYtop },
-  exit: { ...fadeIn.exit, ...slideInYtop.exitYtop },
+  // exit: { ...fadeIn.exit, ...slideInYtop.exitYtop },
 };
 
 function Header() {
@@ -36,14 +36,14 @@ function Header() {
     <>
 
         {/* fast marquee */}
-    <div className="fixed top-0 left-0  w-full h-[43px] z-[1000] bg-pink-300">
+    <div className="fixed top-0 left-0  w-full h-[43px] z-[1000] bg-amber-900">
       <Marquee className="h-full flex gap-9 place-items-center ">
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-green-300 font-bold underline'>Summer Deal:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline'>Free!</span>
+          <span className='text-yellow-300 font-bold underline'>Fall Deal:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline text-yellow-300'>Free!</span>
         </p>
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-green-300 font-bold underline'>Summer Deal:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline'>Free!</span>
-        </p>
+          <span className='text-yellow-300 font-bold underline'>Fall Deal:</span> Buy 3 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline text-yellow-300'>Free!</span>
+        </p> 
       </Marquee>
     </div>
     <div className="flex">

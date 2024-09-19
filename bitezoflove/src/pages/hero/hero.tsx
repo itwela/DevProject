@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import energyIcon from '../../assets/energy.gif'
 import mindIcon from '../../assets/mind.gif'
 import vitalityIcon from '../../assets/vitality.gif'
-import pinkheart from '../../assets/pink.gif' 
+import leaves from '../../assets/leaves.gif' 
 import leftArrow from '../../assets/left-1.png'
 import rightArrow from '../../assets/right-1.png'
 
@@ -106,9 +106,9 @@ import TextTransition, { presets } from 'react-text-transition';
 //  --------------------------------------------------------------
 
 const options = [
+    'Elderberry', 
     "Peach",
     'Strawberry', 
-    'Elderberry', 
     'Spirulina', 
     'Ginger', 
     'Soursop', 
@@ -118,9 +118,9 @@ const options = [
 ];
 
 const images: { [key: string]: any } = {
+    Elderberry: elderberrybottle,
     Peach: peachbottle,
     Strawberry: strawberrybottle,
-    Elderberry: elderberrybottle,
     Spirulina: spirulinabottle,
     Ginger: gingerbottle,
     Soursop: soursopbottle,
@@ -130,9 +130,9 @@ const images: { [key: string]: any } = {
   };
 
 const buttoncolors: { [key: string]: string } = {
+    Elderberry: '#C84153',
     Peach: '#f9d207',
     Strawberry: '#F24236',
-    Elderberry: '#C84153',
     Spirulina: '#12E23F',
     Ginger: '#F1D302',
     Soursop: '#8AC926',
@@ -142,9 +142,9 @@ const buttoncolors: { [key: string]: string } = {
 }
 
 const effects: { [key: string]: any } = [
+    'Cavities', 
     'Toxins', 
     'Dehydration', 
-    'Cavities', 
     'Jitters', 
     'Hypertension', 
     'Hair-Loss', 
@@ -153,9 +153,9 @@ const effects: { [key: string]: any } = [
 ]
 
 const backgrounds: { [key: string]: string } = {
+    Elderberry: ebackg,
     Peach: peachbg,
     Strawberry: sbackg,
-    Elderberry: ebackg,
     Spirulina: spirbackg,
     Ginger: gingerbackg,
     Soursop: sourbackg,
@@ -165,9 +165,9 @@ const backgrounds: { [key: string]: string } = {
 }
 
 const links: { [key: string]: string } = {
+    Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
-    Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
@@ -474,6 +474,11 @@ function Hero() {
     const currentEffect = effects[currentOptionIndex];
     const currentBackground = backgrounds[currentBottle];
     const currentLinks = links[currentBottle]
+
+    const [isBottleLoaded, setIsBottleLoaded] = useState(false);
+    const [isBackgroundLoaded, setIsBackgroundLoaded] = useState(false);
+    const [isGifsLoaded, setIsGifsLoaded] = useState(false);
+
     // ----------------------
 
     
@@ -494,15 +499,32 @@ function Hero() {
                 <div className="strawberry-bottle flex justify-center place-content-center place-items-center items-center h-[100dvh]">
 
                 <motion.img 
-                className='w-[13em] h-[28em] absolute z-[1]' 
+                className='w-[13em] h-[28em] absolute z-[1] scale-[0%]' 
                 initial="hidden"
                 whileInView="visible"
+                onLoad={() => setIsBottleLoaded(true)}
                 //   viewport={{ once: true }}
                 transition={{ duration: 1.8 }}
                 variants={combinedVariantsYtop}
                 src={currentImage} 
                 ref={imageRef} id='the-bottle' 
                 />
+
+                {isBottleLoaded && (
+                    <>
+                    
+                    <motion.img 
+                    className='w-[13em] h-[28em] absolute z-[1]' 
+                    initial="hidden"
+                    whileInView="visible"                    //   viewport={{ once: true }}
+                    transition={{ duration: 1.8 }}
+                    variants={combinedVariantsYtop}
+                    src={currentImage} 
+                    ref={imageRef} id='the-bottle' 
+                    />
+
+                    </>
+                )}
 
                 </div>
 
@@ -535,12 +557,29 @@ function Hero() {
             </div>
                 {/* // style={{ backgroundColor: currentButtonColor }} */}
             <div className="bg-cont flex h-full w-[100vw] absolute justify-center place-items-center overflow-hidden" ref={firstBg} >
-                <img src={currentBackground} alt="" className="back-img absolute scale-[1.6]"/>
+                
+                <img onLoad={() => setIsBackgroundLoaded(true)} src={currentBackground} alt="" className="back-img absolute scale-[0%]"/>
+                {isBackgroundLoaded === true && (
+                    <>
+                    <img src={currentBackground} alt="" className="back-img absolute scale-[1.6]"/>
+                    </>
+                )}
+
             </div>
 
             <div className="heart-cont w-[100vw] h-[100dvh] absolute flex justify-center ">
-                <img src={pinkheart} alt="" className="heart-1 absolute bottom-[30%] left-[4em] md:left-[15em] lg:left-[30em]" />
-                <img src={pinkheart} alt="" className="heart-2 absolute bottom-[30%] right-[4em] md:right-[15em] lg:right-[30em]" />
+
+                <img onLoad={() => setIsGifsLoaded(true)} src={leaves} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
+                <img onLoad={() => setIsGifsLoaded(true)} src={leaves} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" />
+
+                {isGifsLoaded === true && (
+                    <>
+                    <img src={leaves} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
+                    <img src={leaves} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" />
+                    </>
+                )}
+                {/* <img src={pinkheart} alt="" className="heart-1 absolute bottom-[30%] left-[4em] md:left-[15em] lg:left-[30em]" />
+                <img src={pinkheart} alt="" className="heart-2 absolute bottom-[30%] right-[4em] md:right-[15em] lg:right-[30em]" /> */}
             </div>
             
             <div className="test absolute z-[-1] w-[100vw] h-full bg-[#fffbec] overflow-hidden" style={{backgroundColor: currentButtonColor}}>
