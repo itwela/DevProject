@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import energyIcon from '../../assets/energy.gif'
 import mindIcon from '../../assets/mind.gif'
 import vitalityIcon from '../../assets/vitality.gif'
-import leaves from '../../assets/leaves.gif' 
+import leaves from '../../assets/snowgif.gif' 
 import leftArrow from '../../assets/left-1.png'
 import rightArrow from '../../assets/right-1.png'
 
@@ -106,10 +106,10 @@ import TextTransition, { presets } from 'react-text-transition';
 //  --------------------------------------------------------------
 
 const options = [
+    'Spirulina', 
     'Elderberry', 
     "Peach",
     'Strawberry', 
-    'Spirulina', 
     'Ginger', 
     'Soursop', 
     'Mango',
@@ -118,10 +118,10 @@ const options = [
 ];
 
 const images: { [key: string]: any } = {
+    Spirulina: spirulinabottle,
     Elderberry: elderberrybottle,
     Peach: peachbottle,
     Strawberry: strawberrybottle,
-    Spirulina: spirulinabottle,
     Ginger: gingerbottle,
     Soursop: soursopbottle,
     Mango: mangobottle,
@@ -130,10 +130,10 @@ const images: { [key: string]: any } = {
   };
 
 const buttoncolors: { [key: string]: string } = {
+    Spirulina: '#12E23F',
     Elderberry: '#C84153',
     Peach: '#f9d207',
     Strawberry: '#F24236',
-    Spirulina: '#12E23F',
     Ginger: '#F1D302',
     Soursop: '#8AC926',
     Mango: '#FFCA3A',
@@ -142,10 +142,10 @@ const buttoncolors: { [key: string]: string } = {
 }
 
 const effects: { [key: string]: any } = [
+    'Jitters', 
     'Cavities', 
     'Toxins', 
     'Dehydration', 
-    'Jitters', 
     'Hypertension', 
     'Hair-Loss', 
     'Insomnia', 
@@ -153,10 +153,10 @@ const effects: { [key: string]: any } = [
 ]
 
 const backgrounds: { [key: string]: string } = {
+    Spirulina: spirbackg,
     Elderberry: ebackg,
     Peach: peachbg,
     Strawberry: sbackg,
-    Spirulina: spirbackg,
     Ginger: gingerbackg,
     Soursop: sourbackg,
     Mango: mbackg,
@@ -165,10 +165,10 @@ const backgrounds: { [key: string]: string } = {
 }
 
 const links: { [key: string]: string } = {
+    Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
-    Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
     Mango: 'https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade',
