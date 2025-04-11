@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import energyIcon from '../../assets/energy.gif'
 import mindIcon from '../../assets/mind.gif'
 import vitalityIcon from '../../assets/vitality.gif'
-import leaves from '../../assets/snowgif.gif' 
+import snow from '../../assets/snowgif.gif' 
 import leftArrow from '../../assets/left-1.png'
 import rightArrow from '../../assets/right-1.png'
 
@@ -106,9 +106,9 @@ import TextTransition, { presets } from 'react-text-transition';
 //  --------------------------------------------------------------
 
 const options = [
+    "Peach",
     'Spirulina', 
     'Elderberry', 
-    "Peach",
     'Strawberry', 
     'Ginger', 
     'Soursop', 
@@ -118,9 +118,9 @@ const options = [
 ];
 
 const images: { [key: string]: any } = {
+    Peach: peachbottle,
     Spirulina: spirulinabottle,
     Elderberry: elderberrybottle,
-    Peach: peachbottle,
     Strawberry: strawberrybottle,
     Ginger: gingerbottle,
     Soursop: soursopbottle,
@@ -130,9 +130,9 @@ const images: { [key: string]: any } = {
   };
 
 const buttoncolors: { [key: string]: string } = {
+    Peach: '#f9d207',
     Spirulina: '#12E23F',
     Elderberry: '#C84153',
-    Peach: '#f9d207',
     Strawberry: '#F24236',
     Ginger: '#F1D302',
     Soursop: '#8AC926',
@@ -142,9 +142,9 @@ const buttoncolors: { [key: string]: string } = {
 }
 
 const effects: { [key: string]: any } = [
+    'Toxins', 
     'Jitters', 
     'Cavities', 
-    'Toxins', 
     'Dehydration', 
     'Hypertension', 
     'Hair-Loss', 
@@ -153,9 +153,9 @@ const effects: { [key: string]: any } = [
 ]
 
 const backgrounds: { [key: string]: string } = {
+    Peach: peachbg,
     Spirulina: spirbackg,
     Elderberry: ebackg,
-    Peach: peachbg,
     Strawberry: sbackg,
     Ginger: gingerbackg,
     Soursop: sourbackg,
@@ -165,9 +165,9 @@ const backgrounds: { [key: string]: string } = {
 }
 
 const links: { [key: string]: string } = {
+    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
-    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
@@ -569,15 +569,9 @@ function Hero() {
 
             <div className="heart-cont w-[100vw] h-[100dvh] absolute flex justify-center ">
 
-                <img onLoad={() => setIsGifsLoaded(true)} src={leaves} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
-                <img onLoad={() => setIsGifsLoaded(true)} src={leaves} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" />
+                {/* <img onLoad={() => setIsGifsLoaded(true)} src={snow} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
+                <img onLoad={() => setIsGifsLoaded(true)} src={snow} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" /> */}
 
-                {isGifsLoaded === true && (
-                    <>
-                    <img src={leaves} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
-                    <img src={leaves} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" />
-                    </>
-                )}
                 {/* <img src={pinkheart} alt="" className="heart-1 absolute bottom-[30%] left-[4em] md:left-[15em] lg:left-[30em]" />
                 <img src={pinkheart} alt="" className="heart-2 absolute bottom-[30%] right-[4em] md:right-[15em] lg:right-[30em]" /> */}
             </div>
