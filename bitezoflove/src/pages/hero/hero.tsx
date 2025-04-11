@@ -9,7 +9,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import energyIcon from '../../assets/energy.gif'
 import mindIcon from '../../assets/mind.gif'
 import vitalityIcon from '../../assets/vitality.gif'
+import leaves from '../../assets/leaves.gif' 
 import snow from '../../assets/snowgif.gif' 
+import swarmbees from '../../assets/swarmbees.gif' 
 import leftArrow from '../../assets/left-1.png'
 import rightArrow from '../../assets/right-1.png'
 
@@ -569,8 +571,8 @@ function Hero() {
 
             <div className="heart-cont w-[100vw] h-[100dvh] absolute flex justify-center ">
 
-                {/* <img onLoad={() => setIsGifsLoaded(true)} src={snow} alt="" className="heart-1 scale-[200%] absolute bottom-[20%] left-[5%]" />
-                <img onLoad={() => setIsGifsLoaded(true)} src={snow} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" /> */}
+                {/* <img onLoad={() => setIsGifsLoaded(true)} src={swarmbees} alt="" className="heart-1 scale-[50%] absolute bottom-[20%] left-[5%]" /> */}
+                {/* <img onLoad={() => setIsGifsLoaded(true)} src={swarmbees} alt="" className="heart-2 scale-[200%] absolute bottom-[20%] right-[5%]" /> */}
 
                 {/* <img src={pinkheart} alt="" className="heart-1 absolute bottom-[30%] left-[4em] md:left-[15em] lg:left-[30em]" />
                 <img src={pinkheart} alt="" className="heart-2 absolute bottom-[30%] right-[4em] md:right-[15em] lg:right-[30em]" /> */}
