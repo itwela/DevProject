@@ -34,8 +34,11 @@ function Header() {
 
 
   const headerColor = [
+    // brown
     'bg-amber-900',
+    // blue
     'bg-sky-400',
+    // green
     'bg-yellow-400',
   ]
 

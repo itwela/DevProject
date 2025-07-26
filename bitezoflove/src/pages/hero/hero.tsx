@@ -107,9 +107,9 @@ import TextTransition, { presets } from 'react-text-transition';
 //  --------------------------------------------------------------
 
 const options = [
+    "Peach",
     'Spirulina', 
     'Elderberry', 
-    "Peach",
     'Strawberry', 
     'Ginger', 
     'Soursop', 
@@ -119,9 +119,9 @@ const options = [
 ];
 
 const images: { [key: string]: any } = {
+    Peach: peachbottle,
     Spirulina: spirulinabottle,
     Elderberry: elderberrybottle,
-    Peach: peachbottle,
     Strawberry: strawberrybottle,
     Ginger: gingerbottle,
     Soursop: soursopbottle,
@@ -131,9 +131,9 @@ const images: { [key: string]: any } = {
   };
 
 const buttoncolors: { [key: string]: string } = {
+    Peach: '#f9d207',
     Spirulina: '#12E23F',
     Elderberry: '#C84153',
-    Peach: '#f9d207',
     Strawberry: '#F24236',
     Ginger: '#F1D302',
     Soursop: '#8AC926',
@@ -143,9 +143,9 @@ const buttoncolors: { [key: string]: string } = {
 }
 
 const effects: { [key: string]: any } = [
+    'Toxins', 
     'Jitters', 
     'Cavities', 
-    'Toxins', 
     'Dehydration', 
     'Hypertension', 
     'Hair-Loss', 
@@ -154,9 +154,9 @@ const effects: { [key: string]: any } = [
 ]
 
 const backgrounds: { [key: string]: string } = {
+    Peach: peachbg,
     Spirulina: spirbackg,
     Elderberry: ebackg,
-    Peach: peachbg,
     Strawberry: sbackg,
     Ginger: gingerbackg,
     Soursop: sourbackg,
@@ -166,9 +166,9 @@ const backgrounds: { [key: string]: string } = {
 }
 
 const links: { [key: string]: string } = {
+    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
-    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
