@@ -36,19 +36,20 @@ function Header() {
   const headerColor = [
     'bg-amber-900',
     'bg-sky-400',
+    'bg-yellow-400',
   ]
 
   return (
     <>
 
         {/* fast marquee */}
-    <div className={`fixed top-0 left-0 w-full h-[43px] z-[1000] ${headerColor[1]}`}>
+    <div className={`fixed top-0 left-0 w-full h-[43px] z-[1000] ${headerColor[2]}`}>
       <Marquee className="h-full flex gap-9 place-items-center ">
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-pink-500 font-bold underline'>Winter Deal:</span> Buy 3 Sea Moss Lemonade's, Get 1 for <span className='underline text-pink-500'>Free!</span>
+          <span className='text-pink-500 font-bold underline'>Summer Bitez Deal:</span> Buy 2 Sea Moss Gels & Receive A Sea Moss Lemonade <span className='underline text-pink-500'>Free!</span>
         </p>
         <p className='w-max sm:w-[100vw] flex gap-1 text-white font-bold pr-5'>
-          <span className='text-pink-500 font-bold underline'>Winter Deal:</span> Buy 2 Sea Moss Gels, Get 1 Sea Moss Lemonade for <span className='underline text-pink-500'>Free!</span>
+          <span className='text-pink-500 font-bold underline'>Summer Bitez Deal:</span> Buy 2 Sea Moss Gels & Receive A Sea Moss Lemonade <span className='underline text-pink-500'>Free!</span>
         </p> 
       </Marquee>
     </div>
