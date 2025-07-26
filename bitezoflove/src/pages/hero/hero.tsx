@@ -107,8 +107,8 @@ import TextTransition, { presets } from 'react-text-transition';
 //  --------------------------------------------------------------
 
 const options = [
-    "Peach",
     'Spirulina', 
+    "Peach",
     'Elderberry', 
     'Strawberry', 
     'Ginger', 
@@ -119,8 +119,8 @@ const options = [
 ];
 
 const images: { [key: string]: any } = {
-    Peach: peachbottle,
     Spirulina: spirulinabottle,
+    Peach: peachbottle,
     Elderberry: elderberrybottle,
     Strawberry: strawberrybottle,
     Ginger: gingerbottle,
@@ -131,8 +131,8 @@ const images: { [key: string]: any } = {
   };
 
 const buttoncolors: { [key: string]: string } = {
-    Peach: '#f9d207',
     Spirulina: '#12E23F',
+    Peach: '#f9d207',
     Elderberry: '#C84153',
     Strawberry: '#F24236',
     Ginger: '#F1D302',
@@ -143,8 +143,8 @@ const buttoncolors: { [key: string]: string } = {
 }
 
 const effects: { [key: string]: any } = [
-    'Toxins', 
     'Jitters', 
+    'Toxins', 
     'Cavities', 
     'Dehydration', 
     'Hypertension', 
@@ -154,8 +154,8 @@ const effects: { [key: string]: any } = [
 ]
 
 const backgrounds: { [key: string]: string } = {
-    Peach: peachbg,
     Spirulina: spirbackg,
+    Peach: peachbg,
     Elderberry: ebackg,
     Strawberry: sbackg,
     Ginger: gingerbackg,
@@ -166,8 +166,8 @@ const backgrounds: { [key: string]: string } = {
 }
 
 const links: { [key: string]: string } = {
-    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Spirulina: 'https://bitez-of-love.myshopify.com/products/spirulina-bitez-wildcrafted-seamoss-lemonade',
+    Peach: 'https://bitez-of-love.myshopify.com/products/georgia-peach-sea-moss-lemonade',
     Elderberry: 'https://bitez-of-love.myshopify.com/products/elderberry-bitez-wildcrafted-seamoss-lemonade',
     Strawberry: 'https://bitez-of-love.myshopify.com/products/untitled-dec5_15-55',
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
