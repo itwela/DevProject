@@ -114,7 +114,7 @@ const options = [
     'Ginger', 
     'Soursop', 
     'Mango',
-    'Cherry',
+    // 'Cherry',
     'Chlorophyll',
 ];
 
@@ -126,7 +126,7 @@ const images: { [key: string]: any } = {
     Ginger: gingerbottle,
     Soursop: soursopbottle,
     Mango: mangobottle,
-    Cherry: cherrybottle,
+    // Cherry: cherrybottle,
     Chlorophyll: clorobottle,
   };
 
@@ -138,7 +138,7 @@ const buttoncolors: { [key: string]: string } = {
     Ginger: '#F1D302',
     Soursop: '#8AC926',
     Mango: '#FFCA3A',
-    Cherry: '#d4002f',
+    // Cherry: '#d4002f',
     Chlorophyll: '#3cb113',
 }
 
@@ -149,7 +149,7 @@ const effects: { [key: string]: any } = [
     'Dehydration', 
     'Hypertension', 
     'Hair-Loss', 
-    'Insomnia', 
+    // 'Insomnia', 
     'Inflammation' 
 ]
 
@@ -161,7 +161,7 @@ const backgrounds: { [key: string]: string } = {
     Ginger: gingerbackg,
     Soursop: sourbackg,
     Mango: mbackg,
-    Cherry: cherrybg,
+    // Cherry: cherrybg,
     Chlorophyll: clorobg,
 }
 
@@ -173,7 +173,7 @@ const links: { [key: string]: string } = {
     Ginger: 'https://bitez-of-love.myshopify.com/products/ginger-bitez-wildcrafted-seamoss-lemonade',
     Soursop: 'https://bitez-of-love.myshopify.com/products/soursop-bitez-wildcrafted-seamoss-lemonade',
     Mango: 'https://bitez-of-love.myshopify.com/products/mango-bitez-wildcrafted-seamoss-lemonade',
-    Cherry: 'https://bitez-of-love.myshopify.com/products/cherry-wildcrafted-seamoss-lemonade',
+    // Cherry: 'https://bitez-of-love.myshopify.com/products/cherry-wildcrafted-seamoss-lemonade',
     Chlorophyll: 'https://bitez-of-love.myshopify.com/products/chlorophyll-sea-moss-lemonade',
 }
 
