@@ -7,6 +7,17 @@ export default function FindUs() {
 
                 <div className="text-left w-full flex-col py-4 h-max flex gap-3">
                     
+                    <div id="loc0" className="flex flex-col gap-3">
+                        <p className="font-bold flex items-center gap-2">The Juicy Joint:
+                            <span className="uppercase tracking-wide inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full border border-pink-400 bg-green-100 text-pink-500 shadow-sm">
+                                New!
+                            </span>
+                        </p>
+                        <a target="_blank" href="https://maps.google.com/?q=847+McDaniel+St+SW,+Atlanta,+GA+30310">
+                            <p>847 McDaniel St. SW, Atlanta, GA 30310 United States</p>
+                        </a>
+                    </div>
+
                     <div id="loc1" className="flex flex-col gap-3">
                         <p className="font-bold">Sevananda Natural Foods Market:</p>
                         <a target="_blank" href="https://www.google.com/maps/dir/33.7462798,-84.364719/467+Moreland+Ave+NE,+Atlanta,+GA+30307/@33.7550155,-84.3786969,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x88f506af4e6aa77f:0x2dd63ff411d7e50!2m2!1d-84.3485359!2d33.7670353?entry=ttu">
